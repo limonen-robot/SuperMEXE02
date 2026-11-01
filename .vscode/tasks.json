@@ -1,84 +1,236 @@
 {
+  "inputs": [
+    {
+      "id": "flashDrive",
+      "type": "promptString",
+      "description": "ST-LINK USB drive letter for the intended board (e.g. D).",
+      "default": "D"
+    }
+  ],
+  "version": "2.0.0",
   "tasks": [
     {
       "problemMatcher": [
         "$gcc"
       ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "command": "powershell.exe",
-      "type": "process",
+      "group": "build",
       "presentation": {
+        "panel": "dedicated",
         "clear": true,
-        "reveal": "always",
-        "panel": "shared"
+        "reveal": "always"
       },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "label": "Mbed: G431KB_motor Build",
       "args": [
         "-NoProfile",
         "-ExecutionPolicy",
         "Bypass",
         "-File",
         "${workspaceFolder}/.vscode/mbed.ps1",
+        "-Project",
+        "G431KB_motor",
         "-Action",
         "Build"
       ],
-      "label": "Mbed: Build",
-      "options": {
-        "cwd": "${workspaceFolder}"
+      "type": "process",
+      "command": "powershell.exe",
+      "runOptions": {
+        "instanceLimit": 1
       }
     },
     {
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build",
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true,
+        "reveal": "always"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "label": "Mbed: G431KB_motor Rebuild",
       "args": [
         "-NoProfile",
         "-ExecutionPolicy",
         "Bypass",
         "-File",
         "${workspaceFolder}/.vscode/mbed.ps1",
+        "-Project",
+        "G431KB_motor",
         "-Action",
         "Rebuild"
       ],
-      "presentation": {
-        "clear": true,
-        "reveal": "always",
-        "panel": "shared"
-      },
+      "type": "process",
+      "command": "powershell.exe",
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
       "problemMatcher": [
         "$gcc"
       ],
-      "type": "process",
+      "group": "build",
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true,
+        "reveal": "always"
+      },
       "options": {
         "cwd": "${workspaceFolder}"
       },
-      "label": "Mbed: Rebuild",
-      "command": "powershell.exe"
-    },
-    {
+      "label": "Mbed: G431KB_motor Flash",
       "args": [
         "-NoProfile",
         "-ExecutionPolicy",
         "Bypass",
         "-File",
         "${workspaceFolder}/.vscode/mbed.ps1",
+        "-Project",
+        "G431KB_motor",
         "-Action",
-        "Flash"
+        "Flash",
+        "-Drive",
+        "${input:flashDrive}"
       ],
-      "presentation": {
-        "clear": true,
-        "reveal": "always",
-        "panel": "shared"
-      },
+      "type": "process",
+      "command": "powershell.exe",
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
       "problemMatcher": [
         "$gcc"
       ],
-      "type": "process",
+      "group": "build",
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true,
+        "reveal": "always"
+      },
       "options": {
         "cwd": "${workspaceFolder}"
       },
-      "label": "Mbed: Build and Flash",
-      "command": "powershell.exe"
+      "label": "Mbed: G431KB_sensor Build",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/.vscode/mbed.ps1",
+        "-Project",
+        "G431KB_sensor",
+        "-Action",
+        "Build"
+      ],
+      "type": "process",
+      "command": "powershell.exe",
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build",
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true,
+        "reveal": "always"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "label": "Mbed: G431KB_sensor Rebuild",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/.vscode/mbed.ps1",
+        "-Project",
+        "G431KB_sensor",
+        "-Action",
+        "Rebuild"
+      ],
+      "type": "process",
+      "command": "powershell.exe",
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build",
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true,
+        "reveal": "always"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "label": "Mbed: G431KB_sensor Flash",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/.vscode/mbed.ps1",
+        "-Project",
+        "G431KB_sensor",
+        "-Action",
+        "Flash",
+        "-Drive",
+        "${input:flashDrive}"
+      ],
+      "type": "process",
+      "command": "powershell.exe",
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Mbed: G431KB_motor Build",
+        "Mbed: G431KB_sensor Build"
+      ],
+      "label": "Mbed: Build both",
+      "problemMatcher": []
+    },
+    {
+      "label": "App: Motor control",
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/motor_app/start.ps1"
+      ],
+      "problemMatcher": [],
+      "command": "powershell.exe",
+      "type": "process",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     }
-  ],
-  "version": "2.0.0"
+  ]
 }

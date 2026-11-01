@@ -6,3 +6,8 @@ projectfiles
 BUILD/
 cmake_build/
 
+
+# Track motor application Python sources despite legacy *.py* rule
+!motor_app/*.py
+__pycache__/
+
