@@ -1,0 +1,84 @@
+{
+  "tasks": [
+    {
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "command": "powershell.exe",
+      "type": "process",
+      "presentation": {
+        "clear": true,
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/.vscode/mbed.ps1",
+        "-Action",
+        "Build"
+      ],
+      "label": "Mbed: Build",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/.vscode/mbed.ps1",
+        "-Action",
+        "Rebuild"
+      ],
+      "presentation": {
+        "clear": true,
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "type": "process",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "label": "Mbed: Rebuild",
+      "command": "powershell.exe"
+    },
+    {
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/.vscode/mbed.ps1",
+        "-Action",
+        "Flash"
+      ],
+      "presentation": {
+        "clear": true,
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "type": "process",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "label": "Mbed: Build and Flash",
+      "command": "powershell.exe"
+    }
+  ],
+  "version": "2.0.0"
+}
