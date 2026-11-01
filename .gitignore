@@ -1,0 +1,8 @@
+.build
+.mbed
+projectfiles
+*.py*
+
+BUILD/
+cmake_build/
+
