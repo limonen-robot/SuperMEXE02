@@ -1,73 +1,48 @@
-![](./resources/official_armmbed_example_badge.png)
-# Blinky Mbed OS example
+# SuperMEXE02
 
-The example project is part of the [Arm Mbed OS Official Examples](https://os.mbed.com/code/) and is the [getting started example for Mbed OS](https://os.mbed.com/docs/mbed-os/latest/quick-start/index.html). It contains an application that repeatedly blinks an LED on supported [Mbed boards](https://os.mbed.com/platforms/).
+NUCLEO-G431KBを2台使用し、直動アクチュエータの動作生成とセンサー値に基づくPID制御を行う、拍動循環シミュレータ向けの制御システム。
 
-You can build the project with all supported [Mbed OS build tools](https://os.mbed.com/docs/mbed-os/latest/tools/index.html). However, this example project specifically refers to the command-line interface tools, [Arm Mbed CLI 1](https://github.com/ARMmbed/mbed-cli#installing-mbed-cli) and [Mbed CLI 2](https://github.com/ARMmbed/mbed-tools#installation).
+## ドキュメント
 
-(Note: To see a rendered example you can import into the Arm Online Compiler, please see our [import quick start](https://os.mbed.com/docs/mbed-os/latest/quick-start/online-with-the-online-compiler.html#importing-the-code).)
+- **[システム・ハードウェア仕様書](docs/SYSTEM_SPEC.md)**：機器構成、電源・配線、全ピン割当、計測・制御・通信仕様、停止条件、開発環境、未確認事項。
+- **[アプリの操作説明](motor_app/README.md)**：設定、ビルド・書込み、通常運転、フィードバック、保存・読込み。
+- [α→βの変換表CSV](AlphaToBeta_conversion/)：書式例と既存の変換表。
 
-## Mbed OS build tools
+## 現在の実装
 
-### Mbed CLI 2
-Starting with version 6.5, Mbed OS uses Mbed CLI 2. It uses Ninja as a build system, and CMake to generate the build environment and manage the build process in a compiler-independent manner. If you are working with Mbed OS version prior to 6.5 then check the section [Mbed CLI 1](#mbed-cli-1).
-1. [Install Mbed CLI 2](https://os.mbed.com/docs/mbed-os/latest/build-tools/install-or-upgrade.html).
-1. From the command-line, import the example: `mbed-tools import mbed-os-example-blinky`
-1. Change the current directory to where the project was imported.
+| 項目 | 内容 |
+|---|---|
+| motor | MOTOR_V6、最大4軸のCW/CCW・ZHOME、VCT、最大3系統のPID |
+| sensor | SENSOR_V1、4系列100 Hz取得、VCT後の時刻指定取得 |
+| PC | Windows、Python/Tkinter、各ボードへUSBシリアル115200 bps |
+| 動作 | 軸ごとの移動・待機・ZHOME、同時実行、繰り返し、手動操作 |
+| フィードバック | 数式→CSV→目標値、初期位置移動、指令積算位置表示 |
+| 保存 | 通常運転・センサー・PID・変換表をJSONに保存 |
 
-### Mbed CLI 1
-1. [Install Mbed CLI 1](https://os.mbed.com/docs/mbed-os/latest/quick-start/offline-with-mbed-cli.html).
-1. From the command-line, import the example: `mbed import mbed-os-example-blinky`
-1. Change the current directory to where the project was imported.
+PCと各ボードは別々のUSB COMで接続し、motor PA_0→sensor PB_0をVCTに使用する。両ボードのGNDは共通。
+詳細な電源・リレー回路と、未確認の配線事項は仕様書を参照する。
 
-## Application functionality
+## リポジトリ構成
 
-The `main()` function is the single thread in the application. It toggles the state of a digital output connected to an LED on the board.
+```text
+G431KB_motor/             motorファームウェア、PID
+G431KB_sensor/            sensorファームウェア
+motor_app/                PCアプリ、操作説明、自動テスト
+AlphaToBeta_conversion/   変換表CSV
+docs/SYSTEM_SPEC.md       システム・ハードウェア仕様書
+.vscode/                  ビルド・Flash・アプリ起動タスク
+```
 
-**Note**: This example requires a target with RTOS support, i.e. one with `rtos` declared in `supported_application_profiles` in `targets/targets.json` in [mbed-os](https://github.com/ARMmbed/mbed-os). For non-RTOS targets (usually with small memory sizes), please use [mbed-os-example-blinky-baremetal](https://github.com/ARMmbed/mbed-os-example-blinky-baremetal) instead.
+## 開発・起動
 
-## Building and running
+Mbed Studio同梱のPython・Mbed CLI 1・Arm Compiler 6を利用する。各プロジェクトの`mbed-os.lib`がMbed OSの版を指定しており、本体とBUILDはGitに含めない。新規取得時は各Mbedプロジェクトで`mbed deploy`等により依存を復元する。
 
-1. Connect a USB cable between the USB port on the board and the host computer.
-1. Run the following command to build the example project and program the microcontroller flash memory:
+VS Codeでこのリポジトリのルートを開き、タスクから次を実行する。
 
-    * Mbed CLI 2
+1. `Mbed: Build both`：両MCUのビルド。
+2. 各ボードの`Mbed: G431KB_motor Flash` / `Mbed: G431KB_sensor Flash`：対応するUSBドライブを指定して書込み。
+3. `App: Motor control`：アプリ起動後、motorとsensorの異なるCOMを選択。
 
-    ```bash
-    $ mbed-tools compile -m <TARGET> -t <TOOLCHAIN> --flash
-    ```
+COM番号とUSBドライブ文字は固定ではない。現在のアプリにはMOTOR_V6とSENSOR_V1を使用する。
 
-    * Mbed CLI 1
-
-    ```bash
-    $ mbed compile -m <TARGET> -t <TOOLCHAIN> --flash
-    ```
-
-Your PC may take a few minutes to compile your code.
-
-The binary is located at:
-* **Mbed CLI 2** - `./cmake_build/<TARGET>/develop/<TOOLCHAIN>/mbed-os-example-blinky.bin`
-* **Mbed CLI 1** - `./BUILD/<TARGET>/<TOOLCHAIN>/mbed-os-example-blinky.bin`
-
-Alternatively, you can manually copy the binary to the board, which you mount on the host computer over USB.
-
-## Expected output
-The LED on your target turns on and off every 500 milliseconds.
-
-
-## Troubleshooting
-If you have problems, you can review the [documentation](https://os.mbed.com/docs/latest/tutorials/debugging.html) for suggestions on what could be wrong and how to fix it.
-
-## Related Links
-
-* [Mbed OS Stats API](https://os.mbed.com/docs/latest/apis/mbed-statistics.html).
-* [Mbed OS Configuration](https://os.mbed.com/docs/latest/reference/configuration.html).
-* [Mbed OS Serial Communication](https://os.mbed.com/docs/latest/tutorials/serial-communication.html).
-* [Mbed OS bare metal](https://os.mbed.com/docs/mbed-os/latest/reference/mbed-os-bare-metal.html).
-* [Mbed boards](https://os.mbed.com/platforms/).
-
-### License and contributions
-
-The software is provided under Apache-2.0 license. Contributions to this project are accepted under the same license. Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for more info.
-
-This project contains code from other projects. The original license text is included in those source files. They must comply with our license guide.
+2026-11-11時点でアプリの自動テスト89件、両MCUのビルドを確認済み。研究条件での性能評価・校正状況と今後の拡張範囲は[仕様書](docs/SYSTEM_SPEC.md)に記載する。
