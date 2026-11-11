@@ -9,6 +9,7 @@ from tkinter import ttk, messagebox, filedialog
 import serial
 from serial.tools import list_ports
 from scrolling import ScrollablePage
+from feedback_ui import FeedbackPanel
 from settings_store import encode_settings, write_settings, read_settings
 from motion import (plan_move, make_step, make_wait, make_home, compile_program,
                     MAX_STEPS_PER_AXIS, MIN_DISTANCE_MM, MAX_DISTANCE_MM, timing_config, scale_steps, jog_command)
@@ -171,6 +172,7 @@ class MotorApp:
         self.run_btn = ttk.Button(program_panel, text='登録した動作を実行（全軸同時開始）', command=self.run_program, state='disabled')
         self.run_btn.pack(fill='x', ipady=9)
         self.build_controls(control_page)
+        self.feedback = FeedbackPanel(self,pages)
         self.work_scroll.install_wheel_bindings()
         self.control_scroll.install_wheel_bindings()
         info = ttk.Label(frame, text='最小移動0.0004 mm（1パルス）/ 時間入力0.001 ms刻み。1動作6 mm / 合計速度20 mm/sまで。\n'
@@ -195,9 +197,11 @@ class MotorApp:
         root.after(100, self.poll)
 
     def capture_settings(self):
-        return encode_settings(self.programs, self.period.get(), self.pulse_width.get(),
+        data = encode_settings(self.programs, self.period.get(), self.pulse_width.get(),
                                self.delay_values(), self.prehome.get(), self.repeat_mode.get(),
                                self.with_vct.get(), self.jog_axis.get(), self.jog_speed.get())
+        data['sensor_feedback']=self.feedback.capture()
+        return data
 
     def settings_directory(self, create=False):
         if self.settings_path and self.settings_path.parent.is_dir():
@@ -239,6 +243,7 @@ class MotorApp:
             if not path:
                 return
             state = read_settings(path)  # Validate everything before changing current settings.
+            self.feedback.apply(state['sensor_feedback'])
             self.programs = state['programs']
             self.period_sync = True
             try:
@@ -544,6 +549,7 @@ class MotorApp:
 
     def set_busy(self, value):
         self.busy = value
+        if hasattr(self,'feedback'):self.feedback.set_busy(value)
         for control, normal_state in self.controls:
             control.configure(state='disabled' if value else normal_state)
         for control in self.program_controls:
@@ -552,11 +558,14 @@ class MotorApp:
             control.configure(state='disabled' if value else 'normal')
         self.update_preview()
 
-    def reset_execution(self):
+    def reset_execution(self, preserve_feedback_position=False):
         self.pending_upload = []
         self.expected_ack = None
         self.start_deadline = 0
         self.phase = 'idle'
+        if hasattr(self,'feedback'):
+            if not preserve_feedback_position:self.feedback.clear_motor_positions()
+            self.feedback.accepting=False
         self.jog_held = False
         try:
             self.root.grab_release()
@@ -678,6 +687,20 @@ class MotorApp:
         except (serial.SerialException, OSError) as exc:
             self.connection_error(exc)
 
+    def start_feedback(self, feedback_commands):
+        if self.busy or not self.ready:
+            raise ValueError('motorを接続し、停止してから開始してください。')
+        if any(self.programs.values()):
+            commands, _, _ = compile_program(self.programs,self.repeat_mode.get(),self.period.get(),self.delay_values())
+        else:
+            commands=[('CLEAR','ACK CLEAR')]
+        commands += feedback_commands + [self.config_command()]
+        self.begin_execution(self.programs,program_run=True)
+        self.execution_type='feedback'
+        self.pending_upload=list(commands)
+        self.phase='upload'
+        self.send_next_upload()
+
     def send_next_upload(self):
         if self.phase != 'upload':
             return
@@ -688,7 +711,7 @@ class MotorApp:
         else:
             self.phase = 'start'
             self.status.set('全軸の開始応答待ち…')
-            self.send_request('RUN')
+            self.send_request('FBRUN' if self.execution_type=='feedback' else 'RUN')
 
     def stop(self):
         if self.ready:
@@ -704,12 +727,24 @@ class MotorApp:
 
     def receive(self, line):
         self.last_reply = time.monotonic()
+        if line.startswith('FBSTAT '):
+            if self.ready and self.execution_type=='feedback' and self.phase in ('feedback','stop'):
+                self.feedback.motor_line(line)
+            return
+        if line=='FBREADY ALL':
+            if self.execution_type=='feedback' and self.phase=='feedback' and self.busy:
+                try:
+                    self.feedback.reset_measurements()
+                    self.status.set('初期位置移動完了。計測窓を取り直し、有効値が揃ってからPIDを開始します。')
+                except OSError as exc:
+                    self.append('計測を再開できません：'+str(exc));self.stop()
+            return
         if line == 'PONG':
             return
         self.append(line)
-        if line.startswith('READY ') and line != 'READY SUPERMEXE02_MOTOR_V4':
-            self.connection_error('motor用の新しいコード（V4）を書き込んでください。')
-        elif line == 'READY SUPERMEXE02_MOTOR_V4':
+        if line.startswith('READY ') and line != 'READY SUPERMEXE02_MOTOR_V6':
+            self.connection_error('motor用の新しいコード（V6）を書き込んでください。')
+        elif line == 'READY SUPERMEXE02_MOTOR_V6':
             # Establish an idle session before enabling controls.
             self.write('STOP')
             self.ready = True
@@ -728,26 +763,26 @@ class MotorApp:
                 else:
                     self.start_deadline = 0
                     self.send_next_upload()
-        elif self.ready and line in ('START ALL', 'START REPEAT', 'START VCT', 'START JOG'):
+        elif self.ready and line in ('START ALL', 'START REPEAT', 'START VCT', 'START JOG','START FEEDBACK'):
             if self.phase != 'start':
                 if self.phase != 'stop':
                     self.stop()
                 return
             self.start_deadline = 0
-            self.phase = {'START ALL':'run','START REPEAT':'repeat','START VCT':'vct','START JOG':'jog'}[line]
+            self.phase = {'START ALL':'run','START REPEAT':'repeat','START VCT':'vct','START JOG':'jog','START FEEDBACK':'feedback'}[line]
             self.status.set({'run':'実行中（ZHOMEを含む場合は固定待機します）', 'repeat':'VCT同期で繰り返し中',
-                             'vct':'VCT出力中', 'jog':'手動操作中：ボタンを離すと停止'}[self.phase])
+                             'vct':'VCT出力中', 'jog':'手動操作中：ボタンを離すと停止','feedback':'ZHOME・初期位置への移動中。完了後にPIDを開始します。'}[self.phase])
         elif self.ready and line == 'WAIT HOME':
             self.jog_held = False
             self.start_deadline = time.monotonic() + 2
             self.status.set('原点復帰待機中：次の操作は待機終了後に有効になります。')
         elif self.ready and line.startswith('COUNTS '):
-            if self.phase in ('repeat','vct'):
+            if self.phase in ('repeat','vct','feedback'):
                 parts = line.split()
                 if len(parts) == 6 and all(p.isdigit() for p in parts[1:]):
                     self.status.set('VCT {}回 / 周期開始 A:{} B:{} C:{} D:{}'.format(*parts[1:]))
         elif self.ready and line.startswith('STEP '):
-            if self.phase != 'run':
+            if self.phase not in ('run','feedback'):
                 return
             try:
                 _, axis, number, pulses = line.split()
@@ -775,7 +810,7 @@ class MotorApp:
             self.set_busy(False)
             self.status.set('すべての指令パルス出力が完了しました。')
         elif self.ready and line.startswith('STOPPED '):
-            self.reset_execution()
+            self.reset_execution(preserve_feedback_position=True)
             self.set_busy(False)
             self.status.set('停止・待機中（残りの動作も中止）' if line == 'STOPPED USER' else '全軸停止：' + line)
         elif line.startswith('ERR '):
@@ -825,6 +860,7 @@ class MotorApp:
 
     def close(self):
         self.disconnect()
+        self.feedback.close()
         self.root.destroy()
 
 

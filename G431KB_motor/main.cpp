@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <cerrno>
 #include <cstdint>
+#include <cmath>
 using namespace std::chrono;
 using Clock = Timeout::clock;
 
@@ -36,12 +37,18 @@ bool home_guard = false;
 volatile uint32_t vct_count = 0;
 void stop_outputs();
 void pulse_home(int i);
+bool fb_mode=false;
+bool fb_any(); bool fb_axis(int); void fb_clear(); void fb_halt(); void fb_begin(); void fb_poll();
+bool fb_validate(unsigned long&); bool fb_command(char**,int);
+void fb_report(bool);
+extern bool fb_initial_complete;
 
 struct Axis {
     Timeout edge, cycle;
     Step steps[MAX_STEPS];
     int count = 0, index = 0, reported = 0;
     volatile int finished = 0;
+    volatile long position=0;
     volatile uint32_t cycles = 0;
     volatile bool active = false;
     bool high = false, home_started = false;
@@ -74,6 +81,7 @@ struct Axis {
         arm();
     }
     void complete_step() {
+        if(steps[finished].kind==HOME)position=0;
         ++finished;
         if (finished >= count) { active = false; return; }
         start_step(deadline);
@@ -98,6 +106,7 @@ struct Axis {
             if (remaining == 0) { complete_step(); return; }
         } else {
             *pin = 1; high = true;
+            position += s.pulses>0?1:-1;
             if (remaining > 0) --remaining;
         }
         half_us = next_interval();
@@ -145,6 +154,7 @@ void stop_outputs() {
     }
 }
 void stopped_reply() {
+    fb_report(true);
     char out[64]; snprintf(out, sizeof(out), "STOPPED %s\n", stop_reason); send(out);
     stopping = false;
 }
@@ -152,6 +162,7 @@ void halt(const char *reason) {
     core_util_critical_section_enter();
     stop_outputs();
     running = repeating = preparing = jogging = vct_only = false;
+    fb_halt();
     timing_fault = false;
     const bool wait = guarding_home();
     core_util_critical_section_exit();
@@ -172,16 +183,17 @@ void vct_tick() {
 }
 void launch() {
     if (!running) return;
+    if(fb_mode&&!fb_initial_complete){fb_begin();return;}
     preparing = false;
     const auto origin = Clock::now() + milliseconds(2);
-    if (cfg_vct || repeating || vct_only) {
+    if (cfg_vct || repeating || vct_only || fb_mode) {
         next_vct = origin;
         vct_rise_timer.attach_absolute(callback(vct_tick), next_vct);
     }
     if (vct_only) { for (int i = 0; i < 4; ++i) axes[i].cycles = 0; return; }
     for (int i = 0; i < 4; ++i) {
         axes[i].cycles = 0;
-        if (!axes[i].count) continue;
+        if (!axes[i].count || (fb_mode&&fb_axis(i))) continue;
         if (repeating) {
             axes[i].cycle_origin = origin + microseconds(delays_us[i]);
             axes[i].cycle.attach_absolute(callback(&axes[i], &Axis::cycle_tick), axes[i].cycle_origin);
@@ -190,10 +202,11 @@ void launch() {
 }
 void prehome() {
     if (!running) return;
-    for (int i = 0; i < 4; ++i) if (axes[i].count) pulse_home(i);
+    for (int i = 0; i < 4; ++i) if ((cfg_home&&axes[i].count)||(fb_mode&&fb_axis(i))) pulse_home(i);
     prepare_timer.attach_absolute(callback(launch), home_guard_until + microseconds(100));
 }
 void clear_program() {
+    fb_clear();
     for (int i = 0; i < 4; ++i) axes[i].count = axes[i].reported = axes[i].finished = 0;
 }
 bool integer(const char *s, long &value) {
@@ -206,6 +219,8 @@ bool integer64(const char *s, int64_t &value) {
     errno = 0; char *end; value = strtoll(s, &end, 10);
     return errno == 0 && *end == '\0';
 }
+#include "feedback_controller.h"
+
 bool validate_program() {
     unsigned long rate = 0; int total = 0;
     for (int i = 0; i < 4; ++i) {
@@ -227,7 +242,8 @@ bool validate_program() {
         if (cfg_repeat && duration > period_us) { send("ERR CYCLE_TOO_SHORT\n"); return false; }
         total += axes[i].count;
     }
-    if (!total) { send("ERR EMPTY\n"); return false; }
+    if(fb_mode&&!fb_validate(rate))return false;
+    if (!total && !(fb_mode&&fb_any())) { send("ERR EMPTY\n"); return false; }
     if (rate > MAX_EDGE_RATE) { send("ERR COMBINED_SPEED\n"); return false; }
     return true;
 }
@@ -238,26 +254,28 @@ void run_program() {
     jogging = vct_only = false; vct_count = 0;
     core_util_critical_section_enter();
     stop_outputs();
-    preparing = cfg_home;
+    preparing = cfg_home || fb_mode;
     if (preparing) prepare_timer.attach(callback(prehome), milliseconds(2)); else launch();
     core_util_critical_section_exit();
-    send(repeating ? "START REPEAT\n" : "START ALL\n");
+    send(fb_mode ? "START FEEDBACK\n" : (repeating ? "START REPEAT\n" : "START ALL\n"));
 }
 void add_reply(int i) {
     char out[50]; snprintf(out, sizeof(out), "ACK ADD %c %d\n", 'A' + i, axes[i].count); send(out);
 }
 void command(char *line) {
-    char *parts[12] = {}; int n = 0;
+    char *parts[24] = {}; int n = 0;
     char *p = strtok(line, " \t");
-    while (p && n < 12) { parts[n++] = p; p = strtok(nullptr, " \t"); }
+    while (p && n < 24) { parts[n++] = p; p = strtok(nullptr, " \t"); }
     if (!n) return;
     const char *cmd = parts[0];
-    if (n == 1 && !strcmp(cmd, "HELLO")) { send("READY SUPERMEXE02_MOTOR_V4\n"); return; }
+    if (n == 1 && !strcmp(cmd, "HELLO")) { send("READY SUPERMEXE02_MOTOR_V6\n"); return; }
     if (n == 1 && !strcmp(cmd, "PING")) { last_ping_ms = now_ms(); send("PONG\n"); return; }
     if (n == 1 && !strcmp(cmd, "STOP")) { halt("USER"); return; }
     if (n == 1 && !strcmp(cmd, "JKEEP")) { if (jogging) last_jog_ms = now_ms(); return; }
+    if(fb_command(parts,n))return;
     if (running || stopping || guarding_home()) { send("ERR BUSY\n"); return; }
     if (n == 1 && !strcmp(cmd, "CLEAR")) { clear_program(); send("ACK CLEAR\n"); return; }
+    if(n==1&&!strcmp(cmd,"FBRUN")){fb_mode=true;run_program();if(!running)fb_mode=false;return;}
     if (n == 1 && !strcmp(cmd, "RUN")) { run_program(); return; }
     long values[9] = {};
     if (n == 10 && !strcmp(cmd, "CONFIG")) {
@@ -323,11 +341,11 @@ void command(char *line) {
 int main() {
     sleep_manager_lock_deep_sleep(); uptime.start();
     for (int i = 0; i < 4; ++i) axes[i].index = i;
-    char line[128]; size_t length = 0; bool overflow = false;
+    char line[256]; size_t length = 0; bool overflow = false;
     uint32_t last_status = 0;
-    send("READY SUPERMEXE02_MOTOR_V4\n");
+    send("READY SUPERMEXE02_MOTOR_V6\n");
     while (true) {
-        for (int i = 0; i < 128 && pc.readable(); ++i) {
+        for (int i = 0; i < 256 && pc.readable(); ++i) {
             char c; if (pc.read(&c, 1) != 1) break;
             if (c == '\r' || c == '\n') {
                 if (overflow) send("ERR LINE_TOO_LONG\n");
@@ -341,9 +359,11 @@ int main() {
         if (running && timing_fault) halt("TIMING");
         if (running && now_ms() - last_ping_ms > LINK_TIMEOUT_MS) halt("LINK_TIMEOUT");
         if (running && jogging && now_ms() - last_jog_ms > JOG_LEASE_MS) halt("JOG_RELEASE");
+        fb_poll();
         if (running && !preparing && !repeating && !vct_only && !jogging) {
             bool any = false;
             for (int i = 0; i < 4; ++i) {
+                if(fb_mode&&fb_axis(i))continue;
                 Axis &axis = axes[i];
                 while (axis.reported < axis.finished) {
                     int s = axis.reported++;
@@ -351,12 +371,12 @@ int main() {
                 }
                 any |= axis.active;
             }
-            if (!any && !timing_fault) {
+            if (!any && !timing_fault && !fb_mode) {
                 vct_rise_timer.detach(); vct_fall_timer.detach(); vct = 0;
                 running = false; send("DONE ALL\n");
             }
         }
-        if (running && (repeating || vct_only) && now_ms()-last_status >= 1000) {
+        if (running && (repeating || vct_only || fb_mode) && now_ms()-last_status >= 1000) {
             last_status = now_ms(); char out[100];
             snprintf(out, sizeof(out), "COUNTS %lu %lu %lu %lu %lu\n", (unsigned long)vct_count,
                      (unsigned long)axes[0].cycles, (unsigned long)axes[1].cycles,

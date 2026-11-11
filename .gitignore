@@ -11,3 +11,5 @@ cmake_build/
 !motor_app/*.py
 __pycache__/
 
+# Mbed OS is restored from each project's mbed-os.lib
+mbed-os/

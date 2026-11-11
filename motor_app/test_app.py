@@ -34,7 +34,7 @@ class AppTests(unittest.TestCase):
         self.port_mock.stop()
 
     def connect(self):
-        self.app.receive('READY SUPERMEXE02_MOTOR_V4')
+        self.app.receive('READY SUPERMEXE02_MOTOR_V6')
         self.assertEqual(self.fake.sent, ['STOP'])
         self.app.receive('STOPPED USER')
 
@@ -138,7 +138,7 @@ class AppTests(unittest.TestCase):
     def test_reboot_aborts_and_does_not_resume(self):
         self.connect()
         self.upload_two_axes()
-        self.app.receive('READY SUPERMEXE02_MOTOR_V4')
+        self.app.receive('READY SUPERMEXE02_MOTOR_V6')
         self.app.receive('STOPPED USER')
         self.assertFalse(self.app.busy)
         self.assertEqual(self.fake.sent.count('RUN'), 1)
@@ -175,8 +175,11 @@ class AppTests(unittest.TestCase):
         self.assertTrue(self.fake.closed)
         self.assertEqual(self.fake.sent[-1], 'STOP')
 
+    def test_v5_cannot_connect_to_unbounded_position_app(self):
+        self.app.receive('READY SUPERMEXE02_MOTOR_V5')
+        self.assertFalse(self.app.ready)
+        self.assertTrue(self.fake.closed)
+
 
 if __name__ == '__main__':
     unittest.main()
-
-

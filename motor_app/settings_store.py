@@ -3,13 +3,14 @@ import json
 import math
 import os
 import tempfile
+from feedback_model import defaults as feedback_defaults, normalize as normalize_feedback
 from pathlib import Path
 from motion import (PULSES_PER_MM, MAX_STEPS_PER_AXIS, make_step, make_wait,
                     make_home, refresh_step, timing_config, jog_command)
 
 FORMAT = 'SuperMEXE02.motion-settings'
 VERSION = 1
-MAX_FILE_BYTES = 1024 * 1024
+MAX_FILE_BYTES = 4 * 1024 * 1024
 
 
 def object_value(value, label):
@@ -95,7 +96,8 @@ def decode_settings(data):
         if not isinstance(jog_axis, str):
             raise ValueError('手動操作の軸が不正です。')
         jog_command(jog_axis, 'CW', jog_speed)
-        return dict(programs=programs, period_us=period, width_us=width,
+        return dict(sensor_feedback=normalize_feedback(data.get('sensor_feedback',feedback_defaults())),
+                    programs=programs, period_us=period, width_us=width,
                     delays_us=offsets, repeat=repeat, prehome=prehome,
                     with_vct=vct, jog_axis=jog_axis, jog_speed=jog_speed)
     except (KeyError, TypeError, OverflowError) as exc:
@@ -154,7 +156,7 @@ def read_settings(path):
     with open(path, 'rb') as stream:
         raw = stream.read(MAX_FILE_BYTES+1)
     if len(raw) > MAX_FILE_BYTES:
-        raise ValueError('設定ファイルが大きすぎます（上限1 MB）。')
+        raise ValueError('設定ファイルが大きすぎます（上限4 MB）。')
     try:
         data = json.loads(raw.decode('utf-8-sig'))
     except (UnicodeError, ValueError, RecursionError) as exc:
