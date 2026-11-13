@@ -4,6 +4,7 @@ from xml.etree import ElementTree as ET
 
 def verify(path):
     tree=ET.parse(path)
+    assert len(tree.findall("./design/sheet"))==1, "Expected a single-sheet project"
     nets={n.attrib['name']:{(p.attrib['ref'],p.attrib['pin']) for p in n.findall('node')} for n in tree.findall('./nets/net')}
     owner={p:name for name,nodes in nets.items() for p in nodes}
     def same(*pins):

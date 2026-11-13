@@ -4,7 +4,9 @@ KiCad 10で **[SuperMEXE02.kicad_pro](SuperMEXE02.kicad_pro)** を開き、回�
 
 ![motor・sensorと基板間配線](previews/sensor_frontend.png)
 
-同じプロジェクトの1ページ目（A2）に、sensor用U1とmotor用U2の全30端子付きG431KBを配置しました。2ページ目にA/B軸、3ページ目にC/D軸のAZD-K・ZHOMEリレー・24 V電源を追加しています。[AZD-Kの全端子と配線](AZD_K_WIRING.md)を参照してください。4つの入力、共通3V3/GND、リレー経由のVCT、D1→D0、共通リセットスイッチを直接配線しています。[基板間配線と未確定事項](INTERCONNECTS.md)を参照してください。コードは変更していません。
+**A0横の1ページに、すべての部品を統合しました。** 左側に両G431KB・4入力・共通リセット・UART・VCTリレー、右上にA/B軸と電源PS1、右下にC/D軸と電源PS2を配置しています。子ページはありません。同じラベル名は同じ電気接続を表します。KiCadまたはSVGを拡大して全ピンを確認してください。
+
+[AZD-Kの全端子と配線](AZD_K_WIRING.md)／[基板間配線と未確定事項](INTERCONNECTS.md)。接続内容・部品定数・ピン割当は3ページ版から変更していません。ファームウェアとPCアプリも変更していません。
 
 ## 現在の範囲
 
@@ -47,20 +49,13 @@ U1・U2は左CN4・右CN3をそれぞれ上から1〜15番で配置した基板�
 ## ファイルと検証
 
 - `SuperMEXE02.kicad_pro`：開くプロジェクト。
-- `SuperMEXE02.kicad_sch`：両マイコンとセンサーのルート回路図。
-- `Drives_AB.kicad_sch` / `Drives_CD.kicad_sch`：各2軸のドライバ・リレー・24 V電源。
+- `SuperMEXE02.kicad_sch`：全機器を配置した1ページの回路図。
 - [AZD-K・リレー・電源の詳細](AZD_K_WIRING.md)：全端子表、IN-COMの説明、分配と未記載事項。
 - `SuperMEXE02_IO.kicad_sym` / `sym-lib-table`：プロジェクト専用シンボルと相対パス設定。
 - `sensor_channels.json`：チャンネルと部品番号・ヘッダーピンの対応。
 - `nucleo_g431kb_pinout.json` / [全端子対応表](NUCLEO_G431KB_PINOUT.md)：全30端子の配置と信号名。
-- `previews/`：各ページのSVG・PNGプレビュー。
+- `previews/`：1ページ全体のSVG・PNGプレビュー。
 - `verify_connections.py`：KiCad XMLネットリストと確認済み配線の照合。
 - [検証記録](checks/README.md)：ERCとネットリスト照合。
 
 元の回路定数を再現した段階であり、センサーの出力範囲・保護性能・実配線の適合確認は今後行います。ファームウェアとPCアプリは今回変更していません。
-
-## A/B軸・C/D軸プレビュー
-
-![A/B軸](previews/Drives_AB.png)
-
-![C/D軸](previews/Drives_CD.png)

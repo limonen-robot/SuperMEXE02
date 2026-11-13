@@ -2,13 +2,15 @@
 
 利用者確認：2026-11-13。ファームウェアとPCアプリは変更していません。
 
-## ページ構成
+## 1ページの配置
 
-- 1ページ：両NUCLEO、4入力、共通リセット、UART線、VCT用リレーK1。
-- 2ページ：[A・B軸](previews/Drives_AB.png)、AZD-KのU3/U4、ZHOMEリレーK2/K3、電源PS1。
-- 3ページ：[C・D軸](previews/Drives_CD.png)、AZD-KのU5/U6、ZHOMEリレーK4/K5、電源PS2。
+`SuperMEXE02.kicad_pro`を開くと、A0横の1ページ全体を編集できます。[全体プレビュー](previews/sensor_frontend.png)／[拡大可能なSVG](previews/SuperMEXE02.svg)。
 
-同じ `SuperMEXE02.kicad_pro` を開き、ルート図上部の階層シート枠をダブルクリックすると子ページへ入れます。緑色の配線だけでなく、同名のグローバルラベルもページ間で電気的に接続されています。
+- 左：両NUCLEO、4入力、共通リセット、UART線、VCT用リレーK1。
+- 右上：A・B軸のAZD-K U3/U4、ZHOMEリレーK2/K3、電源PS1。
+- 右下：C・D軸のAZD-K U5/U6、ZHOMEリレーK4/K5、電源PS2。
+
+階層シートは廃止し、すべて同じページに配置しました。同名のグローバルラベルは同じ電気接続を表します。統合前後ですべてのネットの部品ピン集合が一致することを確認し、配線の変更はありません。
 
 ## AZD-K：CN4全24端子
 
