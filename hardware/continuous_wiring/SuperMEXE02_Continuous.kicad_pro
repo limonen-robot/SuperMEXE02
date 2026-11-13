@@ -2,5 +2,213 @@
   "meta": {
     "filename": "SuperMEXE02_Continuous.kicad_pro",
     "version": 3
+  },
+  "net_settings": {
+    "meta": {
+      "version": 5
+    },
+    "classes": [
+      {
+        "name": "Default",
+        "priority": 2147483647,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "wire_width": 6,
+        "bus_width": 12,
+        "line_style": 0,
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "clearance": 0.2,
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "diff_pair_width": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25
+      },
+      {
+        "name": "GROUND",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 1.000)"
+      },
+      {
+        "name": "POWER",
+        "priority": 1,
+        "schematic_color": "rgba(208, 32, 32, 1.000)"
+      },
+      {
+        "name": "SENSOR",
+        "priority": 2,
+        "schematic_color": "rgba(32, 128, 64, 1.000)"
+      },
+      {
+        "name": "CW",
+        "priority": 3,
+        "schematic_color": "rgba(32, 85, 208, 1.000)"
+      },
+      {
+        "name": "CCW",
+        "priority": 4,
+        "schematic_color": "rgba(128, 48, 176, 1.000)"
+      },
+      {
+        "name": "ZHOME",
+        "priority": 5,
+        "schematic_color": "rgba(208, 112, 0, 1.000)"
+      },
+      {
+        "name": "VCT",
+        "priority": 6,
+        "schematic_color": "rgba(0, 140, 156, 1.000)"
+      },
+      {
+        "name": "UART",
+        "priority": 7,
+        "schematic_color": "rgba(136, 80, 32, 1.000)"
+      },
+      {
+        "name": "RESET",
+        "priority": 8,
+        "schematic_color": "rgba(96, 96, 96, 1.000)"
+      }
+    ],
+    "netclass_patterns": [
+      {
+        "netclass": "POWER",
+        "pattern": "+3V3"
+      },
+      {
+        "netclass": "GROUND",
+        "pattern": "/0V_AB"
+      },
+      {
+        "netclass": "GROUND",
+        "pattern": "/0V_CD"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/24V_AB"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/24V_CD"
+      },
+      {
+        "netclass": "CCW",
+        "pattern": "/A_CCW"
+      },
+      {
+        "netclass": "CW",
+        "pattern": "/A_CW"
+      },
+      {
+        "netclass": "ZHOME",
+        "pattern": "/A_HOME"
+      },
+      {
+        "netclass": "CCW",
+        "pattern": "/B_CCW"
+      },
+      {
+        "netclass": "CW",
+        "pattern": "/B_CW"
+      },
+      {
+        "netclass": "ZHOME",
+        "pattern": "/B_HOME"
+      },
+      {
+        "netclass": "CCW",
+        "pattern": "/C_CCW"
+      },
+      {
+        "netclass": "CW",
+        "pattern": "/C_CW"
+      },
+      {
+        "netclass": "ZHOME",
+        "pattern": "/C_HOME"
+      },
+      {
+        "netclass": "CCW",
+        "pattern": "/D_CCW"
+      },
+      {
+        "netclass": "CW",
+        "pattern": "/D_CW"
+      },
+      {
+        "netclass": "ZHOME",
+        "pattern": "/D_HOME"
+      },
+      {
+        "netclass": "UART",
+        "pattern": "/SENSOR_D1_TO_MOTOR_D0"
+      },
+      {
+        "netclass": "GROUND",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "SENSOR",
+        "pattern": "Net-(D1-K)"
+      },
+      {
+        "netclass": "SENSOR",
+        "pattern": "Net-(D2-K)"
+      },
+      {
+        "netclass": "SENSOR",
+        "pattern": "Net-(D5-K)"
+      },
+      {
+        "netclass": "SENSOR",
+        "pattern": "Net-(D7-K)"
+      },
+      {
+        "netclass": "SENSOR",
+        "pattern": "Net-(R1-Pad1)"
+      },
+      {
+        "netclass": "SENSOR",
+        "pattern": "Net-(R2-Pad1)"
+      },
+      {
+        "netclass": "SENSOR",
+        "pattern": "Net-(R5-Pad1)"
+      },
+      {
+        "netclass": "SENSOR",
+        "pattern": "Net-(R7-Pad1)"
+      },
+      {
+        "netclass": "RESET",
+        "pattern": "Net-(SW1-Pad1)"
+      },
+      {
+        "netclass": "VCT",
+        "pattern": "/VCT_SENSOR"
+      },
+      {
+        "netclass": "VCT",
+        "pattern": "/VCT_RELAY_IN"
+      },
+      {
+        "netclass": "ZHOME",
+        "pattern": "/A_ZHOME_24V"
+      },
+      {
+        "netclass": "ZHOME",
+        "pattern": "/B_ZHOME_24V"
+      },
+      {
+        "netclass": "ZHOME",
+        "pattern": "/C_ZHOME_24V"
+      },
+      {
+        "netclass": "ZHOME",
+        "pattern": "/D_ZHOME_24V"
+      }
+    ]
   }
 }
