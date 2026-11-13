@@ -1,0 +1,8 @@
+*.lck
+~*
+*.kicad_prl
+*-backups/
+*.net.xml
+*.net
+fp-info-cache
+!verify_continuity.py

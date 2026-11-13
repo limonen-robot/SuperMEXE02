@@ -8,6 +8,10 @@ KiCad 10で **[SuperMEXE02.kicad_pro](SuperMEXE02.kicad_pro)** を開き、回�
 
 [AZD-Kの全端子と配線](AZD_K_WIRING.md)／[基板間配線と未確定事項](INTERCONNECTS.md)。接続内容・部品定数・ピン割当は3ページ版から変更していません。ファームウェアとPCアプリも変更していません。
 
+## 追加：すべての線をつないだ配線図
+
+元の図をそのまま残し、マイコンから全接続先まで線を追える[連続配線図](continuous_wiring/README.md)を別に追加しました。開くファイルは `continuous_wiring/SuperMEXE02_Continuous.kicad_pro` です。信号・電源・GNDをラベルで省略せず描いています。両図の電気的な接続内容は同じです。
+
 ## 現在の範囲
 
 2026-11-13の利用者説明と提供図をもとに、sensor側4入力と両マイコン間の実配線を記録しています。motorのCW/CCW、ZHOME用リレー4枚、MDR-100-24電源2台も記載しています。

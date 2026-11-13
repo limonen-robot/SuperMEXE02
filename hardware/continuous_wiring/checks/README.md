@@ -1,0 +1,23 @@
+# 連続配線図の確認記録
+
+2026-11-14、KiCad 10.0.8。比較元は元図コミット `543c0be` の接続内容です。
+
+- ERC：エラー0・警告0（同梱レポート）。
+- シート1枚、グローバルラベル0、同名のローカルラベルの重複0。
+- `verify_continuity.py`：ラベルと電源名を無視し、線の端点・接続点・部品ピンを解析。299本の直交線分だけによる全ネットの接続を確認。
+- 元図と連続図のネットリストを、全ネットに属する部品ピンの集合で比較して完全一致。
+- 既存の `../verify_connections.py` による4軸GPIO・ADC・IN-COM5・リレー・UART・共通リセット・電源分離の検査にも合格。
+- PNG/SVGで配置・配線・注記を目視確認。
+- 元図の `.kicad_pro` / `.kicad_sch` / 専用シンボル / SVG・PNGは変更なし。
+
+図面上の接続確認であり、実機の電圧・電流・ノイズ・絶縁・接点時間を検証したものではありません。
+
+再確認（この連続配線図フォルダーで実行し、KiCadのbinをPATHへ追加）：
+
+```powershell
+kicad-cli sch erc --severity-all --exit-code-violations -o checks/continuous.erc.rpt SuperMEXE02_Continuous.kicad_sch
+kicad-cli sch export netlist --format kicadxml -o continuous.net.xml SuperMEXE02_Continuous.kicad_sch
+kicad-cli sch export netlist --format kicadxml -o original.net.xml ../SuperMEXE02.kicad_sch
+python ../verify_connections.py continuous.net.xml
+python verify_continuity.py SuperMEXE02_Continuous.kicad_sch continuous.net.xml original.net.xml
+```
