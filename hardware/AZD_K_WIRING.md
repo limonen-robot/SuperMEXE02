@@ -2,6 +2,8 @@
 
 利用者確認：2026-11-13。ファームウェアとPCアプリは変更していません。
 
+全部品の全接続先・未記載端子・配色を省略なく読む場合は[文字による再現仕様](HARDWARE_REPRODUCTION.md)と[機械可読JSON](wiring_manifest.json)を参照してください。CN4の図上の左右配置はシンボルの配置であり、差込面と電線側を含む実コネクターの物理向きを確定する記録ではありません。
+
 ## 1ページの配置
 
 `SuperMEXE02.kicad_pro`を開くと、A0横の1ページ全体を編集できます。[全体プレビュー](previews/sensor_frontend.png)／[拡大可能なSVG](previews/SuperMEXE02.svg)。

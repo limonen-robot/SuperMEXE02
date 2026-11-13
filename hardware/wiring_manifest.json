@@ -1,0 +1,4042 @@
+{
+  "schema": "SuperMEXE02.wiring.v1",
+  "updated_date": "2026-11-14",
+  "source_commit": "f86a55072f371dded0bd47b91c7834496d5b0808",
+  "scope": "Tool-neutral external terminal connectivity of the recorded circuit; native CAD fields are optional provenance, not dependencies. Not a complete manufacturing or as-built specification.",
+  "units": {
+    "coordinates": "mm",
+    "rotation": "degrees",
+    "resistance": "ohm",
+    "capacitance": "farad",
+    "supply_voltage": "volt"
+  },
+  "sources": [
+    {
+      "path": "SuperMEXE02.kicad_sch",
+      "sha256": "31a298ede6e7c0511f2038492c3048800d93bad63cc384a4d54b0e15b877e758"
+    },
+    {
+      "path": "SuperMEXE02.kicad_pro",
+      "sha256": "f8c3e3aa931cb440da33eb00d1effb43c7c79e5b2c8b4cbc30dfd3f18b80ef0f"
+    },
+    {
+      "path": "SuperMEXE02_IO.kicad_sym",
+      "sha256": "b5f63aaaaa93cb8d06791bbf9b553e5b165af15590eb479fdac2435d2788ddb7"
+    },
+    {
+      "path": "sym-lib-table",
+      "sha256": "2f87c15dce482a8da573fe088786104c2c7da39b8c4994f6f47c97a1757360ad"
+    },
+    {
+      "path": "continuous_wiring/SuperMEXE02_Continuous.kicad_sch",
+      "sha256": "b7ba05763f0a0fde9564daceab4dc23c9e83fbcde8c868cd3d55b5511bddc543"
+    },
+    {
+      "path": "continuous_wiring/SuperMEXE02_Continuous.kicad_pro",
+      "sha256": "66f15b94a7521e853f034699c9de0dc0aea43baafed395efc8d504d315e90e7b"
+    },
+    {
+      "path": "continuous_wiring/SuperMEXE02_IO.kicad_sym",
+      "sha256": "b5f63aaaaa93cb8d06791bbf9b553e5b165af15590eb479fdac2435d2788ddb7"
+    },
+    {
+      "path": "continuous_wiring/sym-lib-table",
+      "sha256": "2f87c15dce482a8da573fe088786104c2c7da39b8c4994f6f47c97a1757360ad"
+    }
+  ],
+  "connected_net_count": 34,
+  "component_count": 40,
+  "documented_pin_count": 278,
+  "unrecorded_pin_count": 131,
+  "components": [
+    {
+      "ref": "C1",
+      "value": "0.1u",
+      "role": "ADC入力からGNDへの0.1 µF",
+      "symbol_library": "Device",
+      "symbol_name": "C",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        464.82,
+        347.98,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N07",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "capacitor",
+      "nominal_SI": {
+        "capacitance_farad": 1e-07
+      },
+      "polarized_in_recorded_diagram": false,
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "C2",
+      "value": "0.1u",
+      "role": "ADC入力からGNDへの0.1 µF",
+      "symbol_library": "Device",
+      "symbol_name": "C",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        464.82,
+        302.26,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N08",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "capacitor",
+      "nominal_SI": {
+        "capacitance_farad": 1e-07
+      },
+      "polarized_in_recorded_diagram": false,
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "C3",
+      "value": "0.1u",
+      "role": "3V3電源デカップリング",
+      "symbol_library": "Device",
+      "symbol_name": "C",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        434.34,
+        149.86,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N01",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "capacitor",
+      "nominal_SI": {
+        "capacitance_farad": 1e-07
+      },
+      "polarized_in_recorded_diagram": false,
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "C4",
+      "value": "1u",
+      "role": "3V3電源デカップリング",
+      "symbol_library": "Device",
+      "symbol_name": "C",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        464.82,
+        149.86,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N01",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "capacitor",
+      "nominal_SI": {
+        "capacitance_farad": 1e-06
+      },
+      "polarized_in_recorded_diagram": false,
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "C5",
+      "value": "0.1u",
+      "role": "ADC入力からGNDへの0.1 µF",
+      "symbol_library": "Device",
+      "symbol_name": "C",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        464.82,
+        251.46,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N09",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "capacitor",
+      "nominal_SI": {
+        "capacitance_farad": 1e-07
+      },
+      "polarized_in_recorded_diagram": false,
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "C6",
+      "value": "0.1u",
+      "role": "ADC入力からGNDへの0.1 µF",
+      "symbol_library": "Device",
+      "symbol_name": "C",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        464.82,
+        200.66,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N10",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "capacitor",
+      "nominal_SI": {
+        "capacitance_farad": 1e-07
+      },
+      "polarized_in_recorded_diagram": false,
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "D1",
+      "value": "1N4148",
+      "role": "GND側クランプ（A→GND）",
+      "symbol_library": "Diode",
+      "symbol_name": "1N4148",
+      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+      "original_placement_mm_deg": [
+        496.57,
+        347.98,
+        270
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "K",
+          "symbol_electrical_type": "passive",
+          "net_id": "N07",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "A",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "diode",
+      "model": "1N4148",
+      "polarity": {
+        "1": "cathode_K",
+        "2": "anode_A"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "D2",
+      "value": "1N4148",
+      "role": "GND側クランプ（A→GND）",
+      "symbol_library": "Diode",
+      "symbol_name": "1N4148",
+      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+      "original_placement_mm_deg": [
+        496.57,
+        302.26,
+        270
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "K",
+          "symbol_electrical_type": "passive",
+          "net_id": "N08",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "A",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "diode",
+      "model": "1N4148",
+      "polarity": {
+        "1": "cathode_K",
+        "2": "anode_A"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "D3",
+      "value": "1N4148",
+      "role": "3V3側クランプ（K→3V3）",
+      "symbol_library": "Diode",
+      "symbol_name": "1N4148",
+      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+      "original_placement_mm_deg": [
+        496.57,
+        322.58,
+        270
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "K",
+          "symbol_electrical_type": "passive",
+          "net_id": "N01",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "A",
+          "symbol_electrical_type": "passive",
+          "net_id": "N07",
+          "status": "connected"
+        }
+      ],
+      "kind": "diode",
+      "model": "1N4148",
+      "polarity": {
+        "1": "cathode_K",
+        "2": "anode_A"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "D4",
+      "value": "1N4148",
+      "role": "3V3側クランプ（K→3V3）",
+      "symbol_library": "Diode",
+      "symbol_name": "1N4148",
+      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+      "original_placement_mm_deg": [
+        496.57,
+        276.86,
+        270
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "K",
+          "symbol_electrical_type": "passive",
+          "net_id": "N01",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "A",
+          "symbol_electrical_type": "passive",
+          "net_id": "N08",
+          "status": "connected"
+        }
+      ],
+      "kind": "diode",
+      "model": "1N4148",
+      "polarity": {
+        "1": "cathode_K",
+        "2": "anode_A"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "D5",
+      "value": "1N4148",
+      "role": "GND側クランプ（A→GND）",
+      "symbol_library": "Diode",
+      "symbol_name": "1N4148",
+      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+      "original_placement_mm_deg": [
+        496.57,
+        251.46,
+        270
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "K",
+          "symbol_electrical_type": "passive",
+          "net_id": "N09",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "A",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "diode",
+      "model": "1N4148",
+      "polarity": {
+        "1": "cathode_K",
+        "2": "anode_A"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "D6",
+      "value": "1N4148",
+      "role": "3V3側クランプ（K→3V3）",
+      "symbol_library": "Diode",
+      "symbol_name": "1N4148",
+      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+      "original_placement_mm_deg": [
+        496.57,
+        226.06,
+        270
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "K",
+          "symbol_electrical_type": "passive",
+          "net_id": "N01",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "A",
+          "symbol_electrical_type": "passive",
+          "net_id": "N09",
+          "status": "connected"
+        }
+      ],
+      "kind": "diode",
+      "model": "1N4148",
+      "polarity": {
+        "1": "cathode_K",
+        "2": "anode_A"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "D7",
+      "value": "1N4148",
+      "role": "GND側クランプ（A→GND）",
+      "symbol_library": "Diode",
+      "symbol_name": "1N4148",
+      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+      "original_placement_mm_deg": [
+        496.57,
+        200.66,
+        270
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "K",
+          "symbol_electrical_type": "passive",
+          "net_id": "N10",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "A",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "diode",
+      "model": "1N4148",
+      "polarity": {
+        "1": "cathode_K",
+        "2": "anode_A"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "D8",
+      "value": "1N4148",
+      "role": "3V3側クランプ（K→3V3）",
+      "symbol_library": "Diode",
+      "symbol_name": "1N4148",
+      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal",
+      "original_placement_mm_deg": [
+        496.57,
+        175.26,
+        270
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "K",
+          "symbol_electrical_type": "passive",
+          "net_id": "N01",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "A",
+          "symbol_electrical_type": "passive",
+          "net_id": "N10",
+          "status": "connected"
+        }
+      ],
+      "kind": "diode",
+      "model": "1N4148",
+      "polarity": {
+        "1": "cathode_K",
+        "2": "anode_A"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "K1",
+      "value": "QC19004 / VCT",
+      "role": "VCT用リレー基板",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "VCT_RELAY_MODULE",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        195.58,
+        381,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "VCC",
+          "name": "VCC",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N01",
+          "status": "connected"
+        },
+        {
+          "pin": "IN",
+          "name": "IN",
+          "symbol_electrical_type": "input",
+          "net_id": "N12",
+          "status": "connected"
+        },
+        {
+          "pin": "GND",
+          "name": "GND",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "NC",
+          "name": "NC",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "COM",
+          "name": "COM",
+          "symbol_electrical_type": "passive",
+          "net_id": "N01",
+          "status": "connected"
+        },
+        {
+          "pin": "NO",
+          "name": "NO",
+          "symbol_electrical_type": "output",
+          "net_id": "N13",
+          "status": "connected"
+        }
+      ],
+      "kind": "relay_module",
+      "device": {
+        "brand": "QCCAN",
+        "model": "QC19004",
+        "ASIN": "B09X1P3YHL",
+        "relay_body_marking": "BESTEP JQC3F-03VDC-C",
+        "control_supply_V": 3.3,
+        "trigger": "High",
+        "terminal_order_component_side": {
+          "left_top_to_bottom": [
+            "VCC",
+            "IN",
+            "GND"
+          ],
+          "right_top_to_bottom": [
+            "NC",
+            "COM",
+            "NO"
+          ]
+        },
+        "internal_jumpers": null
+      },
+      "contact_model": {
+        "deenergized": "COM-NC closed; COM-NO open",
+        "energized": "COM-NO closed; COM-NC open",
+        "note": "Functional relay model; internal jumpers and timing remain unverified"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "K2",
+      "value": "QC19004 / ZHOME A",
+      "role": "A軸ZHOME用リレー基板",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "VCT_RELAY_MODULE",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        749.3,
+        127,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "VCC",
+          "name": "VCC",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N01",
+          "status": "connected"
+        },
+        {
+          "pin": "IN",
+          "name": "IN",
+          "symbol_electrical_type": "input",
+          "net_id": "N16",
+          "status": "connected"
+        },
+        {
+          "pin": "GND",
+          "name": "GND",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "NC",
+          "name": "NC",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "COM",
+          "name": "COM",
+          "symbol_electrical_type": "passive",
+          "net_id": "N04",
+          "status": "connected"
+        },
+        {
+          "pin": "NO",
+          "name": "NO",
+          "symbol_electrical_type": "output",
+          "net_id": "N31",
+          "status": "connected"
+        }
+      ],
+      "kind": "relay_module",
+      "device": {
+        "brand": "QCCAN",
+        "model": "QC19004",
+        "ASIN": "B09X1P3YHL",
+        "relay_body_marking": "BESTEP JQC3F-03VDC-C",
+        "control_supply_V": 3.3,
+        "trigger": "High",
+        "terminal_order_component_side": {
+          "left_top_to_bottom": [
+            "VCC",
+            "IN",
+            "GND"
+          ],
+          "right_top_to_bottom": [
+            "NC",
+            "COM",
+            "NO"
+          ]
+        },
+        "internal_jumpers": null
+      },
+      "contact_model": {
+        "deenergized": "COM-NC closed; COM-NO open",
+        "energized": "COM-NO closed; COM-NC open",
+        "note": "Functional relay model; internal jumpers and timing remain unverified"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "K3",
+      "value": "QC19004 / ZHOME B",
+      "role": "B軸ZHOME用リレー基板",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "VCT_RELAY_MODULE",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        944.88,
+        127,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "VCC",
+          "name": "VCC",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N01",
+          "status": "connected"
+        },
+        {
+          "pin": "IN",
+          "name": "IN",
+          "symbol_electrical_type": "input",
+          "net_id": "N19",
+          "status": "connected"
+        },
+        {
+          "pin": "GND",
+          "name": "GND",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "NC",
+          "name": "NC",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "COM",
+          "name": "COM",
+          "symbol_electrical_type": "passive",
+          "net_id": "N04",
+          "status": "connected"
+        },
+        {
+          "pin": "NO",
+          "name": "NO",
+          "symbol_electrical_type": "output",
+          "net_id": "N32",
+          "status": "connected"
+        }
+      ],
+      "kind": "relay_module",
+      "device": {
+        "brand": "QCCAN",
+        "model": "QC19004",
+        "ASIN": "B09X1P3YHL",
+        "relay_body_marking": "BESTEP JQC3F-03VDC-C",
+        "control_supply_V": 3.3,
+        "trigger": "High",
+        "terminal_order_component_side": {
+          "left_top_to_bottom": [
+            "VCC",
+            "IN",
+            "GND"
+          ],
+          "right_top_to_bottom": [
+            "NC",
+            "COM",
+            "NO"
+          ]
+        },
+        "internal_jumpers": null
+      },
+      "contact_model": {
+        "deenergized": "COM-NC closed; COM-NO open",
+        "energized": "COM-NO closed; COM-NC open",
+        "note": "Functional relay model; internal jumpers and timing remain unverified"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "K4",
+      "value": "QC19004 / ZHOME C",
+      "role": "C軸ZHOME用リレー基板",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "VCT_RELAY_MODULE",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        749.3,
+        436.88,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "VCC",
+          "name": "VCC",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N01",
+          "status": "connected"
+        },
+        {
+          "pin": "IN",
+          "name": "IN",
+          "symbol_electrical_type": "input",
+          "net_id": "N22",
+          "status": "connected"
+        },
+        {
+          "pin": "GND",
+          "name": "GND",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "NC",
+          "name": "NC",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "COM",
+          "name": "COM",
+          "symbol_electrical_type": "passive",
+          "net_id": "N05",
+          "status": "connected"
+        },
+        {
+          "pin": "NO",
+          "name": "NO",
+          "symbol_electrical_type": "output",
+          "net_id": "N33",
+          "status": "connected"
+        }
+      ],
+      "kind": "relay_module",
+      "device": {
+        "brand": "QCCAN",
+        "model": "QC19004",
+        "ASIN": "B09X1P3YHL",
+        "relay_body_marking": "BESTEP JQC3F-03VDC-C",
+        "control_supply_V": 3.3,
+        "trigger": "High",
+        "terminal_order_component_side": {
+          "left_top_to_bottom": [
+            "VCC",
+            "IN",
+            "GND"
+          ],
+          "right_top_to_bottom": [
+            "NC",
+            "COM",
+            "NO"
+          ]
+        },
+        "internal_jumpers": null
+      },
+      "contact_model": {
+        "deenergized": "COM-NC closed; COM-NO open",
+        "energized": "COM-NO closed; COM-NC open",
+        "note": "Functional relay model; internal jumpers and timing remain unverified"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "K5",
+      "value": "QC19004 / ZHOME D",
+      "role": "D軸ZHOME用リレー基板",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "VCT_RELAY_MODULE",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        944.88,
+        436.88,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "VCC",
+          "name": "VCC",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N01",
+          "status": "connected"
+        },
+        {
+          "pin": "IN",
+          "name": "IN",
+          "symbol_electrical_type": "input",
+          "net_id": "N25",
+          "status": "connected"
+        },
+        {
+          "pin": "GND",
+          "name": "GND",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "NC",
+          "name": "NC",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "COM",
+          "name": "COM",
+          "symbol_electrical_type": "passive",
+          "net_id": "N05",
+          "status": "connected"
+        },
+        {
+          "pin": "NO",
+          "name": "NO",
+          "symbol_electrical_type": "output",
+          "net_id": "N34",
+          "status": "connected"
+        }
+      ],
+      "kind": "relay_module",
+      "device": {
+        "brand": "QCCAN",
+        "model": "QC19004",
+        "ASIN": "B09X1P3YHL",
+        "relay_body_marking": "BESTEP JQC3F-03VDC-C",
+        "control_supply_V": 3.3,
+        "trigger": "High",
+        "terminal_order_component_side": {
+          "left_top_to_bottom": [
+            "VCC",
+            "IN",
+            "GND"
+          ],
+          "right_top_to_bottom": [
+            "NC",
+            "COM",
+            "NO"
+          ]
+        },
+        "internal_jumpers": null
+      },
+      "contact_model": {
+        "deenergized": "COM-NC closed; COM-NO open",
+        "energized": "COM-NO closed; COM-NC open",
+        "note": "Functional relay model; internal jumpers and timing remain unverified"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "PS1",
+      "value": "MDR-100-24 / AB",
+      "role": "A/B軸用24 V電源",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "MDR_100_24",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        861.06,
+        116.84,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "+V1",
+          "name": "+V1",
+          "symbol_electrical_type": "power_out",
+          "net_id": "N04",
+          "status": "connected"
+        },
+        {
+          "pin": "PE",
+          "name": "PE",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "+V2",
+          "name": "+V2",
+          "symbol_electrical_type": "passive",
+          "net_id": "N04",
+          "status": "connected"
+        },
+        {
+          "pin": "-V1",
+          "name": "-V1",
+          "symbol_electrical_type": "power_out",
+          "net_id": "N02",
+          "status": "connected"
+        },
+        {
+          "pin": "N",
+          "name": "N",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "-V2",
+          "name": "-V2",
+          "symbol_electrical_type": "passive",
+          "net_id": "N02",
+          "status": "connected"
+        },
+        {
+          "pin": "OK1",
+          "name": "DC_OK1",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "L",
+          "name": "L",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "OK2",
+          "name": "DC_OK2",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        }
+      ],
+      "kind": "supply",
+      "device": {
+        "manufacturer": "MEAN WELL",
+        "model": "MDR-100-24",
+        "nominal_output_V": 24,
+        "rated_output_A": 4
+      },
+      "internal_common_terminal_groups": [
+        [
+          "+V1",
+          "+V2"
+        ],
+        [
+          "-V1",
+          "-V2"
+        ]
+      ],
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "PS2",
+      "value": "MDR-100-24 / CD",
+      "role": "C/D軸用24 V電源",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "MDR_100_24",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        861.06,
+        426.72,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "+V1",
+          "name": "+V1",
+          "symbol_electrical_type": "power_out",
+          "net_id": "N05",
+          "status": "connected"
+        },
+        {
+          "pin": "PE",
+          "name": "PE",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "+V2",
+          "name": "+V2",
+          "symbol_electrical_type": "passive",
+          "net_id": "N05",
+          "status": "connected"
+        },
+        {
+          "pin": "-V1",
+          "name": "-V1",
+          "symbol_electrical_type": "power_out",
+          "net_id": "N03",
+          "status": "connected"
+        },
+        {
+          "pin": "N",
+          "name": "N",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "-V2",
+          "name": "-V2",
+          "symbol_electrical_type": "passive",
+          "net_id": "N03",
+          "status": "connected"
+        },
+        {
+          "pin": "OK1",
+          "name": "DC_OK1",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "L",
+          "name": "L",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "OK2",
+          "name": "DC_OK2",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        }
+      ],
+      "kind": "supply",
+      "device": {
+        "manufacturer": "MEAN WELL",
+        "model": "MDR-100-24",
+        "nominal_output_V": 24,
+        "rated_output_A": 4
+      },
+      "internal_common_terminal_groups": [
+        [
+          "+V1",
+          "+V2"
+        ],
+        [
+          "-V1",
+          "-V2"
+        ]
+      ],
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "R1",
+      "value": "510",
+      "role": "510 Ω直列抵抗",
+      "symbol_library": "Device",
+      "symbol_name": "R",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        533.4,
+        335.28,
+        270
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N27",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N07",
+          "status": "connected"
+        }
+      ],
+      "kind": "resistor",
+      "nominal_SI": {
+        "resistance_ohm": 510
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "R2",
+      "value": "510",
+      "role": "510 Ω直列抵抗",
+      "symbol_library": "Device",
+      "symbol_name": "R",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        533.4,
+        289.56,
+        270
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N28",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N08",
+          "status": "connected"
+        }
+      ],
+      "kind": "resistor",
+      "nominal_SI": {
+        "resistance_ohm": 510
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "R3",
+      "value": "47k",
+      "role": "47 kΩ対GND抵抗",
+      "symbol_library": "Device",
+      "symbol_name": "R",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        434.34,
+        347.98,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N07",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "resistor",
+      "nominal_SI": {
+        "resistance_ohm": 47000
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "R4",
+      "value": "47k",
+      "role": "47 kΩ対GND抵抗",
+      "symbol_library": "Device",
+      "symbol_name": "R",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        434.34,
+        302.26,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N08",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "resistor",
+      "nominal_SI": {
+        "resistance_ohm": 47000
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "R5",
+      "value": "510",
+      "role": "510 Ω直列抵抗",
+      "symbol_library": "Device",
+      "symbol_name": "R",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        533.4,
+        238.76,
+        270
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N29",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N09",
+          "status": "connected"
+        }
+      ],
+      "kind": "resistor",
+      "nominal_SI": {
+        "resistance_ohm": 510
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "R6",
+      "value": "47k",
+      "role": "47 kΩ対GND抵抗",
+      "symbol_library": "Device",
+      "symbol_name": "R",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        434.34,
+        251.46,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N09",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "resistor",
+      "nominal_SI": {
+        "resistance_ohm": 47000
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "R7",
+      "value": "510",
+      "role": "510 Ω直列抵抗",
+      "symbol_library": "Device",
+      "symbol_name": "R",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        533.4,
+        187.96,
+        270
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N30",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N10",
+          "status": "connected"
+        }
+      ],
+      "kind": "resistor",
+      "nominal_SI": {
+        "resistance_ohm": 510
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "R8",
+      "value": "47k",
+      "role": "47 kΩ対GND抵抗",
+      "symbol_library": "Device",
+      "symbol_name": "R",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        434.34,
+        200.66,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N10",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "resistor",
+      "nominal_SI": {
+        "resistance_ohm": 47000
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "S1",
+      "value": "sensor1",
+      "role": "sensor1の論理OUT/GND端子。実センサー型番・コネクター未指定",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "SensorInterface",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        566.42,
+        337.82,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "OUT",
+          "name": "OUT",
+          "symbol_electrical_type": "output",
+          "net_id": "N27",
+          "status": "connected"
+        },
+        {
+          "pin": "GND",
+          "name": "GND",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "external_sensor_interface",
+      "device_model": null,
+      "sensor_power_and_input_wiring": null,
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "S2",
+      "value": "sensor2",
+      "role": "sensor2の論理OUT/GND端子。実センサー型番・コネクター未指定",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "SensorInterface",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        566.42,
+        292.1,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "OUT",
+          "name": "OUT",
+          "symbol_electrical_type": "output",
+          "net_id": "N28",
+          "status": "connected"
+        },
+        {
+          "pin": "GND",
+          "name": "GND",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "external_sensor_interface",
+      "device_model": null,
+      "sensor_power_and_input_wiring": null,
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "S3",
+      "value": "sensor3",
+      "role": "sensor3の論理OUT/GND端子。実センサー型番・コネクター未指定",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "SensorInterface",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        566.42,
+        241.3,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "OUT",
+          "name": "OUT",
+          "symbol_electrical_type": "output",
+          "net_id": "N29",
+          "status": "connected"
+        },
+        {
+          "pin": "GND",
+          "name": "GND",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "external_sensor_interface",
+      "device_model": null,
+      "sensor_power_and_input_wiring": null,
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "S4",
+      "value": "sensor4",
+      "role": "sensor4の論理OUT/GND端子。実センサー型番・コネクター未指定",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "SensorInterface",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        566.42,
+        190.5,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "OUT",
+          "name": "OUT",
+          "symbol_electrical_type": "output",
+          "net_id": "N30",
+          "status": "connected"
+        },
+        {
+          "pin": "GND",
+          "name": "GND",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "external_sensor_interface",
+      "device_model": null,
+      "sensor_power_and_input_wiring": null,
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "SW1",
+      "value": "RESET BOTH",
+      "role": "両マイコン共通リセット用・通常開押しボタン",
+      "symbol_library": "Switch",
+      "symbol_name": "SW_Push",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        76.2,
+        373.38,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "1",
+          "name": "1",
+          "symbol_electrical_type": "passive",
+          "net_id": "N06",
+          "status": "connected"
+        },
+        {
+          "pin": "2",
+          "name": "2",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        }
+      ],
+      "kind": "momentary_switch",
+      "model": null,
+      "contacts": {
+        "released": "1-2 open",
+        "pressed": "1-2 closed"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "U1",
+      "value": "NUCLEO-G431KB",
+      "role": "sensor用マイコン",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "NUCLEO_G431KB_FULL",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        274.32,
+        254,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "4.1",
+          "name": "D1/PA9",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": "N11",
+          "status": "connected"
+        },
+        {
+          "pin": "4.2",
+          "name": "D0/PA10",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.3",
+          "name": "NRST",
+          "symbol_electrical_type": "passive",
+          "net_id": "N06",
+          "status": "connected"
+        },
+        {
+          "pin": "4.4",
+          "name": "GND",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "4.5",
+          "name": "D2/PA12",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.6",
+          "name": "D3/PB0",
+          "symbol_electrical_type": "input",
+          "net_id": "N13",
+          "status": "connected"
+        },
+        {
+          "pin": "4.7",
+          "name": "D4/PB7",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.8",
+          "name": "D5/PA15",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.9",
+          "name": "D6/PB6",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.10",
+          "name": "D7/PF0",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.11",
+          "name": "D8/PF1",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.12",
+          "name": "D9/PA8",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.13",
+          "name": "D10/PA11",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.14",
+          "name": "D11/PB5",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.15",
+          "name": "D12/PB4",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.1",
+          "name": "VIN",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.2",
+          "name": "GND",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "3.3",
+          "name": "NRST",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.4",
+          "name": "+5V",
+          "symbol_electrical_type": "power_out",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.5",
+          "name": "A7/PA2",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.6",
+          "name": "A6/PA7",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.7",
+          "name": "A5/PA6/PA15",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.8",
+          "name": "A4/PA5/PB7",
+          "symbol_electrical_type": "input",
+          "net_id": "N10",
+          "status": "connected"
+        },
+        {
+          "pin": "3.9",
+          "name": "A3/PA4",
+          "symbol_electrical_type": "input",
+          "net_id": "N09",
+          "status": "connected"
+        },
+        {
+          "pin": "3.10",
+          "name": "A2/PA3",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.11",
+          "name": "A1/PA1",
+          "symbol_electrical_type": "input",
+          "net_id": "N08",
+          "status": "connected"
+        },
+        {
+          "pin": "3.12",
+          "name": "A0/PA0",
+          "symbol_electrical_type": "input",
+          "net_id": "N07",
+          "status": "connected"
+        },
+        {
+          "pin": "3.13",
+          "name": "AREF/AVDD",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.14",
+          "name": "+3V3",
+          "symbol_electrical_type": "passive",
+          "net_id": "N01",
+          "status": "connected"
+        },
+        {
+          "pin": "3.15",
+          "name": "D13/PB3/PB8",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        }
+      ],
+      "kind": "controller_board",
+      "device": {
+        "manufacturer": "STMicroelectronics",
+        "model": "NUCLEO-G431KB"
+      },
+      "header_view": {
+        "view": "component side, USB at top",
+        "left_top_to_bottom": [
+          "4.1",
+          "4.2",
+          "4.3",
+          "4.4",
+          "4.5",
+          "4.6",
+          "4.7",
+          "4.8",
+          "4.9",
+          "4.10",
+          "4.11",
+          "4.12",
+          "4.13",
+          "4.14",
+          "4.15"
+        ],
+        "right_top_to_bottom": [
+          "3.1",
+          "3.2",
+          "3.3",
+          "3.4",
+          "3.5",
+          "3.6",
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14",
+          "3.15"
+        ]
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "U2",
+      "value": "NUCLEO-G431KB (motor)",
+      "role": "motor用マイコン",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "NUCLEO_G431KB_MOTOR_FULL",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        101.6,
+        254,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "4.1",
+          "name": "D1/PA9",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.2",
+          "name": "D0/PA10",
+          "symbol_electrical_type": "input",
+          "net_id": "N11",
+          "status": "connected"
+        },
+        {
+          "pin": "4.3",
+          "name": "NRST",
+          "symbol_electrical_type": "passive",
+          "net_id": "N06",
+          "status": "connected"
+        },
+        {
+          "pin": "4.4",
+          "name": "GND",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "4.5",
+          "name": "D2/PA12",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": "N23",
+          "status": "connected"
+        },
+        {
+          "pin": "4.6",
+          "name": "D3/PB0",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": "N18",
+          "status": "connected"
+        },
+        {
+          "pin": "4.7",
+          "name": "D4/PB7",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": "N20",
+          "status": "connected"
+        },
+        {
+          "pin": "4.8",
+          "name": "D5/PA15",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": "N25",
+          "status": "connected"
+        },
+        {
+          "pin": "4.9",
+          "name": "D6/PB6",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": "N21",
+          "status": "connected"
+        },
+        {
+          "pin": "4.10",
+          "name": "D7/PF0",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.11",
+          "name": "D8/PF1",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.12",
+          "name": "D9/PA8",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": "N17",
+          "status": "connected"
+        },
+        {
+          "pin": "4.13",
+          "name": "D10/PA11",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": "N24",
+          "status": "connected"
+        },
+        {
+          "pin": "4.14",
+          "name": "D11/PB5",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": "N19",
+          "status": "connected"
+        },
+        {
+          "pin": "4.15",
+          "name": "D12/PB4",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": "N16",
+          "status": "connected"
+        },
+        {
+          "pin": "3.1",
+          "name": "VIN",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.2",
+          "name": "GND",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "3.3",
+          "name": "NRST",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.4",
+          "name": "+5V",
+          "symbol_electrical_type": "power_out",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.5",
+          "name": "A7/PA2",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.6",
+          "name": "A6/PA7",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": "N22",
+          "status": "connected"
+        },
+        {
+          "pin": "3.7",
+          "name": "A5/PA6/PA15",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.8",
+          "name": "A4/PA5/PB7",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.9",
+          "name": "A3/PA4",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": "N14",
+          "status": "connected"
+        },
+        {
+          "pin": "3.10",
+          "name": "A2/PA3",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.11",
+          "name": "A1/PA1",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": "N15",
+          "status": "connected"
+        },
+        {
+          "pin": "3.12",
+          "name": "A0/PA0",
+          "symbol_electrical_type": "output",
+          "net_id": "N12",
+          "status": "connected"
+        },
+        {
+          "pin": "3.13",
+          "name": "AREF/AVDD",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "3.14",
+          "name": "+3V3",
+          "symbol_electrical_type": "passive",
+          "net_id": "N01",
+          "status": "connected"
+        },
+        {
+          "pin": "3.15",
+          "name": "D13/PB3/PB8",
+          "symbol_electrical_type": "bidirectional",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        }
+      ],
+      "kind": "controller_board",
+      "device": {
+        "manufacturer": "STMicroelectronics",
+        "model": "NUCLEO-G431KB"
+      },
+      "header_view": {
+        "view": "component side, USB at top",
+        "left_top_to_bottom": [
+          "4.1",
+          "4.2",
+          "4.3",
+          "4.4",
+          "4.5",
+          "4.6",
+          "4.7",
+          "4.8",
+          "4.9",
+          "4.10",
+          "4.11",
+          "4.12",
+          "4.13",
+          "4.14",
+          "4.15"
+        ],
+        "right_top_to_bottom": [
+          "3.1",
+          "3.2",
+          "3.3",
+          "3.4",
+          "3.5",
+          "3.6",
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14",
+          "3.15"
+        ]
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "U3",
+      "value": "AZD-K / A",
+      "role": "A軸ドライバ",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "AZD_K",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        762,
+        228.6,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "4.1",
+          "name": "CW+",
+          "symbol_electrical_type": "passive",
+          "net_id": "N15",
+          "status": "connected"
+        },
+        {
+          "pin": "4.2",
+          "name": "CCW+",
+          "symbol_electrical_type": "passive",
+          "net_id": "N14",
+          "status": "connected"
+        },
+        {
+          "pin": "4.3",
+          "name": "IN4/ZHOME",
+          "symbol_electrical_type": "passive",
+          "net_id": "N31",
+          "status": "connected"
+        },
+        {
+          "pin": "4.4",
+          "name": "IN6/STOP",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.5",
+          "name": "IN-COM_[4-7]",
+          "symbol_electrical_type": "passive",
+          "net_id": "N02",
+          "status": "connected"
+        },
+        {
+          "pin": "4.6",
+          "name": "IN8/FW-JOG",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.7",
+          "name": "OUT0/HOME-END",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.8",
+          "name": "OUT2/PLS-RDY",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.9",
+          "name": "OUT4/MOVE",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.10",
+          "name": "OUT-COM",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.11",
+          "name": "ASG+",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.12",
+          "name": "BSG+",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "1.MB1",
+          "name": "MB1",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "1.MB2",
+          "name": "MB2",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "1.+",
+          "name": "+",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N04",
+          "status": "connected"
+        },
+        {
+          "pin": "1.-",
+          "name": "-",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N02",
+          "status": "connected"
+        },
+        {
+          "pin": "1.FG",
+          "name": "FG",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.13",
+          "name": "CW-",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "4.14",
+          "name": "CCW-",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "4.15",
+          "name": "IN5/FREE",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.16",
+          "name": "IN7/ALM-RST",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.17",
+          "name": "IN-COM_[8-9]",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.18",
+          "name": "IN9/RV-JOG",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.19",
+          "name": "OUT1/IN-POS",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.20",
+          "name": "OUT3/READY",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.21",
+          "name": "OUT5/ALM-B",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.22",
+          "name": "GND",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.23",
+          "name": "ASG-",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.24",
+          "name": "BSG-",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        }
+      ],
+      "kind": "motor_driver",
+      "device": {
+        "manufacturer": "Oriental Motor",
+        "model": "AZD-K"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "U4",
+      "value": "AZD-K / B",
+      "role": "B軸ドライバ",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "AZD_K",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        957.58,
+        228.6,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "4.1",
+          "name": "CW+",
+          "symbol_electrical_type": "passive",
+          "net_id": "N18",
+          "status": "connected"
+        },
+        {
+          "pin": "4.2",
+          "name": "CCW+",
+          "symbol_electrical_type": "passive",
+          "net_id": "N17",
+          "status": "connected"
+        },
+        {
+          "pin": "4.3",
+          "name": "IN4/ZHOME",
+          "symbol_electrical_type": "passive",
+          "net_id": "N32",
+          "status": "connected"
+        },
+        {
+          "pin": "4.4",
+          "name": "IN6/STOP",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.5",
+          "name": "IN-COM_[4-7]",
+          "symbol_electrical_type": "passive",
+          "net_id": "N02",
+          "status": "connected"
+        },
+        {
+          "pin": "4.6",
+          "name": "IN8/FW-JOG",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.7",
+          "name": "OUT0/HOME-END",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.8",
+          "name": "OUT2/PLS-RDY",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.9",
+          "name": "OUT4/MOVE",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.10",
+          "name": "OUT-COM",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.11",
+          "name": "ASG+",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.12",
+          "name": "BSG+",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "1.MB1",
+          "name": "MB1",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "1.MB2",
+          "name": "MB2",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "1.+",
+          "name": "+",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N04",
+          "status": "connected"
+        },
+        {
+          "pin": "1.-",
+          "name": "-",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N02",
+          "status": "connected"
+        },
+        {
+          "pin": "1.FG",
+          "name": "FG",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.13",
+          "name": "CW-",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "4.14",
+          "name": "CCW-",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "4.15",
+          "name": "IN5/FREE",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.16",
+          "name": "IN7/ALM-RST",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.17",
+          "name": "IN-COM_[8-9]",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.18",
+          "name": "IN9/RV-JOG",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.19",
+          "name": "OUT1/IN-POS",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.20",
+          "name": "OUT3/READY",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.21",
+          "name": "OUT5/ALM-B",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.22",
+          "name": "GND",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.23",
+          "name": "ASG-",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.24",
+          "name": "BSG-",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        }
+      ],
+      "kind": "motor_driver",
+      "device": {
+        "manufacturer": "Oriental Motor",
+        "model": "AZD-K"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "U5",
+      "value": "AZD-K / C",
+      "role": "C軸ドライバ",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "AZD_K",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        762,
+        538.48,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "4.1",
+          "name": "CW+",
+          "symbol_electrical_type": "passive",
+          "net_id": "N21",
+          "status": "connected"
+        },
+        {
+          "pin": "4.2",
+          "name": "CCW+",
+          "symbol_electrical_type": "passive",
+          "net_id": "N20",
+          "status": "connected"
+        },
+        {
+          "pin": "4.3",
+          "name": "IN4/ZHOME",
+          "symbol_electrical_type": "passive",
+          "net_id": "N33",
+          "status": "connected"
+        },
+        {
+          "pin": "4.4",
+          "name": "IN6/STOP",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.5",
+          "name": "IN-COM_[4-7]",
+          "symbol_electrical_type": "passive",
+          "net_id": "N03",
+          "status": "connected"
+        },
+        {
+          "pin": "4.6",
+          "name": "IN8/FW-JOG",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.7",
+          "name": "OUT0/HOME-END",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.8",
+          "name": "OUT2/PLS-RDY",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.9",
+          "name": "OUT4/MOVE",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.10",
+          "name": "OUT-COM",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.11",
+          "name": "ASG+",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.12",
+          "name": "BSG+",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "1.MB1",
+          "name": "MB1",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "1.MB2",
+          "name": "MB2",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "1.+",
+          "name": "+",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N05",
+          "status": "connected"
+        },
+        {
+          "pin": "1.-",
+          "name": "-",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N03",
+          "status": "connected"
+        },
+        {
+          "pin": "1.FG",
+          "name": "FG",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.13",
+          "name": "CW-",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "4.14",
+          "name": "CCW-",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "4.15",
+          "name": "IN5/FREE",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.16",
+          "name": "IN7/ALM-RST",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.17",
+          "name": "IN-COM_[8-9]",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.18",
+          "name": "IN9/RV-JOG",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.19",
+          "name": "OUT1/IN-POS",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.20",
+          "name": "OUT3/READY",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.21",
+          "name": "OUT5/ALM-B",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.22",
+          "name": "GND",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.23",
+          "name": "ASG-",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.24",
+          "name": "BSG-",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        }
+      ],
+      "kind": "motor_driver",
+      "device": {
+        "manufacturer": "Oriental Motor",
+        "model": "AZD-K"
+      },
+      "tolerance_rating_package": null
+    },
+    {
+      "ref": "U6",
+      "value": "AZD-K / D",
+      "role": "D軸ドライバ",
+      "symbol_library": "SuperMEXE02_IO",
+      "symbol_name": "AZD_K",
+      "footprint": null,
+      "original_placement_mm_deg": [
+        957.58,
+        538.48,
+        0
+      ],
+      "pins": [
+        {
+          "pin": "4.1",
+          "name": "CW+",
+          "symbol_electrical_type": "passive",
+          "net_id": "N24",
+          "status": "connected"
+        },
+        {
+          "pin": "4.2",
+          "name": "CCW+",
+          "symbol_electrical_type": "passive",
+          "net_id": "N23",
+          "status": "connected"
+        },
+        {
+          "pin": "4.3",
+          "name": "IN4/ZHOME",
+          "symbol_electrical_type": "passive",
+          "net_id": "N34",
+          "status": "connected"
+        },
+        {
+          "pin": "4.4",
+          "name": "IN6/STOP",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.5",
+          "name": "IN-COM_[4-7]",
+          "symbol_electrical_type": "passive",
+          "net_id": "N03",
+          "status": "connected"
+        },
+        {
+          "pin": "4.6",
+          "name": "IN8/FW-JOG",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.7",
+          "name": "OUT0/HOME-END",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.8",
+          "name": "OUT2/PLS-RDY",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.9",
+          "name": "OUT4/MOVE",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.10",
+          "name": "OUT-COM",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.11",
+          "name": "ASG+",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.12",
+          "name": "BSG+",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "1.MB1",
+          "name": "MB1",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "1.MB2",
+          "name": "MB2",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "1.+",
+          "name": "+",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N05",
+          "status": "connected"
+        },
+        {
+          "pin": "1.-",
+          "name": "-",
+          "symbol_electrical_type": "power_in",
+          "net_id": "N03",
+          "status": "connected"
+        },
+        {
+          "pin": "1.FG",
+          "name": "FG",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.13",
+          "name": "CW-",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "4.14",
+          "name": "CCW-",
+          "symbol_electrical_type": "passive",
+          "net_id": "N26",
+          "status": "connected"
+        },
+        {
+          "pin": "4.15",
+          "name": "IN5/FREE",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.16",
+          "name": "IN7/ALM-RST",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.17",
+          "name": "IN-COM_[8-9]",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.18",
+          "name": "IN9/RV-JOG",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.19",
+          "name": "OUT1/IN-POS",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.20",
+          "name": "OUT3/READY",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.21",
+          "name": "OUT5/ALM-B",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.22",
+          "name": "GND",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.23",
+          "name": "ASG-",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        },
+        {
+          "pin": "4.24",
+          "name": "BSG-",
+          "symbol_electrical_type": "passive",
+          "net_id": null,
+          "status": "external_wiring_not_recorded"
+        }
+      ],
+      "kind": "motor_driver",
+      "device": {
+        "manufacturer": "Oriental Motor",
+        "model": "AZD-K"
+      },
+      "tolerance_rating_package": null
+    }
+  ],
+  "connected_nets": [
+    {
+      "id": "N01",
+      "original_net_name": "+3V3",
+      "continuous_net_name": "+3V3",
+      "category": "POWER",
+      "color": "赤",
+      "rgba": "rgba(208, 32, 32, 1.000)",
+      "endpoints": [
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "C4",
+          "pin": "1"
+        },
+        {
+          "ref": "D3",
+          "pin": "1"
+        },
+        {
+          "ref": "D4",
+          "pin": "1"
+        },
+        {
+          "ref": "D6",
+          "pin": "1"
+        },
+        {
+          "ref": "D8",
+          "pin": "1"
+        },
+        {
+          "ref": "K1",
+          "pin": "COM"
+        },
+        {
+          "ref": "K1",
+          "pin": "VCC"
+        },
+        {
+          "ref": "K2",
+          "pin": "VCC"
+        },
+        {
+          "ref": "K3",
+          "pin": "VCC"
+        },
+        {
+          "ref": "K4",
+          "pin": "VCC"
+        },
+        {
+          "ref": "K5",
+          "pin": "VCC"
+        },
+        {
+          "ref": "U1",
+          "pin": "3.14"
+        },
+        {
+          "ref": "U2",
+          "pin": "3.14"
+        }
+      ]
+    },
+    {
+      "id": "N02",
+      "original_net_name": "/0V_AB",
+      "continuous_net_name": "/0V_AB",
+      "category": "GROUND",
+      "color": "黒",
+      "rgba": "rgba(0, 0, 0, 1.000)",
+      "endpoints": [
+        {
+          "ref": "PS1",
+          "pin": "-V1"
+        },
+        {
+          "ref": "PS1",
+          "pin": "-V2"
+        },
+        {
+          "ref": "U3",
+          "pin": "1.-"
+        },
+        {
+          "ref": "U3",
+          "pin": "4.5"
+        },
+        {
+          "ref": "U4",
+          "pin": "1.-"
+        },
+        {
+          "ref": "U4",
+          "pin": "4.5"
+        }
+      ]
+    },
+    {
+      "id": "N03",
+      "original_net_name": "/0V_CD",
+      "continuous_net_name": "/0V_CD",
+      "category": "GROUND",
+      "color": "黒",
+      "rgba": "rgba(0, 0, 0, 1.000)",
+      "endpoints": [
+        {
+          "ref": "PS2",
+          "pin": "-V1"
+        },
+        {
+          "ref": "PS2",
+          "pin": "-V2"
+        },
+        {
+          "ref": "U5",
+          "pin": "1.-"
+        },
+        {
+          "ref": "U5",
+          "pin": "4.5"
+        },
+        {
+          "ref": "U6",
+          "pin": "1.-"
+        },
+        {
+          "ref": "U6",
+          "pin": "4.5"
+        }
+      ]
+    },
+    {
+      "id": "N04",
+      "original_net_name": "/24V_AB",
+      "continuous_net_name": "/24V_AB",
+      "category": "POWER",
+      "color": "赤",
+      "rgba": "rgba(208, 32, 32, 1.000)",
+      "endpoints": [
+        {
+          "ref": "K2",
+          "pin": "COM"
+        },
+        {
+          "ref": "K3",
+          "pin": "COM"
+        },
+        {
+          "ref": "PS1",
+          "pin": "+V1"
+        },
+        {
+          "ref": "PS1",
+          "pin": "+V2"
+        },
+        {
+          "ref": "U3",
+          "pin": "1.+"
+        },
+        {
+          "ref": "U4",
+          "pin": "1.+"
+        }
+      ]
+    },
+    {
+      "id": "N05",
+      "original_net_name": "/24V_CD",
+      "continuous_net_name": "/24V_CD",
+      "category": "POWER",
+      "color": "赤",
+      "rgba": "rgba(208, 32, 32, 1.000)",
+      "endpoints": [
+        {
+          "ref": "K4",
+          "pin": "COM"
+        },
+        {
+          "ref": "K5",
+          "pin": "COM"
+        },
+        {
+          "ref": "PS2",
+          "pin": "+V1"
+        },
+        {
+          "ref": "PS2",
+          "pin": "+V2"
+        },
+        {
+          "ref": "U5",
+          "pin": "1.+"
+        },
+        {
+          "ref": "U6",
+          "pin": "1.+"
+        }
+      ]
+    },
+    {
+      "id": "N06",
+      "original_net_name": "/NRST_BOTH",
+      "continuous_net_name": "Net-(SW1-Pad1)",
+      "category": "RESET",
+      "color": "灰",
+      "rgba": "rgba(96, 96, 96, 1.000)",
+      "endpoints": [
+        {
+          "ref": "SW1",
+          "pin": "1"
+        },
+        {
+          "ref": "U1",
+          "pin": "4.3"
+        },
+        {
+          "ref": "U2",
+          "pin": "4.3"
+        }
+      ]
+    },
+    {
+      "id": "N07",
+      "original_net_name": "/SENSOR1_ADC_PA0",
+      "continuous_net_name": "Net-(D1-K)",
+      "category": "SENSOR",
+      "color": "緑",
+      "rgba": "rgba(32, 128, 64, 1.000)",
+      "endpoints": [
+        {
+          "ref": "C1",
+          "pin": "1"
+        },
+        {
+          "ref": "D1",
+          "pin": "1"
+        },
+        {
+          "ref": "D3",
+          "pin": "2"
+        },
+        {
+          "ref": "R1",
+          "pin": "2"
+        },
+        {
+          "ref": "R3",
+          "pin": "1"
+        },
+        {
+          "ref": "U1",
+          "pin": "3.12"
+        }
+      ]
+    },
+    {
+      "id": "N08",
+      "original_net_name": "/SENSOR2_ADC_PA1",
+      "continuous_net_name": "Net-(D2-K)",
+      "category": "SENSOR",
+      "color": "緑",
+      "rgba": "rgba(32, 128, 64, 1.000)",
+      "endpoints": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "D2",
+          "pin": "1"
+        },
+        {
+          "ref": "D4",
+          "pin": "2"
+        },
+        {
+          "ref": "R2",
+          "pin": "2"
+        },
+        {
+          "ref": "R4",
+          "pin": "1"
+        },
+        {
+          "ref": "U1",
+          "pin": "3.11"
+        }
+      ]
+    },
+    {
+      "id": "N09",
+      "original_net_name": "/SENSOR3_ADC_PA4",
+      "continuous_net_name": "Net-(D5-K)",
+      "category": "SENSOR",
+      "color": "緑",
+      "rgba": "rgba(32, 128, 64, 1.000)",
+      "endpoints": [
+        {
+          "ref": "C5",
+          "pin": "1"
+        },
+        {
+          "ref": "D5",
+          "pin": "1"
+        },
+        {
+          "ref": "D6",
+          "pin": "2"
+        },
+        {
+          "ref": "R5",
+          "pin": "2"
+        },
+        {
+          "ref": "R6",
+          "pin": "1"
+        },
+        {
+          "ref": "U1",
+          "pin": "3.9"
+        }
+      ]
+    },
+    {
+      "id": "N10",
+      "original_net_name": "/SENSOR4_ADC_PA5",
+      "continuous_net_name": "Net-(D7-K)",
+      "category": "SENSOR",
+      "color": "緑",
+      "rgba": "rgba(32, 128, 64, 1.000)",
+      "endpoints": [
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "D7",
+          "pin": "1"
+        },
+        {
+          "ref": "D8",
+          "pin": "2"
+        },
+        {
+          "ref": "R7",
+          "pin": "2"
+        },
+        {
+          "ref": "R8",
+          "pin": "1"
+        },
+        {
+          "ref": "U1",
+          "pin": "3.8"
+        }
+      ]
+    },
+    {
+      "id": "N11",
+      "original_net_name": "/SENSOR_D1_TO_MOTOR_D0",
+      "continuous_net_name": "/SENSOR_D1_TO_MOTOR_D0",
+      "category": "UART",
+      "color": "茶",
+      "rgba": "rgba(136, 80, 32, 1.000)",
+      "endpoints": [
+        {
+          "ref": "U1",
+          "pin": "4.1"
+        },
+        {
+          "ref": "U2",
+          "pin": "4.2"
+        }
+      ]
+    },
+    {
+      "id": "N12",
+      "original_net_name": "/VCT_RELAY_CTRL",
+      "continuous_net_name": "/VCT_RELAY_IN",
+      "category": "VCT",
+      "color": "青緑",
+      "rgba": "rgba(0, 140, 156, 1.000)",
+      "endpoints": [
+        {
+          "ref": "K1",
+          "pin": "IN"
+        },
+        {
+          "ref": "U2",
+          "pin": "3.12"
+        }
+      ]
+    },
+    {
+      "id": "N13",
+      "original_net_name": "/VCT_TO_SENSOR_PB0",
+      "continuous_net_name": "/VCT_SENSOR",
+      "category": "VCT",
+      "color": "青緑",
+      "rgba": "rgba(0, 140, 156, 1.000)",
+      "endpoints": [
+        {
+          "ref": "K1",
+          "pin": "NO"
+        },
+        {
+          "ref": "U1",
+          "pin": "4.6"
+        }
+      ]
+    },
+    {
+      "id": "N14",
+      "original_net_name": "A_CCW",
+      "continuous_net_name": "/A_CCW",
+      "category": "CCW",
+      "color": "青",
+      "rgba": "rgba(32, 85, 208, 1.000)",
+      "endpoints": [
+        {
+          "ref": "U2",
+          "pin": "3.9"
+        },
+        {
+          "ref": "U3",
+          "pin": "4.2"
+        }
+      ]
+    },
+    {
+      "id": "N15",
+      "original_net_name": "A_CW",
+      "continuous_net_name": "/A_CW",
+      "category": "CW",
+      "color": "オレンジ",
+      "rgba": "rgba(224, 112, 0, 1.000)",
+      "endpoints": [
+        {
+          "ref": "U2",
+          "pin": "3.11"
+        },
+        {
+          "ref": "U3",
+          "pin": "4.1"
+        }
+      ]
+    },
+    {
+      "id": "N16",
+      "original_net_name": "A_HOME",
+      "continuous_net_name": "/A_HOME",
+      "category": "ZHOME",
+      "color": "赤紫",
+      "rgba": "rgba(176, 32, 128, 1.000)",
+      "endpoints": [
+        {
+          "ref": "K2",
+          "pin": "IN"
+        },
+        {
+          "ref": "U2",
+          "pin": "4.15"
+        }
+      ]
+    },
+    {
+      "id": "N17",
+      "original_net_name": "B_CCW",
+      "continuous_net_name": "/B_CCW",
+      "category": "CCW",
+      "color": "青",
+      "rgba": "rgba(32, 85, 208, 1.000)",
+      "endpoints": [
+        {
+          "ref": "U2",
+          "pin": "4.12"
+        },
+        {
+          "ref": "U4",
+          "pin": "4.2"
+        }
+      ]
+    },
+    {
+      "id": "N18",
+      "original_net_name": "B_CW",
+      "continuous_net_name": "/B_CW",
+      "category": "CW",
+      "color": "オレンジ",
+      "rgba": "rgba(224, 112, 0, 1.000)",
+      "endpoints": [
+        {
+          "ref": "U2",
+          "pin": "4.6"
+        },
+        {
+          "ref": "U4",
+          "pin": "4.1"
+        }
+      ]
+    },
+    {
+      "id": "N19",
+      "original_net_name": "B_HOME",
+      "continuous_net_name": "/B_HOME",
+      "category": "ZHOME",
+      "color": "赤紫",
+      "rgba": "rgba(176, 32, 128, 1.000)",
+      "endpoints": [
+        {
+          "ref": "K3",
+          "pin": "IN"
+        },
+        {
+          "ref": "U2",
+          "pin": "4.14"
+        }
+      ]
+    },
+    {
+      "id": "N20",
+      "original_net_name": "C_CCW",
+      "continuous_net_name": "/C_CCW",
+      "category": "CCW",
+      "color": "青",
+      "rgba": "rgba(32, 85, 208, 1.000)",
+      "endpoints": [
+        {
+          "ref": "U2",
+          "pin": "4.7"
+        },
+        {
+          "ref": "U5",
+          "pin": "4.2"
+        }
+      ]
+    },
+    {
+      "id": "N21",
+      "original_net_name": "C_CW",
+      "continuous_net_name": "/C_CW",
+      "category": "CW",
+      "color": "オレンジ",
+      "rgba": "rgba(224, 112, 0, 1.000)",
+      "endpoints": [
+        {
+          "ref": "U2",
+          "pin": "4.9"
+        },
+        {
+          "ref": "U5",
+          "pin": "4.1"
+        }
+      ]
+    },
+    {
+      "id": "N22",
+      "original_net_name": "C_HOME",
+      "continuous_net_name": "/C_HOME",
+      "category": "ZHOME",
+      "color": "赤紫",
+      "rgba": "rgba(176, 32, 128, 1.000)",
+      "endpoints": [
+        {
+          "ref": "K4",
+          "pin": "IN"
+        },
+        {
+          "ref": "U2",
+          "pin": "3.6"
+        }
+      ]
+    },
+    {
+      "id": "N23",
+      "original_net_name": "D_CCW",
+      "continuous_net_name": "/D_CCW",
+      "category": "CCW",
+      "color": "青",
+      "rgba": "rgba(32, 85, 208, 1.000)",
+      "endpoints": [
+        {
+          "ref": "U2",
+          "pin": "4.5"
+        },
+        {
+          "ref": "U6",
+          "pin": "4.2"
+        }
+      ]
+    },
+    {
+      "id": "N24",
+      "original_net_name": "D_CW",
+      "continuous_net_name": "/D_CW",
+      "category": "CW",
+      "color": "オレンジ",
+      "rgba": "rgba(224, 112, 0, 1.000)",
+      "endpoints": [
+        {
+          "ref": "U2",
+          "pin": "4.13"
+        },
+        {
+          "ref": "U6",
+          "pin": "4.1"
+        }
+      ]
+    },
+    {
+      "id": "N25",
+      "original_net_name": "D_HOME",
+      "continuous_net_name": "/D_HOME",
+      "category": "ZHOME",
+      "color": "赤紫",
+      "rgba": "rgba(176, 32, 128, 1.000)",
+      "endpoints": [
+        {
+          "ref": "K5",
+          "pin": "IN"
+        },
+        {
+          "ref": "U2",
+          "pin": "4.8"
+        }
+      ]
+    },
+    {
+      "id": "N26",
+      "original_net_name": "GND",
+      "continuous_net_name": "GND",
+      "category": "GROUND",
+      "color": "黒",
+      "rgba": "rgba(0, 0, 0, 1.000)",
+      "endpoints": [
+        {
+          "ref": "C1",
+          "pin": "2"
+        },
+        {
+          "ref": "C2",
+          "pin": "2"
+        },
+        {
+          "ref": "C3",
+          "pin": "2"
+        },
+        {
+          "ref": "C4",
+          "pin": "2"
+        },
+        {
+          "ref": "C5",
+          "pin": "2"
+        },
+        {
+          "ref": "C6",
+          "pin": "2"
+        },
+        {
+          "ref": "D1",
+          "pin": "2"
+        },
+        {
+          "ref": "D2",
+          "pin": "2"
+        },
+        {
+          "ref": "D5",
+          "pin": "2"
+        },
+        {
+          "ref": "D7",
+          "pin": "2"
+        },
+        {
+          "ref": "K1",
+          "pin": "GND"
+        },
+        {
+          "ref": "K2",
+          "pin": "GND"
+        },
+        {
+          "ref": "K3",
+          "pin": "GND"
+        },
+        {
+          "ref": "K4",
+          "pin": "GND"
+        },
+        {
+          "ref": "K5",
+          "pin": "GND"
+        },
+        {
+          "ref": "R3",
+          "pin": "2"
+        },
+        {
+          "ref": "R4",
+          "pin": "2"
+        },
+        {
+          "ref": "R6",
+          "pin": "2"
+        },
+        {
+          "ref": "R8",
+          "pin": "2"
+        },
+        {
+          "ref": "S1",
+          "pin": "GND"
+        },
+        {
+          "ref": "S2",
+          "pin": "GND"
+        },
+        {
+          "ref": "S3",
+          "pin": "GND"
+        },
+        {
+          "ref": "S4",
+          "pin": "GND"
+        },
+        {
+          "ref": "SW1",
+          "pin": "2"
+        },
+        {
+          "ref": "U1",
+          "pin": "3.2"
+        },
+        {
+          "ref": "U1",
+          "pin": "4.4"
+        },
+        {
+          "ref": "U2",
+          "pin": "3.2"
+        },
+        {
+          "ref": "U2",
+          "pin": "4.4"
+        },
+        {
+          "ref": "U3",
+          "pin": "4.13"
+        },
+        {
+          "ref": "U3",
+          "pin": "4.14"
+        },
+        {
+          "ref": "U4",
+          "pin": "4.13"
+        },
+        {
+          "ref": "U4",
+          "pin": "4.14"
+        },
+        {
+          "ref": "U5",
+          "pin": "4.13"
+        },
+        {
+          "ref": "U5",
+          "pin": "4.14"
+        },
+        {
+          "ref": "U6",
+          "pin": "4.13"
+        },
+        {
+          "ref": "U6",
+          "pin": "4.14"
+        }
+      ]
+    },
+    {
+      "id": "N27",
+      "original_net_name": "Net-(R1-Pad1)",
+      "continuous_net_name": "Net-(R1-Pad1)",
+      "category": "SENSOR",
+      "color": "緑",
+      "rgba": "rgba(32, 128, 64, 1.000)",
+      "endpoints": [
+        {
+          "ref": "R1",
+          "pin": "1"
+        },
+        {
+          "ref": "S1",
+          "pin": "OUT"
+        }
+      ]
+    },
+    {
+      "id": "N28",
+      "original_net_name": "Net-(R2-Pad1)",
+      "continuous_net_name": "Net-(R2-Pad1)",
+      "category": "SENSOR",
+      "color": "緑",
+      "rgba": "rgba(32, 128, 64, 1.000)",
+      "endpoints": [
+        {
+          "ref": "R2",
+          "pin": "1"
+        },
+        {
+          "ref": "S2",
+          "pin": "OUT"
+        }
+      ]
+    },
+    {
+      "id": "N29",
+      "original_net_name": "Net-(R5-Pad1)",
+      "continuous_net_name": "Net-(R5-Pad1)",
+      "category": "SENSOR",
+      "color": "緑",
+      "rgba": "rgba(32, 128, 64, 1.000)",
+      "endpoints": [
+        {
+          "ref": "R5",
+          "pin": "1"
+        },
+        {
+          "ref": "S3",
+          "pin": "OUT"
+        }
+      ]
+    },
+    {
+      "id": "N30",
+      "original_net_name": "Net-(R7-Pad1)",
+      "continuous_net_name": "Net-(R7-Pad1)",
+      "category": "SENSOR",
+      "color": "緑",
+      "rgba": "rgba(32, 128, 64, 1.000)",
+      "endpoints": [
+        {
+          "ref": "R7",
+          "pin": "1"
+        },
+        {
+          "ref": "S4",
+          "pin": "OUT"
+        }
+      ]
+    },
+    {
+      "id": "N31",
+      "original_net_name": "Net-(U3-IN4/ZHOME)",
+      "continuous_net_name": "/A_ZHOME_24V",
+      "category": "ZHOME",
+      "color": "赤紫",
+      "rgba": "rgba(176, 32, 128, 1.000)",
+      "endpoints": [
+        {
+          "ref": "K2",
+          "pin": "NO"
+        },
+        {
+          "ref": "U3",
+          "pin": "4.3"
+        }
+      ]
+    },
+    {
+      "id": "N32",
+      "original_net_name": "Net-(U4-IN4/ZHOME)",
+      "continuous_net_name": "/B_ZHOME_24V",
+      "category": "ZHOME",
+      "color": "赤紫",
+      "rgba": "rgba(176, 32, 128, 1.000)",
+      "endpoints": [
+        {
+          "ref": "K3",
+          "pin": "NO"
+        },
+        {
+          "ref": "U4",
+          "pin": "4.3"
+        }
+      ]
+    },
+    {
+      "id": "N33",
+      "original_net_name": "Net-(U5-IN4/ZHOME)",
+      "continuous_net_name": "/C_ZHOME_24V",
+      "category": "ZHOME",
+      "color": "赤紫",
+      "rgba": "rgba(176, 32, 128, 1.000)",
+      "endpoints": [
+        {
+          "ref": "K4",
+          "pin": "NO"
+        },
+        {
+          "ref": "U5",
+          "pin": "4.3"
+        }
+      ]
+    },
+    {
+      "id": "N34",
+      "original_net_name": "Net-(U6-IN4/ZHOME)",
+      "continuous_net_name": "/D_ZHOME_24V",
+      "category": "ZHOME",
+      "color": "赤紫",
+      "rgba": "rgba(176, 32, 128, 1.000)",
+      "endpoints": [
+        {
+          "ref": "K5",
+          "pin": "NO"
+        },
+        {
+          "ref": "U6",
+          "pin": "4.3"
+        }
+      ]
+    }
+  ],
+  "unknowns": [
+    "センサー1〜4の製造元・型番・IN/給電・実コネクター・出力範囲・校正。S1〜S4は実センサーそのものの型番ではない。",
+    "NUCLEO実個体の基板リビジョン・ソルダーブリッジ（特にA4=PA5/PB7、A5=PA6/PA15、D13=PB3/PB8）とUSB/3V3内部給電設定。",
+    "リレー基板の実ジャンパー位置・内部結線・個体リビジョン。6端子の外部配線のみ確定。",
+    "AZD-Kの各軸個体・入力機能割当・パルス入力方式・電子ギヤ・原点復帰パラメータの実設定。2500 pulse/mmの採用換算はあるが設定バックアップ未収録。",
+    "AZD-K CN2モータ・CN3エンコーダの個別接点とケーブル、CN1 MB1/MB2ブレーキ・FG、各電源AC L/N/PE・DC OKの実配線。図の×は実機で未使用の証明ではない。",
+    "抵抗/コンデンサーの許容差・定格・パッケージ、ダイオード実装形状、SW1型番と物理端子、基板/コネクター/線材/端末処理/配線長・実色。PCBフットプリント未指定。",
+    "アクチュエータの個体対応・取付・原点/正負方向・押し面と受け台・チューブ材質寸法・循環流路の形状。",
+    "3.3 V直結CW/CCWと説明書5〜24 V指定の適合性、共有3V3の内部経路、実機の同期遅延・チャタリング・ノイズ・絶縁・精度の検証。"
+  ],
+  "interpretation": {
+    "reference_and_pin_identity": "Each (ref,pin) is a unique external terminal; pin is a string, never a decimal number.",
+    "net_identity": "Only net_id defines external electrical connectivity. Original and continuous net names and CAD classes are aliases/appearance metadata.",
+    "unrecorded": "A null net_id means external wiring is not recorded; never merge null endpoints, and never infer real hardware disuse or internal isolation.",
+    "internals": "Do not expand unknown board/driver/relay internals, add missing supply paths, or permanently join relay COM to NO.",
+    "colors": "Logical diagram colors, not verified physical insulation colors. Same color is not the same net.",
+    "coordinates": "Optional schematic drawing positions only; not mounting dimensions or cable lengths."
+  },
+  "external_mechanisms": [
+    {
+      "axis": "A",
+      "driver": "U3",
+      "actuator_model": "DRSM42RG-04A2AZMK",
+      "manufacturer": "Oriental Motor",
+      "motor_encoder_brake_contact_wiring": null,
+      "physical_serial_number": null
+    },
+    {
+      "axis": "B",
+      "driver": "U4",
+      "actuator_model": "DRSM42RG-04A2AZMK",
+      "manufacturer": "Oriental Motor",
+      "motor_encoder_brake_contact_wiring": null,
+      "physical_serial_number": null
+    },
+    {
+      "axis": "C",
+      "driver": "U5",
+      "actuator_model": "DRSM42RG-04A2AZMK",
+      "manufacturer": "Oriental Motor",
+      "motor_encoder_brake_contact_wiring": null,
+      "physical_serial_number": null
+    },
+    {
+      "axis": "D",
+      "driver": "U6",
+      "actuator_model": "DRSM42RG-04A2AZMK",
+      "manufacturer": "Oriental Motor",
+      "motor_encoder_brake_contact_wiring": null,
+      "physical_serial_number": null
+    }
+  ],
+  "power_groups": [
+    {
+      "supply": "PS1",
+      "axes": [
+        "A",
+        "B"
+      ],
+      "positive_alias": "24V_AB",
+      "negative_alias": "0V_AB"
+    },
+    {
+      "supply": "PS2",
+      "axes": [
+        "C",
+        "D"
+      ],
+      "positive_alias": "24V_CD",
+      "negative_alias": "0V_CD"
+    }
+  ]
+}

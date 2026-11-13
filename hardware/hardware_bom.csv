@@ -1,0 +1,41 @@
+﻿ref,kind,recorded_value,role,resistance_ohm,capacitance_farad,pin_count
+C1,capacitor,0.1u,ADC入力からGNDへの0.1 µF,,1e-07,2
+C2,capacitor,0.1u,ADC入力からGNDへの0.1 µF,,1e-07,2
+C3,capacitor,0.1u,3V3電源デカップリング,,1e-07,2
+C4,capacitor,1u,3V3電源デカップリング,,1e-06,2
+C5,capacitor,0.1u,ADC入力からGNDへの0.1 µF,,1e-07,2
+C6,capacitor,0.1u,ADC入力からGNDへの0.1 µF,,1e-07,2
+D1,diode,1N4148,GND側クランプ（A→GND）,,,2
+D2,diode,1N4148,GND側クランプ（A→GND）,,,2
+D3,diode,1N4148,3V3側クランプ（K→3V3）,,,2
+D4,diode,1N4148,3V3側クランプ（K→3V3）,,,2
+D5,diode,1N4148,GND側クランプ（A→GND）,,,2
+D6,diode,1N4148,3V3側クランプ（K→3V3）,,,2
+D7,diode,1N4148,GND側クランプ（A→GND）,,,2
+D8,diode,1N4148,3V3側クランプ（K→3V3）,,,2
+K1,relay_module,QC19004 / VCT,VCT用リレー基板,,,6
+K2,relay_module,QC19004 / ZHOME A,A軸ZHOME用リレー基板,,,6
+K3,relay_module,QC19004 / ZHOME B,B軸ZHOME用リレー基板,,,6
+K4,relay_module,QC19004 / ZHOME C,C軸ZHOME用リレー基板,,,6
+K5,relay_module,QC19004 / ZHOME D,D軸ZHOME用リレー基板,,,6
+PS1,supply,MDR-100-24 / AB,A/B軸用24 V電源,,,9
+PS2,supply,MDR-100-24 / CD,C/D軸用24 V電源,,,9
+R1,resistor,510,510 Ω直列抵抗,510,,2
+R2,resistor,510,510 Ω直列抵抗,510,,2
+R3,resistor,47k,47 kΩ対GND抵抗,47000,,2
+R4,resistor,47k,47 kΩ対GND抵抗,47000,,2
+R5,resistor,510,510 Ω直列抵抗,510,,2
+R6,resistor,47k,47 kΩ対GND抵抗,47000,,2
+R7,resistor,510,510 Ω直列抵抗,510,,2
+R8,resistor,47k,47 kΩ対GND抵抗,47000,,2
+S1,external_sensor_interface,sensor1,sensor1の論理OUT/GND端子。実センサー型番・コネクター未指定,,,2
+S2,external_sensor_interface,sensor2,sensor2の論理OUT/GND端子。実センサー型番・コネクター未指定,,,2
+S3,external_sensor_interface,sensor3,sensor3の論理OUT/GND端子。実センサー型番・コネクター未指定,,,2
+S4,external_sensor_interface,sensor4,sensor4の論理OUT/GND端子。実センサー型番・コネクター未指定,,,2
+SW1,momentary_switch,RESET BOTH,両マイコン共通リセット用・通常開押しボタン,,,2
+U1,controller_board,NUCLEO-G431KB,sensor用マイコン,,,30
+U2,controller_board,NUCLEO-G431KB (motor),motor用マイコン,,,30
+U3,motor_driver,AZD-K / A,A軸ドライバ,,,29
+U4,motor_driver,AZD-K / B,B軸ドライバ,,,29
+U5,motor_driver,AZD-K / C,C軸ドライバ,,,29
+U6,motor_driver,AZD-K / D,D軸ドライバ,,,29

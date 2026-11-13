@@ -4,6 +4,8 @@ NUCLEO-G431KBを2台使用し、直動アクチュエータの動作生成とセ
 
 ## ドキュメント
 
+- **[文字だけで回路を再構成する仕様](hardware/HARDWARE_REPRODUCTION.md)**：全40部品・278ピン・34ネット、未記載端子、組立規則、配色、完全複製に不足する情報。KiCad以外にも使えるJSON・接続CSV・部品CSVを同梱。
+
 - **[KiCad回路図](hardware/README.md)**：両G431KBと4入力、AZD-K×4、リレー×5、24 V電源×2をA0横の1ページに統合。
 - **[連続配線図](hardware/continuous_wiring/README.md)**：元図を残し、マイコンから各部品まで全配線を線で表示。
 
