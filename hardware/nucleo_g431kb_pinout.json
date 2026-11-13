@@ -285,7 +285,7 @@
     {
       "number": "3.14",
       "name": "+3V3",
-      "type": "power_out",
+      "type": "passive",
       "side": "right",
       "header": "CN3",
       "header_pin": 14,
