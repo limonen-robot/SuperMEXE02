@@ -1,0 +1,18 @@
+{
+  "started": true,
+  "values": true,
+  "pid": true,
+  "fbval": true,
+  "status": "VCT 20回 / 周期開始 A:0 B:0 C:0 D:0",
+  "motor_states": {
+    "0": [
+      4,
+      9924
+    ],
+    "1": [
+      4,
+      9882
+    ]
+  },
+  "clock_error": ""
+}
