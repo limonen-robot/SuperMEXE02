@@ -1,0 +1,306 @@
+{
+  "view": "component side, USB at top",
+  "source": "ST UM2397 Rev 2, Figure 12 / Table 11",
+  "pins": [
+    {
+      "number": "4.1",
+      "name": "D1/PA9",
+      "type": "bidirectional",
+      "side": "left",
+      "header": "CN4",
+      "header_pin": 1,
+      "arduino": "D1",
+      "mcu": "PA9"
+    },
+    {
+      "number": "4.2",
+      "name": "D0/PA10",
+      "type": "bidirectional",
+      "side": "left",
+      "header": "CN4",
+      "header_pin": 2,
+      "arduino": "D0",
+      "mcu": "PA10"
+    },
+    {
+      "number": "4.3",
+      "name": "NRST",
+      "type": "passive",
+      "side": "left",
+      "header": "CN4",
+      "header_pin": 3,
+      "arduino": "NRST",
+      "mcu": "NRST"
+    },
+    {
+      "number": "4.4",
+      "name": "GND",
+      "type": "power_in",
+      "side": "left",
+      "header": "CN4",
+      "header_pin": 4,
+      "arduino": "GND",
+      "mcu": "GND"
+    },
+    {
+      "number": "4.5",
+      "name": "D2/PA12",
+      "type": "bidirectional",
+      "side": "left",
+      "header": "CN4",
+      "header_pin": 5,
+      "arduino": "D2",
+      "mcu": "PA12"
+    },
+    {
+      "number": "4.6",
+      "name": "D3/PB0",
+      "type": "input",
+      "side": "left",
+      "header": "CN4",
+      "header_pin": 6,
+      "arduino": "D3",
+      "mcu": "PB0"
+    },
+    {
+      "number": "4.7",
+      "name": "D4/PB7",
+      "type": "bidirectional",
+      "side": "left",
+      "header": "CN4",
+      "header_pin": 7,
+      "arduino": "D4",
+      "mcu": "PB7"
+    },
+    {
+      "number": "4.8",
+      "name": "D5/PA15",
+      "type": "bidirectional",
+      "side": "left",
+      "header": "CN4",
+      "header_pin": 8,
+      "arduino": "D5",
+      "mcu": "PA15"
+    },
+    {
+      "number": "4.9",
+      "name": "D6/PB6",
+      "type": "bidirectional",
+      "side": "left",
+      "header": "CN4",
+      "header_pin": 9,
+      "arduino": "D6",
+      "mcu": "PB6"
+    },
+    {
+      "number": "4.10",
+      "name": "D7/PF0",
+      "type": "bidirectional",
+      "side": "left",
+      "header": "CN4",
+      "header_pin": 10,
+      "arduino": "D7",
+      "mcu": "PF0"
+    },
+    {
+      "number": "4.11",
+      "name": "D8/PF1",
+      "type": "bidirectional",
+      "side": "left",
+      "header": "CN4",
+      "header_pin": 11,
+      "arduino": "D8",
+      "mcu": "PF1"
+    },
+    {
+      "number": "4.12",
+      "name": "D9/PA8",
+      "type": "bidirectional",
+      "side": "left",
+      "header": "CN4",
+      "header_pin": 12,
+      "arduino": "D9",
+      "mcu": "PA8"
+    },
+    {
+      "number": "4.13",
+      "name": "D10/PA11",
+      "type": "bidirectional",
+      "side": "left",
+      "header": "CN4",
+      "header_pin": 13,
+      "arduino": "D10",
+      "mcu": "PA11"
+    },
+    {
+      "number": "4.14",
+      "name": "D11/PB5",
+      "type": "bidirectional",
+      "side": "left",
+      "header": "CN4",
+      "header_pin": 14,
+      "arduino": "D11",
+      "mcu": "PB5"
+    },
+    {
+      "number": "4.15",
+      "name": "D12/PB4",
+      "type": "bidirectional",
+      "side": "left",
+      "header": "CN4",
+      "header_pin": 15,
+      "arduino": "D12",
+      "mcu": "PB4"
+    },
+    {
+      "number": "3.1",
+      "name": "VIN",
+      "type": "passive",
+      "side": "right",
+      "header": "CN3",
+      "header_pin": 1,
+      "arduino": "VIN",
+      "mcu": "VIN"
+    },
+    {
+      "number": "3.2",
+      "name": "GND",
+      "type": "power_in",
+      "side": "right",
+      "header": "CN3",
+      "header_pin": 2,
+      "arduino": "GND",
+      "mcu": "GND"
+    },
+    {
+      "number": "3.3",
+      "name": "NRST",
+      "type": "passive",
+      "side": "right",
+      "header": "CN3",
+      "header_pin": 3,
+      "arduino": "NRST",
+      "mcu": "NRST"
+    },
+    {
+      "number": "3.4",
+      "name": "+5V",
+      "type": "power_out",
+      "side": "right",
+      "header": "CN3",
+      "header_pin": 4,
+      "arduino": "+5V",
+      "mcu": "+5V"
+    },
+    {
+      "number": "3.5",
+      "name": "A7/PA2",
+      "type": "bidirectional",
+      "side": "right",
+      "header": "CN3",
+      "header_pin": 5,
+      "arduino": "A7",
+      "mcu": "PA2"
+    },
+    {
+      "number": "3.6",
+      "name": "A6/PA7",
+      "type": "bidirectional",
+      "side": "right",
+      "header": "CN3",
+      "header_pin": 6,
+      "arduino": "A6",
+      "mcu": "PA7"
+    },
+    {
+      "number": "3.7",
+      "name": "A5/PA6/PA15",
+      "type": "bidirectional",
+      "side": "right",
+      "header": "CN3",
+      "header_pin": 7,
+      "arduino": "A5",
+      "mcu": "PA6/PA15"
+    },
+    {
+      "number": "3.8",
+      "name": "A4/PA5/PB7",
+      "type": "input",
+      "side": "right",
+      "header": "CN3",
+      "header_pin": 8,
+      "arduino": "A4",
+      "mcu": "PA5/PB7"
+    },
+    {
+      "number": "3.9",
+      "name": "A3/PA4",
+      "type": "input",
+      "side": "right",
+      "header": "CN3",
+      "header_pin": 9,
+      "arduino": "A3",
+      "mcu": "PA4"
+    },
+    {
+      "number": "3.10",
+      "name": "A2/PA3",
+      "type": "bidirectional",
+      "side": "right",
+      "header": "CN3",
+      "header_pin": 10,
+      "arduino": "A2",
+      "mcu": "PA3"
+    },
+    {
+      "number": "3.11",
+      "name": "A1/PA1",
+      "type": "input",
+      "side": "right",
+      "header": "CN3",
+      "header_pin": 11,
+      "arduino": "A1",
+      "mcu": "PA1"
+    },
+    {
+      "number": "3.12",
+      "name": "A0/PA0",
+      "type": "input",
+      "side": "right",
+      "header": "CN3",
+      "header_pin": 12,
+      "arduino": "A0",
+      "mcu": "PA0"
+    },
+    {
+      "number": "3.13",
+      "name": "AREF/AVDD",
+      "type": "passive",
+      "side": "right",
+      "header": "CN3",
+      "header_pin": 13,
+      "arduino": "AREF",
+      "mcu": "AVDD"
+    },
+    {
+      "number": "3.14",
+      "name": "+3V3",
+      "type": "power_out",
+      "side": "right",
+      "header": "CN3",
+      "header_pin": 14,
+      "arduino": "+3V3",
+      "mcu": "+3V3"
+    },
+    {
+      "number": "3.15",
+      "name": "D13/PB3/PB8",
+      "type": "bidirectional",
+      "side": "right",
+      "header": "CN3",
+      "header_pin": 15,
+      "arduino": "D13",
+      "mcu": "PB3/PB8"
+    }
+  ]
+}
