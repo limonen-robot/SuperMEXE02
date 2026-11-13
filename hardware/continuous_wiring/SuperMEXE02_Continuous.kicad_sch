@@ -11200,7 +11200,7 @@
 		(stroke
 			(width 0.6)
 			(type default)
-			(color 32 85 208 1)
+			(color 224 112 0 1)
 		)
 		(uuid "2487619b-8250-4369-872e-eefff0fdf461")
 	)
@@ -11222,7 +11222,7 @@
 		(stroke
 			(width 0.6)
 			(type default)
-			(color 128 48 176 1)
+			(color 32 85 208 1)
 		)
 		(uuid "a5ebba6d-e5ad-4cf9-bf48-b113080cb18b")
 	)
@@ -11244,7 +11244,7 @@
 		(stroke
 			(width 0.6)
 			(type default)
-			(color 208 112 0 1)
+			(color 176 32 128 1)
 		)
 		(uuid "68c4326e-2ccd-4c28-af1e-8050368f648b")
 	)

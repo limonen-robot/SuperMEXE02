@@ -30,3 +30,11 @@ kicad-cli sch export netlist --format kicadxml -o sensor_frontend.net.xml SuperM
 kicad-cli sch export netlist --format kicadxml -o hardware.net.xml SuperMEXE02.kicad_sch
 python verify_connections.py hardware.net.xml
 ```
+
+## 両図の配色統一（2026-11-14）
+
+- 利用者指定：CWをオレンジ、CCWを青、センサーを緑に統一。ZHOMEはCWと区別するため赤紫へ変更。
+- 元図・連続図それぞれの接続済み34ネットについて、KiCad出力のネットクラスが指定分類と一致することを確認。
+- 両図の全ネットの部品ピン集合は、今回の変更前と完全一致。4軸GPIO・ADC・IN-COM5・UART・共通リセット・電源分離の既存検査に合格。
+- 連続図は299本の線分だけによる接続検査にも合格。両図のERCはエラー0・警告0。
+- SVGで全9色の配線出力を確認し、PNGで凡例と全体配置を目視確認。ファームウェア・PCアプリは変更なし。

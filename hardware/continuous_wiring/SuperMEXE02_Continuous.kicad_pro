@@ -44,17 +44,17 @@
       {
         "name": "CW",
         "priority": 3,
-        "schematic_color": "rgba(32, 85, 208, 1.000)"
+        "schematic_color": "rgba(224, 112, 0, 1.000)"
       },
       {
         "name": "CCW",
         "priority": 4,
-        "schematic_color": "rgba(128, 48, 176, 1.000)"
+        "schematic_color": "rgba(32, 85, 208, 1.000)"
       },
       {
         "name": "ZHOME",
         "priority": 5,
-        "schematic_color": "rgba(208, 112, 0, 1.000)"
+        "schematic_color": "rgba(176, 32, 128, 1.000)"
       },
       {
         "name": "VCT",
@@ -106,6 +106,10 @@
         "pattern": "/A_HOME"
       },
       {
+        "netclass": "ZHOME",
+        "pattern": "/A_ZHOME_24V"
+      },
+      {
         "netclass": "CCW",
         "pattern": "/B_CCW"
       },
@@ -116,6 +120,10 @@
       {
         "netclass": "ZHOME",
         "pattern": "/B_HOME"
+      },
+      {
+        "netclass": "ZHOME",
+        "pattern": "/B_ZHOME_24V"
       },
       {
         "netclass": "CCW",
@@ -130,6 +138,10 @@
         "pattern": "/C_HOME"
       },
       {
+        "netclass": "ZHOME",
+        "pattern": "/C_ZHOME_24V"
+      },
+      {
         "netclass": "CCW",
         "pattern": "/D_CCW"
       },
@@ -142,8 +154,20 @@
         "pattern": "/D_HOME"
       },
       {
+        "netclass": "ZHOME",
+        "pattern": "/D_ZHOME_24V"
+      },
+      {
         "netclass": "UART",
         "pattern": "/SENSOR_D1_TO_MOTOR_D0"
+      },
+      {
+        "netclass": "VCT",
+        "pattern": "/VCT_RELAY_IN"
+      },
+      {
+        "netclass": "VCT",
+        "pattern": "/VCT_SENSOR"
       },
       {
         "netclass": "GROUND",
@@ -184,30 +208,6 @@
       {
         "netclass": "RESET",
         "pattern": "Net-(SW1-Pad1)"
-      },
-      {
-        "netclass": "VCT",
-        "pattern": "/VCT_SENSOR"
-      },
-      {
-        "netclass": "VCT",
-        "pattern": "/VCT_RELAY_IN"
-      },
-      {
-        "netclass": "ZHOME",
-        "pattern": "/A_ZHOME_24V"
-      },
-      {
-        "netclass": "ZHOME",
-        "pattern": "/B_ZHOME_24V"
-      },
-      {
-        "netclass": "ZHOME",
-        "pattern": "/C_ZHOME_24V"
-      },
-      {
-        "netclass": "ZHOME",
-        "pattern": "/D_ZHOME_24V"
       }
     ]
   }

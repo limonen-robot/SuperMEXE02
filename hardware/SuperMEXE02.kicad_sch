@@ -11858,4 +11858,202 @@
 			(page "1")
 		)
 	)
+	(polyline
+		(pts
+			(xy 30.48 784.86)
+			(xy 45.72 784.86)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "76095be3-e1ff-4672-a9a1-9cc56b2867ca")
+	)
+	(text "GROUND : GND / 24 V return"
+		(at 50.8 784.86 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left)
+		)
+		(uuid "ca7e8e71-89d6-4d82-ab49-989dfae36e14")
+	)
+	(polyline
+		(pts
+			(xy 360.68 784.86)
+			(xy 375.92 784.86)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 208 32 32 1)
+		)
+		(uuid "4d97315b-c588-432e-92a8-ef79227998cf")
+	)
+	(text "POWER : 3V3 / +24 V"
+		(at 381 784.86 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left)
+		)
+		(uuid "a79f9e1e-13b4-475b-82fc-178c860d794e")
+	)
+	(polyline
+		(pts
+			(xy 690.88 784.86)
+			(xy 706.12 784.86)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 32 128 64 1)
+		)
+		(uuid "145c18f0-ebb4-47e3-a185-8bf071d60c4f")
+	)
+	(text "SENSOR : Sensor analog"
+		(at 711.2 784.86 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left)
+		)
+		(uuid "754eafcb-e367-4ebc-ae8f-1e21c4d84720")
+	)
+	(polyline
+		(pts
+			(xy 30.48 797.56)
+			(xy 45.72 797.56)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 224 112 0 1)
+		)
+		(uuid "98fd4e3d-f3f3-4513-9824-f66a216bb506")
+	)
+	(text "CW : CW"
+		(at 50.8 797.56 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left)
+		)
+		(uuid "73b79c64-fffc-4a3a-93af-7748754041bf")
+	)
+	(polyline
+		(pts
+			(xy 360.68 797.56)
+			(xy 375.92 797.56)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 32 85 208 1)
+		)
+		(uuid "b3992ae5-ada6-406f-9ecd-e324569e182f")
+	)
+	(text "CCW : CCW"
+		(at 381 797.56 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left)
+		)
+		(uuid "574d64dd-523b-4993-9f4e-b1a2c1fc2964")
+	)
+	(polyline
+		(pts
+			(xy 690.88 797.56)
+			(xy 706.12 797.56)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 176 32 128 1)
+		)
+		(uuid "2ac3a377-6d1e-4f27-a745-434113cdc757")
+	)
+	(text "ZHOME : ZHOME"
+		(at 711.2 797.56 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left)
+		)
+		(uuid "12e3c05b-109f-4081-b460-6ba7e1714909")
+	)
+	(polyline
+		(pts
+			(xy 30.48 810.26)
+			(xy 45.72 810.26)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 140 156 1)
+		)
+		(uuid "56941d79-8c61-4ecb-a966-589f3405a30d")
+	)
+	(text "VCT : VCT"
+		(at 50.8 810.26 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left)
+		)
+		(uuid "db7c1d4a-a495-43cf-8092-d7c796602476")
+	)
+	(polyline
+		(pts
+			(xy 360.68 810.26)
+			(xy 375.92 810.26)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 136 80 32 1)
+		)
+		(uuid "b22097e6-9647-4cd8-9c46-9afcc95d8a3f")
+	)
+	(text "UART : UART"
+		(at 381 810.26 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left)
+		)
+		(uuid "a36470b4-e7fc-4abf-8066-85864e7ca554")
+	)
+	(polyline
+		(pts
+			(xy 690.88 810.26)
+			(xy 706.12 810.26)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 96 96 96 1)
+		)
+		(uuid "61abb9d4-21b3-471e-8178-e291e8a052f5")
+	)
+	(text "RESET : RESET"
+		(at 711.2 810.26 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left)
+		)
+		(uuid "382a4706-97d4-4e07-849a-495a877380d0")
+	)
 )

@@ -1,6 +1,6 @@
 # 線を省略しない連続配線図
 
-**[SuperMEXE02_Continuous.kicad_pro](SuperMEXE02_Continuous.kicad_pro)** をKiCadで開いてください。元の[全体回路図](../SuperMEXE02.kicad_pro)とは別のプロジェクトです。元の回路図ファイル・専用シンボル・プレビューは変更せず残しています。
+**[SuperMEXE02_Continuous.kicad_pro](SuperMEXE02_Continuous.kicad_pro)** をKiCadで開いてください。元の[全体回路図](../SuperMEXE02.kicad_pro)とは別のプロジェクトです。元の配置とラベル接続の形式も残しています。元図・連続図の両方に同じ色設定を適用しています。
 
 ![連続配線図](previews/SuperMEXE02_Continuous.png)
 
@@ -28,9 +28,9 @@ KiCad標準のネットクラスで、同じ種類の信号を同じ色にしま
 | マイコンGND・24 V電源の−（0V_AB / 0V_CD） | 黒 |
 | 3V3・24 V電源の＋ | 赤 |
 | センサー1～4のアナログ信号（510 Ωの前後とも） | 緑 |
-| A～DのCW信号 | 青 |
-| A～DのCCW信号 | 紫 |
-| ZHOME信号（リレー制御側・接点出力側） | オレンジ |
+| A～DのCW信号 | オレンジ |
+| A～DのCCW信号 | 青 |
+| ZHOME信号（リレー制御側・接点出力側） | 赤紫 |
 | VCT信号（リレー制御側・接点出力側） | 青緑 |
 | sensor D1 → motor D0の通信線 | 茶 |
 | 共通リセット信号 | 灰 |

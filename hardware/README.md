@@ -10,7 +10,13 @@ KiCad 10で **[SuperMEXE02.kicad_pro](SuperMEXE02.kicad_pro)** を開き、回�
 
 ## 追加：すべての線をつないだ配線図
 
-元の図をそのまま残し、マイコンから全接続先まで線を追える[連続配線図](continuous_wiring/README.md)を別に追加しました。開くファイルは `continuous_wiring/SuperMEXE02_Continuous.kicad_pro` です。信号・電源・GNDをラベルで省略せず描いています。両図の電気的な接続内容は同じです。
+元の図の配置とラベル接続を残し、マイコンから全接続先まで線を追える[連続配線図](continuous_wiring/README.md)を別に追加しました。開くファイルは `continuous_wiring/SuperMEXE02_Continuous.kicad_pro` です。信号・電源・GNDをラベルで省略せず描いています。両図の電気的な接続内容は同じです。
+
+## 配線の色
+
+元図と連続配線図の両方で、信号の種類ごとに同じ色を使います。CW＝オレンジ、CCW＝青、センサー信号＝緑、ZHOME＝赤紫、VCT＝青緑、通信＝茶、リセット＝灰、電源＋＝赤、GND／電源−＝黒です。図の下端にも色見本を付けました。
+
+同じ色でも別の電源・別の軸は別の接続です。配線と電源の分離は変更していません。色設定を読み込むには、このフォルダーの **SuperMEXE02.kicad_pro** から開いてください。[配色表と表示設定の説明](continuous_wiring/README.md#配線の色)を参照。
 
 ## 現在の範囲
 
