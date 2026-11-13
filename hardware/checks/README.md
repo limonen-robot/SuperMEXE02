@@ -10,9 +10,10 @@
 - Rev 0.2：G431KBまでの直接配線、共通3V3/GNDラインへ配置変更。変更前後の全11ネットについて、全ての部品ピンの接続先が完全一致することを確認。
 - Rev 0.3：左右15本ずつ全30端子の重複・欠落なし。公式UM2397 Figure 12/Table 11に対応させ、既存の論理GPIO名から物理ヘッダー端子へ変換後、全11ネットの接続先を照合して一致。GNDはCN3-2とCN4-4の両方へ接続。
 - Rev 0.4：U1/U2各30端子、D1→D0の2端子だけの接続、NRST2端子とSW1の接続、GND/3V3の共有、PA0→K1 IN・K1 NO→PB0の独立ネット、K1 COM→3V3をXMLネットリストで照合。4入力の既存ネットは完全一致。
+- Rev 0.5：3ページの階層を含むERC 0/0。4台のCN4全24端子・CN1全5点、リレー5枚×6端子、電源2台×9端子を確認。12本の軸制御信号、各リレーNO→IN4、IN-COM5→各24 V−、CW/CCW−→マイコンGND、3つの基準線が別ネットであることを検証スクリプトで照合。
 - PNGで文字・部品・配線の配置を目視確認。
 
-ERCは回路図上の接続検査であり、実配線の一致、ADC保護性能、基板の端子割当、センサー適合性を検証するものではない。VCTのリレー経由配線は利用者説明を反映。リレー基板の未説明端子とUSBを含む電源経路の適否は未検証。
+ERCは回路図上の接続検査であり、実配線の一致、ADC保護性能、基板の端子割当、センサー適合性を検証するものではない。VCTのリレー経由配線は利用者説明を反映。リレー基板は全6端子を反映済み。内部ジャンパー・USBを含む電源経路の適否・3.3 V直結パルス入力の適合性は未検証。
 
 再確認例（このhardwareフォルダーで実行。KiCadのbinをPATHに追加）：
 
@@ -20,4 +21,11 @@ ERCは回路図上の接続検査であり、実配線の一致、ADC保護性�
 kicad-cli sch erc --severity-all -o checks/sensor_frontend.erc.rpt SuperMEXE02.kicad_sch
 kicad-cli sch export svg -o previews SuperMEXE02.kicad_sch
 kicad-cli sch export netlist --format kicadxml -o sensor_frontend.net.xml SuperMEXE02.kicad_sch
+```
+
+配線照合の再実行：
+
+```powershell
+kicad-cli sch export netlist --format kicadxml -o hardware.net.xml SuperMEXE02.kicad_sch
+python verify_connections.py hardware.net.xml
 ```

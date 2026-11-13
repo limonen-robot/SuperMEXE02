@@ -1,0 +1,133 @@
+{
+  "source": "HM-60313-7 p10,18",
+  "CN4": [
+    {
+      "pin": 1,
+      "signal": "CW+"
+    },
+    {
+      "pin": 2,
+      "signal": "CCW+"
+    },
+    {
+      "pin": 3,
+      "signal": "IN4 / ZHOME"
+    },
+    {
+      "pin": 4,
+      "signal": "IN6 / STOP"
+    },
+    {
+      "pin": 5,
+      "signal": "IN-COM [4-7]"
+    },
+    {
+      "pin": 6,
+      "signal": "IN8 / FW-JOG"
+    },
+    {
+      "pin": 7,
+      "signal": "OUT0 / HOME-END"
+    },
+    {
+      "pin": 8,
+      "signal": "OUT2 / PLS-RDY"
+    },
+    {
+      "pin": 9,
+      "signal": "OUT4 / MOVE"
+    },
+    {
+      "pin": 10,
+      "signal": "OUT-COM"
+    },
+    {
+      "pin": 11,
+      "signal": "ASG+"
+    },
+    {
+      "pin": 12,
+      "signal": "BSG+"
+    },
+    {
+      "pin": 13,
+      "signal": "CW-"
+    },
+    {
+      "pin": 14,
+      "signal": "CCW-"
+    },
+    {
+      "pin": 15,
+      "signal": "IN5 / FREE"
+    },
+    {
+      "pin": 16,
+      "signal": "IN7 / ALM-RST"
+    },
+    {
+      "pin": 17,
+      "signal": "IN-COM [8-9]"
+    },
+    {
+      "pin": 18,
+      "signal": "IN9 / RV-JOG"
+    },
+    {
+      "pin": 19,
+      "signal": "OUT1 / IN-POS"
+    },
+    {
+      "pin": 20,
+      "signal": "OUT3 / READY"
+    },
+    {
+      "pin": 21,
+      "signal": "OUT5 / ALM-B"
+    },
+    {
+      "pin": 22,
+      "signal": "GND"
+    },
+    {
+      "pin": 23,
+      "signal": "ASG-"
+    },
+    {
+      "pin": 24,
+      "signal": "BSG-"
+    }
+  ],
+  "CN1": [
+    "MB1",
+    "MB2",
+    "+",
+    "-",
+    "FG"
+  ],
+  "power_groups": {
+    "PS1": [
+      "A",
+      "B"
+    ],
+    "PS2": [
+      "C",
+      "D"
+    ]
+  },
+  "relay": {
+    "model": "QCCAN QC19004",
+    "input_top_to_bottom": [
+      "VCC",
+      "IN",
+      "GND"
+    ],
+    "contacts_top_to_bottom": [
+      "NC",
+      "COM",
+      "NO"
+    ],
+    "product": "https://www.amazon.com/dp/B09X1P3YHL",
+    "image": "https://m.media-amazon.com/images/I/61G9igaKVnL._SL500_.jpg"
+  }
+}

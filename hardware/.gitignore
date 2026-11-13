@@ -4,3 +4,5 @@
 *-backups/
 *.net.xml
 fp-info-cache
+
+!verify_connections.py

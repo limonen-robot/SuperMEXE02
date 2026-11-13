@@ -1431,7 +1431,7 @@
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "K"
-			(at -17.78 13.97 0)
+			(at -7.62 6.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1439,8 +1439,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "VCT relay module"
-			(at -17.78 -11.43 0)
+		(property "Value" "QCCAN QC19004"
+			(at -7.62 -6.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1466,7 +1466,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Functional relay-module block: IN high closes COM to NO; COM is shared 3V3. Contact output modeled as a driven logic output for ERC. Control supply/common and physical module terminal ordering are not yet specified. Relay body photographed: BESTEP JQC3F-03VDC-C; not a bare-coil GPIO connection."
+		(property "Description" "3V/3.3V High-trigger relay module. Product image: input left top-to-bottom VCC/IN/GND; contact right top-to-bottom NC/COM/NO. Physical terminal labels, not invented manufacturer pin numbers. BESTEP JQC3F-03VDC-C relay body. NO modeled as driven functional output for ERC, no mechanical simulation."
 			(at 0 0 0)
 			(effects
 				(font
@@ -1477,8 +1477,8 @@
 		)
 		(symbol "VCT_RELAY_MODULE_0_1"
 			(rectangle
-				(start -17.78 10.16)
-				(end 17.78 -10.16)
+				(start -17.78 12.7)
+				(end 17.78 -12.7)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -1489,10 +1489,28 @@
 			)
 		)
 		(symbol "VCT_RELAY_MODULE_1_1"
+			(pin power_in line
+				(at -25.4 7.62 0)
+				(length 7.62)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 			(pin input line
-				(at -20.32 0 0)
-				(length 2.54)
-				(name "IN (HIGH=ON)"
+				(at -25.4 0 0)
+				(length 7.62)
+				(name "IN"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1508,9 +1526,45 @@
 				)
 			)
 			(pin power_in line
-				(at 0 12.7 270)
-				(length 2.54)
-				(name "COM / 3V3"
+				(at -25.4 -7.62 0)
+				(length 7.62)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 25.4 7.62 180)
+				(length 7.62)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 25.4 0 180)
+				(length 7.62)
+				(name "COM"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1526,9 +1580,9 @@
 				)
 			)
 			(pin output line
-				(at 20.32 0 180)
-				(length 2.54)
-				(name "NO / VCT_OUT"
+				(at 25.4 -7.62 180)
+				(length 7.62)
+				(name "NO"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1536,6 +1590,832 @@
 					)
 				)
 				(number "NO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "AZD_K"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -20.32 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AZD-K"
+			(at -20.32 -24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Oriental Motor AZD-K pulse input. CN4 all 24 I/O terminals, physical two-column order 1..12 and 13..24. CN1 all five terminals MB1/MB2/+/-/FG top-to-bottom. HM-60313-7 p10/18. Motor CN2 and encoder CN3 contact assignments are not published in this manual; shown as named internal connector blocks only. No AZD-KD RS485 ports."
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "AZD_K_0_1"
+			(rectangle
+				(start -33.02 71.12)
+				(end 33.02 -76.2)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "AZD_K_1_1"
+			(pin passive line
+				(at -40.64 45.72 0)
+				(length 7.62)
+				(name "CW+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -40.64 40.64 0)
+				(length 7.62)
+				(name "CCW+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -40.64 35.56 0)
+				(length 7.62)
+				(name "IN4/ZHOME"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -40.64 30.48 0)
+				(length 7.62)
+				(name "IN6/STOP"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -40.64 25.4 0)
+				(length 7.62)
+				(name "IN-COM [4-7]"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -40.64 20.32 0)
+				(length 7.62)
+				(name "IN8/FW-JOG"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -40.64 15.24 0)
+				(length 7.62)
+				(name "OUT0/HOME-END"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -40.64 10.16 0)
+				(length 7.62)
+				(name "OUT2/PLS-RDY"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -40.64 5.08 0)
+				(length 7.62)
+				(name "OUT4/MOVE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -40.64 0 0)
+				(length 7.62)
+				(name "OUT-COM"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -40.64 -5.08 0)
+				(length 7.62)
+				(name "ASG+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -40.64 -10.16 0)
+				(length 7.62)
+				(name "BSG+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 40.64 45.72 180)
+				(length 7.62)
+				(name "CW-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 40.64 40.64 180)
+				(length 7.62)
+				(name "CCW-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 40.64 35.56 180)
+				(length 7.62)
+				(name "IN5/FREE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 40.64 30.48 180)
+				(length 7.62)
+				(name "IN7/ALM-RST"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 40.64 25.4 180)
+				(length 7.62)
+				(name "IN-COM [8-9]"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.17"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 40.64 20.32 180)
+				(length 7.62)
+				(name "IN9/RV-JOG"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 40.64 15.24 180)
+				(length 7.62)
+				(name "OUT1/IN-POS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.19"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 40.64 10.16 180)
+				(length 7.62)
+				(name "OUT3/READY"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.20"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 40.64 5.08 180)
+				(length 7.62)
+				(name "OUT5/ALM-B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.21"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 40.64 0 180)
+				(length 7.62)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.22"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 40.64 -5.08 180)
+				(length 7.62)
+				(name "ASG-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.23"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 40.64 -10.16 180)
+				(length 7.62)
+				(name "BSG-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4.24"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -40.64 -45.72 0)
+				(length 7.62)
+				(name "MB1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1.MB1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -40.64 -52.07 0)
+				(length 7.62)
+				(name "MB2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1.MB2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -40.64 -58.42 0)
+				(length 7.62)
+				(name "+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1.+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -40.64 -64.77 0)
+				(length 7.62)
+				(name "-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1.-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -40.64 -71.12 0)
+				(length 7.62)
+				(name "FG"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1.FG"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "MDR_100_24"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "PS"
+			(at -10.16 11.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MDR-100-24"
+			(at -10.16 -11.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "MEAN WELL MDR-100-24 24V 4A. Front label: top left-to-right +V,+V,-V,-V,DC OK pair; bottom left-to-right PE,N,L. Duplicate rail terminals internally common, represented by equal net labels. Contact numbering +V1/+V2 etc is project identification, not manufacturer numbering."
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "MDR_100_24_0_1"
+			(rectangle
+				(start -35.56 15.24)
+				(end 35.56 -15.24)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "MDR_100_24_1_1"
+			(pin power_out line
+				(at -25.4 22.86 270)
+				(length 7.62)
+				(name "+V1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "+V1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -15.24 22.86 270)
+				(length 7.62)
+				(name "+V2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "+V2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at -5.08 22.86 270)
+				(length 7.62)
+				(name "-V1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "-V1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 22.86 270)
+				(length 7.62)
+				(name "-V2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "-V2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 22.86 270)
+				(length 7.62)
+				(name "DC_OK1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "OK1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 25.4 22.86 270)
+				(length 7.62)
+				(name "DC_OK2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "OK2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -20.32 -22.86 90)
+				(length 7.62)
+				(name "PE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "PE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -22.86 90)
+				(length 7.62)
+				(name "N"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "N"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 20.32 -22.86 90)
+				(length 7.62)
+				(name "L"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "L"
 					(effects
 						(font
 							(size 1.27 1.27)
