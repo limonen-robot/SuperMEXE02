@@ -59,8 +59,8 @@
 		)
 		(symbol "NUCLEO_G431KB_SENSOR_0_1"
 			(rectangle
-				(start -12.7 10.16)
-				(end 12.7 -7.62)
+				(start -30.48 101.6)
+				(end 30.48 -109.22)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -72,8 +72,8 @@
 		)
 		(symbol "NUCLEO_G431KB_SENSOR_1_1"
 			(pin input line
-				(at -15.24 5.08 0)
-				(length 2.54)
+				(at -38.1 66.04 0)
+				(length 7.62)
 				(name "PA0"
 					(effects
 						(font
@@ -90,8 +90,8 @@
 				)
 			)
 			(pin input line
-				(at -15.24 2.54 0)
-				(length 2.54)
+				(at -38.1 22.86 0)
+				(length 7.62)
 				(name "PA1"
 					(effects
 						(font
@@ -108,8 +108,8 @@
 				)
 			)
 			(pin input line
-				(at -15.24 0 0)
-				(length 2.54)
+				(at -38.1 -20.32 0)
+				(length 7.62)
 				(name "PA4"
 					(effects
 						(font
@@ -126,8 +126,8 @@
 				)
 			)
 			(pin input line
-				(at -15.24 -2.54 0)
-				(length 2.54)
+				(at -38.1 -63.5 0)
+				(length 7.62)
 				(name "PA5"
 					(effects
 						(font
@@ -144,8 +144,8 @@
 				)
 			)
 			(pin input line
-				(at 15.24 5.08 180)
-				(length 2.54)
+				(at -38.1 -78.74 0)
+				(length 7.62)
 				(name "PB0_VCT"
 					(effects
 						(font
@@ -162,8 +162,8 @@
 				)
 			)
 			(pin power_out line
-				(at 0 12.7 270)
-				(length 2.54)
+				(at -38.1 96.52 0)
+				(length 7.62)
 				(name "+3V3"
 					(effects
 						(font
@@ -180,8 +180,8 @@
 				)
 			)
 			(pin power_in line
-				(at 0 -10.16 90)
-				(length 2.54)
+				(at -38.1 -99.06 0)
+				(length 7.62)
 				(name "GND"
 					(effects
 						(font

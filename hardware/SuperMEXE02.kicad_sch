@@ -2,11 +2,11 @@
 	(version 20260306)
 	(generator "kicad-mcp")
 	(generator_version "10.0")
-	(uuid "1187bea8-b2da-4e1f-a4a8-1686578e182d")
+	(uuid "d7241718-d196-4e12-b0bd-9d1ffa318543")
 	(paper "A3")
 	(title_block
-		(title "SuperMEXE02 - sensor front end")
-		(rev "0.1")
+		(title "SuperMEXE02 - connected sensor front end")
+		(rev "0.2")
 		(company "iwasaki_lab")
 	)
 	(lib_symbols
@@ -645,8 +645,8 @@
 			)
 			(symbol "NUCLEO_G431KB_SENSOR_0_1"
 				(rectangle
-					(start -12.7 10.16)
-					(end 12.7 -7.62)
+					(start -30.48 101.6)
+					(end 30.48 -109.22)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -658,8 +658,8 @@
 			)
 			(symbol "NUCLEO_G431KB_SENSOR_1_1"
 				(pin input line
-					(at -15.24 5.08 0)
-					(length 2.54)
+					(at -38.1 66.04 0)
+					(length 7.62)
 					(name "PA0"
 						(effects
 							(font
@@ -676,8 +676,8 @@
 					)
 				)
 				(pin input line
-					(at -15.24 2.54 0)
-					(length 2.54)
+					(at -38.1 22.86 0)
+					(length 7.62)
 					(name "PA1"
 						(effects
 							(font
@@ -694,8 +694,8 @@
 					)
 				)
 				(pin input line
-					(at -15.24 0 0)
-					(length 2.54)
+					(at -38.1 -20.32 0)
+					(length 7.62)
 					(name "PA4"
 						(effects
 							(font
@@ -712,8 +712,8 @@
 					)
 				)
 				(pin input line
-					(at -15.24 -2.54 0)
-					(length 2.54)
+					(at -38.1 -63.5 0)
+					(length 7.62)
 					(name "PA5"
 						(effects
 							(font
@@ -730,8 +730,8 @@
 					)
 				)
 				(pin input line
-					(at 15.24 5.08 180)
-					(length 2.54)
+					(at -38.1 -78.74 0)
+					(length 7.62)
 					(name "PB0_VCT"
 						(effects
 							(font
@@ -748,8 +748,8 @@
 					)
 				)
 				(pin power_out line
-					(at 0 12.7 270)
-					(length 2.54)
+					(at -38.1 96.52 0)
+					(length 7.62)
 					(name "+3V3"
 						(effects
 							(font
@@ -766,8 +766,8 @@
 					)
 				)
 				(pin power_in line
-					(at 0 -10.16 90)
-					(length 2.54)
+					(at -38.1 -99.06 0)
+					(length 7.62)
 					(name "GND"
 						(effects
 							(font
@@ -1278,1197 +1278,1353 @@
 		)
 	)
 	(junction
-		(at 101.6 60.96)
+		(at 109.22 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "1ceb394d-02a4-4e9d-ba77-9be3cb0dd868")
+		(uuid "cc66c118-2493-47eb-b563-6f48c81fa96d")
 	)
 	(junction
-		(at 129.54 60.96)
+		(at 109.22 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "acb7bd6b-003c-4873-8d0f-5c763659c1f6")
+		(uuid "786c833c-196a-4408-8fd1-e9e4ca33b0dc")
 	)
 	(junction
-		(at 157.48 60.96)
+		(at 139.7 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "43d22ec8-1a8f-4fec-8184-c6bb0662a930")
+		(uuid "d69bcca3-7cc6-4b69-a5b5-71ef9a23a8f8")
 	)
 	(junction
-		(at 129.54 83.82)
+		(at 139.7 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "94fa9e35-3093-4c34-a5d7-8b735de8903d")
+		(uuid "740a86b5-4087-48e4-a1c7-1fd01bfe76db")
 	)
 	(junction
-		(at 101.6 109.22)
+		(at 170.18 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "da1daed0-e118-43fc-b289-5312f087a3f4")
+		(uuid "54fe7b54-365e-4da7-b1a7-c21a2a203f9d")
 	)
 	(junction
-		(at 129.54 109.22)
+		(at 170.18 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "41b5ee0d-0bf2-481e-9a02-ae0d9c49fb8c")
+		(uuid "4b7a3164-1247-413a-a469-691bb3e5f354")
 	)
 	(junction
-		(at 157.48 109.22)
+		(at 299.72 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0344284a-bc39-4da2-ba63-ee46cad387c4")
+		(uuid "7e74c8c0-33ee-4eb3-9e2f-66479e9ab14d")
 	)
 	(junction
-		(at 129.54 132.08)
+		(at 109.22 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f3fed35d-6b5b-4c00-ade6-b2d31ac15502")
+		(uuid "19100413-15f6-4095-a054-2565ad67d2d1")
 	)
 	(junction
-		(at 101.6 157.48)
+		(at 109.22 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "575dd93d-9b3d-43dc-990d-bb3cf9909aeb")
+		(uuid "04f60bbf-2452-48f8-9e75-d42dac3eacb9")
 	)
 	(junction
-		(at 129.54 157.48)
+		(at 139.7 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "267e22a5-bc1a-49f2-beca-717f95ddc360")
+		(uuid "279937ac-da64-4c53-bb5c-f1b5aba8d61a")
 	)
 	(junction
-		(at 157.48 157.48)
+		(at 139.7 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "4528d198-6098-4a08-9b1b-66ca29247780")
+		(uuid "50f6a491-b698-47a9-ad8b-367dc5a09e0f")
 	)
 	(junction
-		(at 129.54 180.34)
+		(at 170.18 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "55860c19-71e3-4c4a-bea1-0111de2d8306")
+		(uuid "d5923b83-4614-46aa-80c3-158a0d304b2c")
 	)
 	(junction
-		(at 101.6 205.74)
+		(at 170.18 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3b73c4e6-eb3e-4f09-96bf-75f6bd9a0774")
+		(uuid "7d3cd9ca-9ccf-4e5d-86c5-edde2935c61f")
 	)
 	(junction
-		(at 129.54 205.74)
+		(at 299.72 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a800b6e4-c313-4938-8743-17c989b333ac")
+		(uuid "20a44369-548e-4c84-94fb-b47c83bba1b4")
 	)
 	(junction
-		(at 157.48 205.74)
+		(at 109.22 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b0c94a58-58c5-4733-8e30-7ee44e578288")
+		(uuid "e787231b-730c-4c1a-9b59-94d81150813e")
 	)
 	(junction
-		(at 129.54 228.6)
+		(at 109.22 175.26)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "06cd2e5f-82bb-415a-8f24-0ba036bd42cd")
+		(uuid "dc4a8ac2-2610-4391-bb74-bfad34235d6b")
+	)
+	(junction
+		(at 139.7 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fa63f274-3152-41d6-99d9-7d51cf58fe58")
+	)
+	(junction
+		(at 139.7 175.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b1a48d48-a5f6-4347-b4f7-116c54ebc0a8")
+	)
+	(junction
+		(at 170.18 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "88d7906f-7c44-4890-90c7-64063d3f269d")
+	)
+	(junction
+		(at 170.18 175.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0465ea94-e39d-4759-afc0-2aa105791784")
+	)
+	(junction
+		(at 299.72 175.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d9ce576a-27ea-433c-9253-ce7a37644231")
+	)
+	(junction
+		(at 109.22 195.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "abc518d5-ad43-4ae0-8c17-aef00e0c0522")
+	)
+	(junction
+		(at 109.22 218.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b8ad52c0-76df-4b07-a454-a6caf4340708")
+	)
+	(junction
+		(at 139.7 195.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1682938e-0914-45c2-ba8c-0164df2ded3d")
+	)
+	(junction
+		(at 139.7 218.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "22a78c26-591f-4ec5-8af8-685f4fed3113")
+	)
+	(junction
+		(at 170.18 195.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5af4dc51-a8d6-4500-b856-ac80a0a2be4a")
+	)
+	(junction
+		(at 170.18 218.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e84f31f8-7058-4fe9-96ae-4ef42bad26b7")
+	)
+	(junction
+		(at 299.72 218.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "805569cc-325e-46d2-a178-725c0c99ebd1")
+	)
+	(junction
+		(at 25.4 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "034ffbb0-228a-4099-be36-378047ee90f1")
+	)
+	(junction
+		(at 25.4 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1ef413ac-4475-4a41-ba3b-c490a486275a")
+	)
+	(junction
+		(at 25.4 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "33e257cf-fcbf-44dd-8316-10ae9778febf")
+	)
+	(junction
+		(at 25.4 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "12475630-97df-477a-9eca-b66c4bd85122")
+	)
+	(junction
+		(at 210.82 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d960ced1-94cd-45c2-8954-64b7119a02b3")
+	)
+	(junction
+		(at 246.38 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "499a18f9-1bbc-4fc8-bb48-676d5db71fd4")
+	)
+	(junction
+		(at 246.38 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d375a342-f753-430c-aaac-302b14e936d6")
 	)
 	(wire
 		(pts
-			(xy 48.26 60.96)
-			(xy 72.39 60.96)
+			(xy 25.4 25.4)
+			(xy 312.42 25.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "44f849b2-d822-4ef6-8d7e-28849753eb1f")
+		(uuid "7cd37fff-136c-44c2-917d-8eb6be502312")
 	)
 	(wire
 		(pts
-			(xy 80.01 60.96)
-			(xy 101.6 60.96)
+			(xy 312.42 25.4)
+			(xy 312.42 35.56)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "805efb57-4a64-4af8-b1ea-3ee2cdcb2175")
+		(uuid "e061cde5-5f49-482d-a3b9-8171b81a5cf8")
 	)
 	(wire
 		(pts
-			(xy 101.6 60.96)
-			(xy 129.54 60.96)
+			(xy 312.42 35.56)
+			(xy 322.58 35.56)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1d9f8ee5-8967-4995-9574-d1052698d00f")
+		(uuid "bfe299a8-bac3-423e-8ad7-7c36d4b7a8f5")
 	)
 	(wire
 		(pts
-			(xy 129.54 60.96)
-			(xy 157.48 60.96)
+			(xy 299.72 50.8)
+			(xy 299.72 231.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "64241569-259e-41e3-896f-0c3f025c4b5b")
+		(uuid "f24e540e-6920-4fc7-a333-967b3b9ca4dc")
 	)
 	(wire
 		(pts
-			(xy 157.48 60.96)
-			(xy 185.42 60.96)
+			(xy 299.72 231.14)
+			(xy 322.58 231.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5c3c8ad4-210f-4d0b-b0d3-17f5f60a6869")
+		(uuid "28531aee-58af-4f52-ab2e-799c6e13fc8e")
 	)
 	(wire
 		(pts
-			(xy 101.6 52.07)
-			(xy 101.6 60.96)
+			(xy 53.34 66.04)
+			(xy 77.47 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e081ede3-150c-43f0-b12a-d75424954906")
+		(uuid "bf2d702e-8dfe-4eab-943f-7eadf395e961")
 	)
 	(wire
 		(pts
-			(xy 101.6 60.96)
-			(xy 101.6 69.85)
+			(xy 85.09 66.04)
+			(xy 109.22 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0c61e218-e596-4e3e-982e-c1cf9561a3b9")
+		(uuid "d6676174-ab77-4612-bf4a-5901b82bfa50")
 	)
 	(wire
 		(pts
-			(xy 101.6 44.45)
-			(xy 101.6 39.37)
+			(xy 109.22 66.04)
+			(xy 139.7 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "449d5b0f-67c1-4132-af28-4f7adb2a1a2b")
+		(uuid "a8c03805-0c30-4e93-a338-3063cd34b1ee")
 	)
 	(wire
 		(pts
-			(xy 101.6 39.37)
-			(xy 88.9 39.37)
+			(xy 139.7 66.04)
+			(xy 170.18 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "986e5546-e75d-4b95-b8ef-2c76fb49f8fa")
+		(uuid "9b9a7ae2-51d8-4885-8865-adc5f030918f")
 	)
 	(wire
 		(pts
-			(xy 101.6 77.47)
-			(xy 101.6 83.82)
+			(xy 170.18 66.04)
+			(xy 322.58 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8010b40b-2ab0-4782-ad0b-dffb77133f04")
+		(uuid "966b1cfb-2b6b-4f7a-abde-da5b358413ce")
 	)
 	(wire
 		(pts
-			(xy 129.54 60.96)
-			(xy 129.54 69.85)
+			(xy 109.22 57.15)
+			(xy 109.22 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b0d05661-6fe2-4925-8480-d821c0787f00")
+		(uuid "a9bce2a6-040b-41d9-b9f4-27b3b886fc76")
 	)
 	(wire
 		(pts
-			(xy 129.54 77.47)
-			(xy 129.54 83.82)
+			(xy 109.22 66.04)
+			(xy 109.22 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4a7c9fdd-a6cf-47ca-aca5-483104d27321")
+		(uuid "412f7028-9cf0-4057-977b-bf678b84fbcf")
 	)
 	(wire
 		(pts
-			(xy 157.48 60.96)
-			(xy 157.48 69.85)
+			(xy 109.22 49.53)
+			(xy 109.22 48.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "24670fd5-dfae-42cd-9da7-6c432b9c20ce")
+		(uuid "df9b26fd-3c7d-4214-ab43-4fc99a280fbb")
 	)
 	(wire
 		(pts
-			(xy 157.48 77.47)
-			(xy 157.48 83.82)
+			(xy 109.22 48.26)
+			(xy 25.4 48.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9cbce5d8-7fac-4fc7-94fd-8da123f12695")
+		(uuid "59fb9a14-3e81-4b28-a205-22baae2a567f")
 	)
 	(wire
 		(pts
-			(xy 101.6 83.82)
-			(xy 129.54 83.82)
+			(xy 109.22 82.55)
+			(xy 109.22 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "434161b0-8be0-4497-a78a-ec35ab5e54b7")
+		(uuid "0a86672a-fead-427f-a3c7-67a64b585fc1")
 	)
 	(wire
 		(pts
-			(xy 129.54 83.82)
-			(xy 157.48 83.82)
+			(xy 139.7 66.04)
+			(xy 139.7 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c437e048-2c7e-4359-bcaf-324a0e4f34f3")
+		(uuid "ed651cc5-1859-4607-8ead-e0a45e411815")
 	)
 	(wire
 		(pts
-			(xy 48.26 63.5)
-			(xy 53.34 63.5)
+			(xy 139.7 82.55)
+			(xy 139.7 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "061f12dd-d991-4f03-a8f0-609f7a221e50")
+		(uuid "54663c6b-6e67-4275-8d52-01a0b6c697c2")
 	)
 	(wire
 		(pts
-			(xy 53.34 63.5)
-			(xy 53.34 78.74)
+			(xy 170.18 66.04)
+			(xy 170.18 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7dcc1d67-57c9-4ddc-ace7-aede8e2af771")
+		(uuid "40a78886-a4e8-4c81-b29f-b38d1ba25bd4")
 	)
 	(wire
 		(pts
-			(xy 48.26 109.22)
-			(xy 72.39 109.22)
+			(xy 170.18 82.55)
+			(xy 170.18 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3ae864a8-f3b6-485c-9330-a8b55c08b19b")
+		(uuid "9d70ec84-72af-4a86-a224-ee248c2b8431")
 	)
 	(wire
 		(pts
-			(xy 80.01 109.22)
-			(xy 101.6 109.22)
+			(xy 53.34 68.58)
+			(xy 63.5 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4f8d30ba-2daf-434f-82cc-91400167a02b")
+		(uuid "daea575a-5523-4f37-b66b-1748bc01f201")
 	)
 	(wire
 		(pts
-			(xy 101.6 109.22)
-			(xy 129.54 109.22)
+			(xy 63.5 68.58)
+			(xy 63.5 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a890e668-a43e-4fc7-b281-440449c8c14b")
+		(uuid "c4bc2e0d-29ef-40de-88bb-52297a5147dc")
 	)
 	(wire
 		(pts
-			(xy 129.54 109.22)
-			(xy 157.48 109.22)
+			(xy 63.5 88.9)
+			(xy 109.22 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fa586376-2da3-461b-8fda-84cf32976b13")
+		(uuid "4d0ba99d-4d36-4c6d-935b-cd11610b0eec")
 	)
 	(wire
 		(pts
-			(xy 157.48 109.22)
-			(xy 185.42 109.22)
+			(xy 109.22 88.9)
+			(xy 139.7 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d9b1103b-ba93-4f9d-907d-5b594af7d520")
+		(uuid "4e3b44bc-72bf-4acc-8e1a-07351c41c08b")
 	)
 	(wire
 		(pts
-			(xy 101.6 100.33)
-			(xy 101.6 109.22)
+			(xy 139.7 88.9)
+			(xy 170.18 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d9113f9d-a18b-4535-ba33-6cfb9cf5940e")
+		(uuid "1b29a269-7def-47c1-94d6-0f48fef00966")
 	)
 	(wire
 		(pts
-			(xy 101.6 109.22)
-			(xy 101.6 118.11)
+			(xy 170.18 88.9)
+			(xy 299.72 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "22750785-511e-4684-b017-c664de9d7360")
+		(uuid "f255b4fa-f3fc-48d7-b049-7514fb36f4fa")
 	)
 	(wire
 		(pts
-			(xy 101.6 92.71)
-			(xy 101.6 87.63)
+			(xy 53.34 109.22)
+			(xy 77.47 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d7c4885e-d3ec-40b3-841e-e719a6cf9e64")
+		(uuid "b74f1204-031c-4609-9d50-4e912ef6c439")
 	)
 	(wire
 		(pts
-			(xy 101.6 87.63)
-			(xy 88.9 87.63)
+			(xy 85.09 109.22)
+			(xy 109.22 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "bc322168-9f6b-4047-bf8f-5119e2343b72")
+		(uuid "b8d52b93-4fc0-4401-bf55-3072789392d5")
 	)
 	(wire
 		(pts
-			(xy 101.6 125.73)
-			(xy 101.6 132.08)
+			(xy 109.22 109.22)
+			(xy 139.7 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2c48d9ca-4aa1-4faf-88b3-af77bc784508")
+		(uuid "6245a412-8c22-4131-b457-91ba56fbd72d")
 	)
 	(wire
 		(pts
-			(xy 129.54 109.22)
-			(xy 129.54 118.11)
+			(xy 139.7 109.22)
+			(xy 170.18 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c694b284-b68e-4831-968f-9506289cead7")
+		(uuid "65acc91d-6bbc-47d8-b98f-84d1eacf6acc")
 	)
 	(wire
 		(pts
-			(xy 129.54 125.73)
-			(xy 129.54 132.08)
+			(xy 170.18 109.22)
+			(xy 322.58 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "25a81ad9-7e5c-4c4b-be25-92b475de7a0e")
+		(uuid "dcaefaa6-abec-45ef-9b8e-5b5b114ff46e")
 	)
 	(wire
 		(pts
-			(xy 157.48 109.22)
-			(xy 157.48 118.11)
+			(xy 109.22 100.33)
+			(xy 109.22 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4f1585db-9181-497e-88c0-bb4c5352ce4d")
+		(uuid "bb95a594-b782-4ff1-a7c7-75745a774e5d")
 	)
 	(wire
 		(pts
-			(xy 157.48 125.73)
-			(xy 157.48 132.08)
+			(xy 109.22 109.22)
+			(xy 109.22 118.11)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e11bb239-ae0d-4334-95eb-904570e3c245")
+		(uuid "bf28ce50-ffc4-48be-a905-6ee01b8e37a4")
 	)
 	(wire
 		(pts
-			(xy 101.6 132.08)
-			(xy 129.54 132.08)
+			(xy 109.22 92.71)
+			(xy 109.22 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a63ad8ae-b961-45fd-8b42-bfd166ae818b")
+		(uuid "1f4865c0-9628-49bb-8dfe-8ee807269334")
 	)
 	(wire
 		(pts
-			(xy 129.54 132.08)
-			(xy 157.48 132.08)
+			(xy 109.22 91.44)
+			(xy 25.4 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "29b09786-c5e4-46b1-8a73-bb3cf6fb12c8")
+		(uuid "45430e07-36ab-4627-896d-534a6ea4ba82")
 	)
 	(wire
 		(pts
-			(xy 48.26 111.76)
+			(xy 109.22 125.73)
+			(xy 109.22 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fe4f649-2201-40d7-a6db-250f56ba59be")
+	)
+	(wire
+		(pts
+			(xy 139.7 109.22)
+			(xy 139.7 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc7bb204-b146-4850-a4db-7fadcc673877")
+	)
+	(wire
+		(pts
+			(xy 139.7 125.73)
+			(xy 139.7 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49e2c019-45d1-4360-9a3b-61b33f02b9f3")
+	)
+	(wire
+		(pts
+			(xy 170.18 109.22)
+			(xy 170.18 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "188c7f83-c42f-4ef7-9b59-57a303889925")
+	)
+	(wire
+		(pts
+			(xy 170.18 125.73)
+			(xy 170.18 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb5122b2-5cdc-4e54-81a7-ade28edd8d03")
+	)
+	(wire
+		(pts
 			(xy 53.34 111.76)
+			(xy 63.5 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c5aaad38-d7c9-4601-8016-a8093b158eb9")
+		(uuid "01980d6c-4c1f-41b3-9a85-8ec82e892a41")
 	)
 	(wire
 		(pts
-			(xy 53.34 111.76)
-			(xy 53.34 127)
+			(xy 63.5 111.76)
+			(xy 63.5 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2c801e72-e627-4efb-99da-24aa113ec0e8")
+		(uuid "6f4fc834-8aa5-49ac-89dd-bc1be0f077db")
 	)
 	(wire
 		(pts
-			(xy 48.26 157.48)
-			(xy 72.39 157.48)
+			(xy 63.5 132.08)
+			(xy 109.22 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8b1d759b-a223-408b-b966-431c75d826a8")
+		(uuid "ca8dc31c-8442-4c10-8b5b-3f00fead0711")
 	)
 	(wire
 		(pts
-			(xy 80.01 157.48)
-			(xy 101.6 157.48)
+			(xy 109.22 132.08)
+			(xy 139.7 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "799f8474-6dba-4fa8-adf9-265ae0d00556")
+		(uuid "1bda3ff4-12dd-490f-836b-717f85207111")
 	)
 	(wire
 		(pts
-			(xy 101.6 157.48)
-			(xy 129.54 157.48)
+			(xy 139.7 132.08)
+			(xy 170.18 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5d64495c-20e0-4fc0-a5d6-a2b11818a621")
+		(uuid "d837efab-0911-4ee7-9a26-a3eb8d995563")
 	)
 	(wire
 		(pts
-			(xy 129.54 157.48)
-			(xy 157.48 157.48)
+			(xy 170.18 132.08)
+			(xy 299.72 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8b6392ec-93a9-4c61-96f0-72856a6d5b1b")
+		(uuid "6c767725-e510-43ed-8630-fa1392739d08")
 	)
 	(wire
 		(pts
-			(xy 157.48 157.48)
-			(xy 185.42 157.48)
+			(xy 53.34 152.4)
+			(xy 77.47 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cb07a898-e8e7-4d45-962b-7071021abea4")
+		(uuid "9729da3b-12d8-4e64-ace1-3f49fd18e67b")
 	)
 	(wire
 		(pts
-			(xy 101.6 148.59)
-			(xy 101.6 157.48)
+			(xy 85.09 152.4)
+			(xy 109.22 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1c661ebe-5c95-4152-837c-18ecfc9b001b")
+		(uuid "9013591d-7669-4853-ace9-9d91e5b57616")
 	)
 	(wire
 		(pts
-			(xy 101.6 157.48)
-			(xy 101.6 166.37)
+			(xy 109.22 152.4)
+			(xy 139.7 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8a816eb2-cd7b-4e67-9ba1-2288a2226813")
+		(uuid "3d5f46db-6522-41ce-a8f3-6719f3e15286")
 	)
 	(wire
 		(pts
-			(xy 101.6 140.97)
-			(xy 101.6 135.89)
+			(xy 139.7 152.4)
+			(xy 170.18 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "153e120f-d590-4477-98ec-61e642ca577b")
+		(uuid "2fee6291-7cde-43b9-8a56-64891b68a665")
 	)
 	(wire
 		(pts
-			(xy 101.6 135.89)
-			(xy 88.9 135.89)
+			(xy 170.18 152.4)
+			(xy 322.58 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "87ace97f-43df-4ff2-9850-bd357628719a")
+		(uuid "e067afcc-e450-452f-ab04-83bb9c354ef3")
 	)
 	(wire
 		(pts
-			(xy 101.6 173.99)
-			(xy 101.6 180.34)
+			(xy 109.22 143.51)
+			(xy 109.22 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a0407ad3-7257-4a6f-96f3-a9a9aae3075c")
+		(uuid "bfe624e8-bd93-4792-869c-73aff4449184")
 	)
 	(wire
 		(pts
-			(xy 129.54 157.48)
-			(xy 129.54 166.37)
+			(xy 109.22 152.4)
+			(xy 109.22 161.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e2098e28-b5fe-4945-9c34-ecf325dffac0")
+		(uuid "55983429-ed5b-484e-ba59-0c088ec70e97")
 	)
 	(wire
 		(pts
-			(xy 129.54 173.99)
-			(xy 129.54 180.34)
+			(xy 109.22 135.89)
+			(xy 109.22 134.62)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b61fd087-01b8-4264-95ca-c1a5437cea6d")
+		(uuid "55ab3457-0789-47e7-821b-1f401d74a303")
 	)
 	(wire
 		(pts
-			(xy 157.48 157.48)
-			(xy 157.48 166.37)
+			(xy 109.22 134.62)
+			(xy 25.4 134.62)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6729fcc3-748f-48ae-8e64-f15193dba6ff")
+		(uuid "93f22582-df11-482d-978e-21e879b1eb3b")
 	)
 	(wire
 		(pts
-			(xy 157.48 173.99)
-			(xy 157.48 180.34)
+			(xy 109.22 168.91)
+			(xy 109.22 175.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6e90f987-51c0-49b6-9cd1-6dd95ae8360c")
+		(uuid "bb9b8f31-c828-4c83-9408-beaedbbc17f2")
 	)
 	(wire
 		(pts
-			(xy 101.6 180.34)
-			(xy 129.54 180.34)
+			(xy 139.7 152.4)
+			(xy 139.7 161.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "36cfbf7b-f130-4696-b753-4bcd2d6bc5e4")
+		(uuid "a5269c06-cbdb-4740-97ce-c77e5e21b3b8")
 	)
 	(wire
 		(pts
-			(xy 129.54 180.34)
-			(xy 157.48 180.34)
+			(xy 139.7 168.91)
+			(xy 139.7 175.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d88d97a1-f0d6-4aa8-bdde-23180c4d2103")
+		(uuid "a11f42be-372f-4bb3-90ce-c25379acba3b")
 	)
 	(wire
 		(pts
-			(xy 48.26 160.02)
-			(xy 53.34 160.02)
+			(xy 170.18 152.4)
+			(xy 170.18 161.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d739e9c9-c58c-42bd-8f7f-efc1db87467d")
+		(uuid "216ce3f4-7b6c-449a-a2d8-1efb0da65eac")
 	)
 	(wire
 		(pts
-			(xy 53.34 160.02)
-			(xy 53.34 175.26)
+			(xy 170.18 168.91)
+			(xy 170.18 175.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ce52020f-ea0c-49f4-a34f-6a3301c42385")
+		(uuid "7e5abe34-4a25-49f7-bb15-ae473036ecba")
 	)
 	(wire
 		(pts
-			(xy 48.26 205.74)
-			(xy 72.39 205.74)
+			(xy 53.34 154.94)
+			(xy 63.5 154.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9bbfbee4-c3fa-4c5d-9a54-5c0adf3c00e9")
+		(uuid "4f2de5df-3aeb-43d7-9f31-2c676cbe6847")
 	)
 	(wire
 		(pts
-			(xy 80.01 205.74)
-			(xy 101.6 205.74)
+			(xy 63.5 154.94)
+			(xy 63.5 175.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2b20de97-b6a6-473d-a466-54cb19e64b46")
+		(uuid "dbe4c86a-888d-4767-9c33-75f78d8b50b2")
 	)
 	(wire
 		(pts
-			(xy 101.6 205.74)
-			(xy 129.54 205.74)
+			(xy 63.5 175.26)
+			(xy 109.22 175.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "db687c85-986a-4e65-a7a6-11412ebc0733")
+		(uuid "aa6e0132-9a62-4df5-a607-4bbd72df4bf6")
 	)
 	(wire
 		(pts
-			(xy 129.54 205.74)
-			(xy 157.48 205.74)
+			(xy 109.22 175.26)
+			(xy 139.7 175.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9abdf8a8-b98a-4b56-b51b-5a59eafbaeb6")
+		(uuid "8e147d20-0ed8-491d-bb05-7147ca1e8b55")
 	)
 	(wire
 		(pts
-			(xy 157.48 205.74)
-			(xy 185.42 205.74)
+			(xy 139.7 175.26)
+			(xy 170.18 175.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f9908f37-4d7a-49ff-b818-b06810d64be6")
+		(uuid "17c3e01a-5635-46cf-a3c2-a21af32c6988")
 	)
 	(wire
 		(pts
-			(xy 101.6 196.85)
-			(xy 101.6 205.74)
+			(xy 170.18 175.26)
+			(xy 299.72 175.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ef2139a8-60c7-434e-9341-5ff4be2fec80")
+		(uuid "70014537-97b5-4f09-9c33-6c398b74155f")
 	)
 	(wire
 		(pts
-			(xy 101.6 205.74)
-			(xy 101.6 214.63)
+			(xy 53.34 195.58)
+			(xy 77.47 195.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "bcb3b216-3f7e-4384-93fa-62e3fa7b105c")
+		(uuid "5851142d-307c-40c6-bb3b-41dddf14bb64")
 	)
 	(wire
 		(pts
-			(xy 101.6 189.23)
-			(xy 101.6 184.15)
+			(xy 85.09 195.58)
+			(xy 109.22 195.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b90efc38-0379-4de2-a7da-bd144d999fc9")
+		(uuid "3939ff8b-7e08-4403-b0b9-4fb4d97dd642")
 	)
 	(wire
 		(pts
-			(xy 101.6 184.15)
-			(xy 88.9 184.15)
+			(xy 109.22 195.58)
+			(xy 139.7 195.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4c524d53-007b-4054-8b07-d102a2c0b6fb")
+		(uuid "0e3211bb-3eeb-4805-a5e5-23b78d7802cf")
 	)
 	(wire
 		(pts
-			(xy 101.6 222.25)
-			(xy 101.6 228.6)
+			(xy 139.7 195.58)
+			(xy 170.18 195.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "696f1b21-1ff1-4054-b41c-2fd4a6910bba")
+		(uuid "b6bac74f-a2d6-4cf9-84fd-23ee8dadbd29")
 	)
 	(wire
 		(pts
-			(xy 129.54 205.74)
-			(xy 129.54 214.63)
+			(xy 170.18 195.58)
+			(xy 322.58 195.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b48f5021-a62a-4684-8088-c3d632201017")
+		(uuid "c7fea840-cb17-475a-b8d2-b4734ad1210d")
 	)
 	(wire
 		(pts
-			(xy 129.54 222.25)
-			(xy 129.54 228.6)
+			(xy 109.22 186.69)
+			(xy 109.22 195.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9c2a713d-3c3f-42f3-a6e2-90b58b9f09e9")
+		(uuid "98ec67e7-4567-4416-9d7a-5bf8e1a542d9")
 	)
 	(wire
 		(pts
-			(xy 157.48 205.74)
-			(xy 157.48 214.63)
+			(xy 109.22 195.58)
+			(xy 109.22 204.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a02a9409-10ec-4efb-a5f7-2ebe6d96fd4e")
+		(uuid "70c0ca7a-3a92-42d5-aaec-2c445bfce345")
 	)
 	(wire
 		(pts
-			(xy 157.48 222.25)
-			(xy 157.48 228.6)
+			(xy 109.22 179.07)
+			(xy 109.22 177.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b17b651e-8edb-43af-bfa8-1a33b37d129f")
+		(uuid "a9808c36-6670-4982-8b44-7f8771bdac52")
 	)
 	(wire
 		(pts
-			(xy 101.6 228.6)
-			(xy 129.54 228.6)
+			(xy 109.22 177.8)
+			(xy 25.4 177.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9295918b-8df8-4f55-9356-8c4703534df6")
+		(uuid "1e683177-9c86-42f3-acd9-b84f0bec130f")
 	)
 	(wire
 		(pts
-			(xy 129.54 228.6)
-			(xy 157.48 228.6)
+			(xy 109.22 212.09)
+			(xy 109.22 218.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "22305c27-d822-4869-b992-78ef463b127a")
+		(uuid "b67d0d10-55a0-4834-825b-f2cb838150d6")
 	)
 	(wire
 		(pts
-			(xy 48.26 208.28)
-			(xy 53.34 208.28)
+			(xy 139.7 195.58)
+			(xy 139.7 204.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "580449df-b500-4f07-af4a-3f201ef0cc8d")
+		(uuid "c6782744-e199-4406-8d93-2139721ed905")
 	)
 	(wire
 		(pts
-			(xy 53.34 208.28)
-			(xy 53.34 223.52)
+			(xy 139.7 212.09)
+			(xy 139.7 218.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "839a3fba-95de-4230-9ea0-6c105539f91b")
+		(uuid "cdab1492-756d-4cd9-814b-a441168f4cf8")
 	)
 	(wire
 		(pts
-			(xy 314.96 71.12)
-			(xy 304.8 71.12)
+			(xy 170.18 195.58)
+			(xy 170.18 204.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "33d1e9d0-7d7e-4d42-92e4-cbff828a5d71")
+		(uuid "d78f921b-05f7-4d59-a491-46e9cb14a55f")
 	)
 	(wire
 		(pts
-			(xy 314.96 73.66)
-			(xy 304.8 73.66)
+			(xy 170.18 212.09)
+			(xy 170.18 218.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "45c7296b-3f91-47ae-95fb-0b24a7f21f6d")
+		(uuid "dc1b835d-2e87-4f58-bd6a-8be48467b654")
 	)
 	(wire
 		(pts
-			(xy 314.96 76.2)
-			(xy 304.8 76.2)
+			(xy 53.34 198.12)
+			(xy 63.5 198.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1a909328-7ce1-4639-94b1-19202ac8d886")
+		(uuid "29e61857-7799-414e-bbc9-2d7865313bd2")
 	)
 	(wire
 		(pts
-			(xy 314.96 78.74)
-			(xy 304.8 78.74)
+			(xy 63.5 198.12)
+			(xy 63.5 218.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c3f9e9e2-64aa-49ba-837f-3b8fe99280d4")
+		(uuid "d9a148a5-ef34-4674-83e9-91636aa22433")
 	)
 	(wire
 		(pts
-			(xy 330.2 63.5)
-			(xy 330.2 58.42)
+			(xy 63.5 218.44)
+			(xy 109.22 218.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "21e33b34-0f64-4bdd-9ed2-c78b73d70326")
+		(uuid "38dc3e96-72df-4413-88fc-94275443bd23")
 	)
 	(wire
 		(pts
-			(xy 330.2 86.36)
-			(xy 330.2 91.44)
+			(xy 109.22 218.44)
+			(xy 139.7 218.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9d4aa1a1-aff8-480a-8a9c-34c4ae9882e4")
+		(uuid "d71176ac-51c1-466e-a87e-4414cac8a1d9")
 	)
 	(wire
 		(pts
-			(xy 345.44 71.12)
-			(xy 350.52 71.12)
+			(xy 139.7 218.44)
+			(xy 170.18 218.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a764a593-1188-4b7e-9fb1-50a934f21083")
+		(uuid "14152f8a-0375-43bd-8e1d-9cbc69ba0047")
 	)
 	(wire
 		(pts
-			(xy 289.56 40.64)
-			(xy 294.64 40.64)
+			(xy 170.18 218.44)
+			(xy 299.72 218.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1b681e42-2e8c-4335-b04c-c9af1903f12e")
+		(uuid "3c90c9ab-6519-43b4-b9cf-5b257eebdffc")
 	)
 	(wire
 		(pts
-			(xy 287.02 201.93)
-			(xy 287.02 194.31)
+			(xy 25.4 25.4)
+			(xy 25.4 48.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "36069a06-c60d-48ca-bfb8-5e7108daf0ee")
+		(uuid "9fc9fda4-6687-4c73-8c28-ec71edaa206a")
 	)
 	(wire
 		(pts
-			(xy 287.02 209.55)
-			(xy 287.02 217.17)
+			(xy 25.4 48.26)
+			(xy 25.4 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3e16a8f1-3ced-4334-b0a0-c512e86fdd60")
+		(uuid "1f586360-cb1f-4a5b-b3ea-3ea59566c118")
 	)
 	(wire
 		(pts
-			(xy 322.58 201.93)
-			(xy 322.58 194.31)
+			(xy 25.4 91.44)
+			(xy 25.4 134.62)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "49d39ef3-f00e-40c7-8c5f-514dcf7cd70b")
+		(uuid "73f3499c-31d4-4943-b67f-e5200b5f63b2")
 	)
 	(wire
 		(pts
-			(xy 322.58 209.55)
-			(xy 322.58 217.17)
+			(xy 25.4 134.62)
+			(xy 25.4 177.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f25b311e-6151-4806-81a6-328e02d41554")
+		(uuid "08aec528-2391-4d62-bbce-720e767c7fca")
 	)
-	(text "SENSOR INPUTS 1-4 / identical conditioning"
-		(at 22.86 17.78 0)
+	(wire
+		(pts
+			(xy 210.82 34.29)
+			(xy 210.82 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "986bbafd-4caf-44f9-8c64-655db54772ed")
+	)
+	(wire
+		(pts
+			(xy 210.82 41.91)
+			(xy 210.82 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebaf222f-03d9-44da-8d8b-a019103a9bf3")
+	)
+	(wire
+		(pts
+			(xy 246.38 34.29)
+			(xy 246.38 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b415fd95-2f01-4e39-99a3-0d112bd579af")
+	)
+	(wire
+		(pts
+			(xy 246.38 41.91)
+			(xy 246.38 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ee0f6cf-ad48-4e04-b375-bad43eb3c833")
+	)
+	(wire
+		(pts
+			(xy 210.82 50.8)
+			(xy 246.38 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa046382-6e9d-41c6-ae10-e23afbaeb3ad")
+	)
+	(wire
+		(pts
+			(xy 246.38 50.8)
+			(xy 299.72 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6b4dd72-a80a-4074-925e-9d7018304381")
+	)
+	(wire
+		(pts
+			(xy 228.6 210.82)
+			(xy 322.58 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2aa387b2-dd47-4d27-ae32-f1a8c392e37a")
+	)
+	(text "SENSOR INPUTS 1-4 / direct connections to NUCLEO-G431KB"
+		(at 20.32 15.24 0)
 		(effects
 			(font
-				(size 2.4 2.4)
+				(size 2 2)
 			)
 			(justify left)
 		)
-		(uuid "f1570df1-0953-474d-8cf3-acfd5d9c5801")
+		(uuid "b90f913d-cc14-4134-a790-adbd2985bab1")
 	)
-	(text "All four inputs are generic analog channels. Pressure/flow selection is by application settings."
-		(at 22.86 24.13 0)
+	(text "NUCLEO-G431KB"
+		(at 335.28 139.7 0)
 		(effects
 			(font
-				(size 1.35 1.35)
+				(size 2 2)
 			)
 			(justify left)
 		)
-		(uuid "c4a260dc-c91b-498a-88a6-2b1fa6a818b2")
+		(uuid "da1f0151-62c2-4f77-9279-6fe6813276de")
 	)
-	(text "CH1 / PA0"
-		(at 22.86 48.26 0)
-		(effects
-			(font
-				(size 1.45 1.45)
-			)
-			(justify left)
-		)
-		(uuid "5d14cb3a-ea39-43d4-b7a7-abce291c351f")
-	)
-	(text "CH2 / PA1"
-		(at 22.86 96.52 0)
-		(effects
-			(font
-				(size 1.45 1.45)
-			)
-			(justify left)
-		)
-		(uuid "bace4592-31f3-445e-8b27-f9713b9f5310")
-	)
-	(text "CH3 / PA4"
-		(at 22.86 144.78 0)
-		(effects
-			(font
-				(size 1.45 1.45)
-			)
-			(justify left)
-		)
-		(uuid "db967c4f-bf16-4268-8a49-fa4c689a44d3")
-	)
-	(text "CH4 / PA5 / added fourth channel"
-		(at 22.86 193.04 0)
-		(effects
-			(font
-				(size 1.45 1.45)
-			)
-			(justify left)
-		)
-		(uuid "7e23b8db-af31-4747-a4f7-c432fc6eeef4")
-	)
-	(text "USB powered via ST-LINK USB"
-		(at 264.16 106.68 0)
+	(text "sensor board"
+		(at 340.36 149.86 0)
 		(effects
 			(font
 				(size 1.6 1.6)
 			)
 			(justify left)
 		)
-		(uuid "d6719739-6b9a-4dc9-a223-b288633c2bae")
+		(uuid "b0b330c0-0ae7-4797-8ac4-b56f421da1a9")
 	)
-	(text "U1 is a functional board symbol; unused pins are omitted."
-		(at 264.16 113.03 0)
-		(effects
-			(font
-				(size 1.3 1.3)
-			)
-			(justify left)
-		)
-		(uuid "45123c9f-8188-494b-84b2-dd38ac370da1")
-	)
-	(text "VCT: motor PA0 -> sensor PB0 (D3)"
-		(at 264.16 127 0)
+	(text "USB powered"
+		(at 340.36 160.02 0)
 		(effects
 			(font
 				(size 1.6 1.6)
 			)
 			(justify left)
 		)
-		(uuid "241058d0-8f48-45cb-b53f-b7cc82d4ed97")
+		(uuid "5e03bd67-ad7a-458e-8de9-7996e1de3685")
 	)
-	(text "Firmware connection shown; actual VCT wiring to be confirmed."
-		(at 264.16 133.35 0)
+	(text "Used pins only"
+		(at 340.36 172.72 0)
 		(effects
 			(font
 				(size 1.25 1.25)
 			)
 			(justify left)
 		)
-		(uuid "4be83196-fca2-4349-b16a-5cf58f64d884")
+		(uuid "c5981227-1fe2-4fb9-b499-0e4308e5cd66")
 	)
-	(text "PB0: rising-edge digital input with internal pull-down."
-		(at 264.16 139.7 0)
+	(text "VCT wire shown from firmware; actual wiring unconfirmed."
+		(at 20.32 269.24 0)
 		(effects
 			(font
-				(size 1.25 1.25)
+				(size 1.2 1.2)
 			)
 			(justify left)
 		)
-		(uuid "f3ce4654-9532-446c-b05b-5324d6aba038")
+		(uuid "a29a7293-fe2f-430a-8b2a-64ea91331931")
 	)
-	(text "The edge starts the programmable delayed ADC acquisition."
-		(at 264.16 146.05 0)
+	(text "IN/excitation omitted. Pin identifiers are logical; no PCB footprint assigned."
+		(at 20.32 275.59 0)
 		(effects
 			(font
-				(size 1.25 1.25)
+				(size 1.2 1.2)
 			)
 			(justify left)
 		)
-		(uuid "d6e7ecf8-7de4-4bf1-ae25-b08f3b1170de")
+		(uuid "4f24cde0-984f-4eb2-9a40-bf75147b5d28")
 	)
-	(text "Sensor IN/excitation and sensor power wiring are intentionally omitted."
-		(at 264.16 160.02 0)
+	(text "Wire crossings without a dot are not connected."
+		(at 20.32 281.94 0)
 		(effects
 			(font
-				(size 1.25 1.25)
+				(size 1.2 1.2)
 			)
 			(justify left)
 		)
-		(uuid "6e40379c-f64a-41da-bcf4-b75efb9514c2")
-	)
-	(text "No 24 V supply is connected to this USB-powered sensor sheet."
-		(at 264.16 166.37 0)
-		(effects
-			(font
-				(size 1.25 1.25)
-			)
-			(justify left)
-		)
-		(uuid "c296195c-d9f6-4107-8e1d-9e9bffce13fd")
-	)
-	(text "Sensor types and physical connector pin numbers: not specified."
-		(at 264.16 172.72 0)
-		(effects
-			(font
-				(size 1.25 1.25)
-			)
-			(justify left)
-		)
-		(uuid "a0fbd5ff-cf2e-46cb-ab44-acd218adae8f")
-	)
-	(text "3V3 rail is the board output; USB provides power and ground."
-		(at 264.16 231.14 0)
-		(effects
-			(font
-				(size 1.25 1.25)
-			)
-			(justify left)
-		)
-		(uuid "05ec75e3-256d-4258-945a-cffb8718d976")
-	)
-	(text "First sensor-sheet draft; existing circuit values reproduced from the supplied drawing."
-		(at 22.86 266.7 0)
-		(effects
-			(font
-				(size 1.3 1.3)
-			)
-			(justify left)
-		)
-		(uuid "9abad9a8-fd1c-4927-a0c4-aeb9466110b3")
+		(uuid "25f71d52-5498-4a7f-915f-a494045f3ec2")
 	)
 	(label "SENSOR1_ADC_PA0"
-		(at 185.42 60.96 0)
+		(at 259.08 66.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2476,10 +2632,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c18de5ca-7519-4e2f-96f0-5534f9cdcf94")
+		(uuid "f3525547-16db-4b2c-bdb0-5cd2f1c74f7c")
 	)
 	(label "SENSOR2_ADC_PA1"
-		(at 185.42 109.22 0)
+		(at 259.08 109.22 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2487,10 +2643,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9efc2caa-579c-4e18-8c57-4d4f5379ee51")
+		(uuid "a2f3df16-90c2-41eb-a2f1-d6d6481b0aca")
 	)
 	(label "SENSOR3_ADC_PA4"
-		(at 185.42 157.48 0)
+		(at 259.08 152.4 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2498,10 +2654,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3a31c435-e57f-4741-ac77-288462a06feb")
+		(uuid "f5e3cd7d-0c72-4b58-b639-bb0d08330928")
 	)
 	(label "SENSOR4_ADC_PA5"
-		(at 185.42 205.74 0)
+		(at 259.08 195.58 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2509,54 +2665,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b7eaf6fa-cd36-4583-a8e4-04e61d05d03f")
-	)
-	(label "SENSOR1_ADC_PA0"
-		(at 304.8 71.12 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "923243af-43ab-4c2a-804c-2e4b71dfe112")
-	)
-	(label "SENSOR2_ADC_PA1"
-		(at 304.8 73.66 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c5339809-c248-4ea1-a548-015f9e444508")
-	)
-	(label "SENSOR3_ADC_PA4"
-		(at 304.8 76.2 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "94dc96d0-d622-4e8d-9179-00e7ab2051ba")
-	)
-	(label "SENSOR4_ADC_PA5"
-		(at 304.8 78.74 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "bd5c8684-7b83-4703-9af2-4d9bef7abf3a")
+		(uuid "ddec7cbc-e0c8-4d1e-b812-a5840b9108df")
 	)
 	(label "VCT_FROM_MOTOR_PA0"
-		(at 350.52 71.12 0)
+		(at 254 210.82 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2564,2254 +2676,19 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d983c3a2-cc82-4b5e-8fa7-328b48be3d37")
-	)
-	(label "VCT_FROM_MOTOR_PA0"
-		(at 294.64 40.64 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4aaac05b-3e96-465c-a650-fd99a36a76af")
-	)
-	(symbol
-		(lib_id "SuperMEXE02_IO:SensorInterface")
-		(at 40.64 63.5 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2328f4ca-81d7-487b-95ce-d21669b6118a")
-		(property "Reference" "S1"
-			(at 35.56 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "sensor1"
-			(at 35.56 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 40.64 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 40.64 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 40.64 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "S1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 76.2 60.96 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0e046fbd-bdec-454d-a824-802082edec27")
-		(property "Reference" "R1"
-			(at 76.2 55.88 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "510"
-			(at 76.2 66.04 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 76.2 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 76.2 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 76.2 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4148")
-		(at 101.6 48.26 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "691bc5f9-9cd0-4be3-a481-9dcdebcdfe58")
-		(property "Reference" "D3"
-			(at 107.95 45.72 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 110.49 50.8 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 101.6 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "D3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4148")
-		(at 101.6 73.66 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "73c7639d-71bb-43ee-a3b5-770aaaefeb22")
-		(property "Reference" "D1"
-			(at 107.95 71.12 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 110.49 76.2 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 101.6 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 88.9 39.37 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "496fb14c-37c2-4f11-bdac-9d28291e8510")
-		(property "Reference" "#PWR001"
-			(at 88.9 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 88.9 33.56 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 88.9 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 88.9 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 88.9 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 129.54 73.66 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "382294d2-fef3-4e72-9941-9c61c0d79903")
-		(property "Reference" "C1"
-			(at 134.62 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1u"
-			(at 134.62 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 129.54 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 129.54 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 129.54 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 157.48 73.66 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "728c3351-4b3a-4e93-99aa-bca462b42e19")
-		(property "Reference" "R3"
-			(at 162.56 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "47k"
-			(at 162.56 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 157.48 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 157.48 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "R3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 157.48 83.82 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bf85d8d1-0b73-4026-97ac-53204f095cab")
-		(property "Reference" "#PWR002"
-			(at 157.48 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 157.48 89.13 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 157.48 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 157.48 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR002")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 53.34 78.74 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fcbb87c1-e178-4833-82fd-9bad08a5a8f6")
-		(property "Reference" "#PWR003"
-			(at 53.34 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 53.34 84.05 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 53.34 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR003")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "SuperMEXE02_IO:SensorInterface")
-		(at 40.64 111.76 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "783aa3b0-6ae3-4384-9d6d-293db7a0f596")
-		(property "Reference" "S2"
-			(at 35.56 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "sensor2"
-			(at 35.56 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 40.64 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 40.64 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 40.64 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "S2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 76.2 109.22 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e6682af4-6d74-4c02-a566-f3bc19167f73")
-		(property "Reference" "R2"
-			(at 76.2 104.14 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "510"
-			(at 76.2 114.3 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 76.2 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 76.2 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 76.2 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4148")
-		(at 101.6 96.52 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "50f816f2-ac83-4097-a57d-16a3b4addb46")
-		(property "Reference" "D4"
-			(at 107.95 93.98 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 110.49 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 101.6 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "D4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4148")
-		(at 101.6 121.92 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "eff3318b-58a4-448f-a33e-0441b51c20b2")
-		(property "Reference" "D2"
-			(at 107.95 119.38 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 110.49 124.46 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 101.6 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 88.9 87.63 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fad5d3b9-97af-44bc-bfa4-75a6d11ff209")
-		(property "Reference" "#PWR004"
-			(at 88.9 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 88.9 81.82 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 88.9 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 88.9 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 88.9 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR004")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 129.54 121.92 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "20ac2905-f861-4149-be98-b722962d9ce0")
-		(property "Reference" "C2"
-			(at 134.62 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1u"
-			(at 134.62 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 129.54 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 129.54 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 129.54 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 157.48 121.92 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "cd80f183-b41e-4fc7-adfa-465738f42079")
-		(property "Reference" "R4"
-			(at 162.56 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "47k"
-			(at 162.56 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 157.48 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 157.48 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 157.48 132.08 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bf5053a9-efe5-4f21-9eb5-29b50f8e6d28")
-		(property "Reference" "#PWR005"
-			(at 157.48 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 157.48 137.39 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 157.48 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 157.48 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR005")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 53.34 127 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5c92578b-bfef-4c81-9066-cfcab4af3040")
-		(property "Reference" "#PWR006"
-			(at 53.34 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 53.34 132.31 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 53.34 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR006")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "SuperMEXE02_IO:SensorInterface")
-		(at 40.64 160.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ded6d964-019d-4ec1-8b89-71de8fc484d6")
-		(property "Reference" "S3"
-			(at 35.56 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "sensor3"
-			(at 35.56 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 40.64 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 40.64 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 40.64 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "S3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 76.2 157.48 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "57c0bfee-4b81-4b67-88d3-aff531823827")
-		(property "Reference" "R5"
-			(at 76.2 152.4 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "510"
-			(at 76.2 162.56 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 76.2 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 76.2 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 76.2 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4148")
-		(at 101.6 144.78 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e62bb993-8b4f-4a71-8582-facbad0fae90")
-		(property "Reference" "D6"
-			(at 107.95 142.24 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 110.49 147.32 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 101.6 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "D6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4148")
-		(at 101.6 170.18 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "51aa938f-8270-4c18-bde7-e1cc524ed842")
-		(property "Reference" "D5"
-			(at 107.95 167.64 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 110.49 172.72 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 101.6 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "D5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 88.9 135.89 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "576e0206-0bc5-481a-a5dd-9efc476df0d5")
-		(property "Reference" "#PWR007"
-			(at 88.9 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 88.9 130.08 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 88.9 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 88.9 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 88.9 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR007")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 129.54 170.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "52078dc0-1b1d-4866-929f-0a43fc339e3f")
-		(property "Reference" "C5"
-			(at 134.62 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1u"
-			(at 134.62 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 129.54 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 129.54 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 129.54 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "C5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 157.48 170.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "59c9b358-a629-43f6-8cc2-1c50319c028c")
-		(property "Reference" "R6"
-			(at 162.56 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "47k"
-			(at 162.56 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 157.48 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 157.48 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 157.48 180.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1d5cba04-acd3-4da2-acfc-007f416c50f7")
-		(property "Reference" "#PWR008"
-			(at 157.48 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 157.48 185.65 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 157.48 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 157.48 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR008")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 53.34 175.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1a048f5e-7cb9-416d-aced-7c15e3d955ce")
-		(property "Reference" "#PWR009"
-			(at 53.34 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 53.34 180.57 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 53.34 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR009")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "SuperMEXE02_IO:SensorInterface")
-		(at 40.64 208.28 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5b5e0dc2-4eb6-429c-97dd-1678b2e0b0fb")
-		(property "Reference" "S4"
-			(at 35.56 201.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "sensor4"
-			(at 35.56 212.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 40.64 208.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 40.64 208.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 40.64 208.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "S4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 76.2 205.74 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b1aa77fd-5c41-480b-994f-3286b28e4531")
-		(property "Reference" "R7"
-			(at 76.2 200.66 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "510"
-			(at 76.2 210.82 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 76.2 205.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 76.2 205.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 76.2 205.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "R7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4148")
-		(at 101.6 193.04 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d1328cd1-3ab1-4342-905a-422cefea8736")
-		(property "Reference" "D8"
-			(at 107.95 190.5 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 110.49 195.58 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 101.6 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "D8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4148")
-		(at 101.6 218.44 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "53261141-dba2-444a-9973-7aa2f83171c5")
-		(property "Reference" "D7"
-			(at 107.95 215.9 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 110.49 220.98 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 101.6 218.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 218.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 218.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "D7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 88.9 184.15 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b4976269-8003-49af-af48-f0ab22adc797")
-		(property "Reference" "#PWR010"
-			(at 88.9 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 88.9 178.34 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 88.9 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 88.9 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 88.9 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR010")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 129.54 218.44 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9c542eef-18c6-48c3-b942-ea6d6ee3154e")
-		(property "Reference" "C6"
-			(at 134.62 215.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1u"
-			(at 134.62 220.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 129.54 218.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 129.54 218.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 129.54 218.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "C6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 157.48 218.44 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d214e369-c46b-42b3-aa71-adda7df07d84")
-		(property "Reference" "R8"
-			(at 162.56 215.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "47k"
-			(at 162.56 220.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 157.48 218.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 218.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 157.48 218.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 157.48 228.6 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8e3b85a7-3396-4b1e-9902-9a1e7705112b")
-		(property "Reference" "#PWR011"
-			(at 157.48 223.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 157.48 233.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 157.48 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 157.48 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR011")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 53.34 223.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4fee5475-1c0d-485a-ae64-c98a2c8dd172")
-		(property "Reference" "#PWR012"
-			(at 53.34 218.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 53.34 228.83 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 223.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 223.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 53.34 223.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "81e4cf0d-bcad-4c3d-ae46-36b12e7b1ac5")
 	)
 	(symbol
 		(lib_id "SuperMEXE02_IO:NUCLEO_G431KB_SENSOR")
-		(at 330.2 76.2 0)
+		(at 360.68 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "84360159-d2df-4ae4-a185-efc22fcc7a63")
+		(uuid "16c81ec6-e2ba-4d39-af54-28c3900b9990")
 		(property "Reference" "U1"
-			(at 317.5 62.23 0)
+			(at 330.2 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4820,7 +2697,7 @@
 			)
 		)
 		(property "Value" "NUCLEO-G431KB (sensor)"
-			(at 317.5 87.63 0)
+			(at 330.2 246.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4829,7 +2706,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 330.2 76.2 0)
+			(at 360.68 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4838,7 +2715,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 330.2 76.2 0)
+			(at 360.68 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4847,7 +2724,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 330.2 76.2 0)
+			(at 360.68 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4857,7 +2734,7 @@
 		)
 		(instances
 			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
 					(reference "U1")
 					(unit 1)
 				)
@@ -4866,15 +2743,15 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 330.2 58.42 0)
+		(at 25.4 25.4 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7f6616c2-3c71-4e59-9b7b-fdb5d9db326f")
-		(property "Reference" "#PWR013"
-			(at 330.2 53.34 0)
+		(uuid "a3d10b82-b1af-4219-b1dd-1eb9f09155f3")
+		(property "Reference" "#PWR001"
+			(at 25.4 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4883,7 +2760,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 330.2 52.61 90)
+			(at 25.4 19.59 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4891,7 +2768,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 330.2 58.42 0)
+			(at 25.4 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4900,7 +2777,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 330.2 58.42 0)
+			(at 25.4 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4909,7 +2786,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 330.2 58.42 0)
+			(at 25.4 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4919,8 +2796,8 @@
 		)
 		(instances
 			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR013")
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "#PWR001")
 					(unit 1)
 				)
 			)
@@ -4928,15 +2805,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 330.2 91.44 0)
+		(at 299.72 231.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "34103439-2646-4166-983e-efcceab182ed")
-		(property "Reference" "#PWR014"
-			(at 330.2 86.36 0)
+		(uuid "44e5dcba-97c5-4313-90e5-44de1fae9461")
+		(property "Reference" "#PWR002"
+			(at 299.72 226.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4945,7 +2822,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 330.2 96.75 90)
+			(at 299.72 236.45 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4953,7 +2830,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 330.2 91.44 0)
+			(at 299.72 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4962,7 +2839,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 330.2 91.44 0)
+			(at 299.72 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4971,7 +2848,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 330.2 91.44 0)
+			(at 299.72 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4981,24 +2858,24 @@
 		)
 		(instances
 			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR014")
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "#PWR002")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "SuperMEXE02_IO:MotorVCTInterface")
-		(at 279.4 40.64 0)
+		(lib_id "SuperMEXE02_IO:SensorInterface")
+		(at 45.72 68.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e0fd2b99-cd3a-43ca-9e9e-9a6d637d08c7")
-		(property "Reference" "M1"
-			(at 271.78 36.83 0)
+		(uuid "16e49002-1eb0-4195-b036-f0d9db2b60d8")
+		(property "Reference" "S1"
+			(at 40.64 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5006,8 +2883,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "motor PA0 (logical)"
-			(at 271.78 44.45 0)
+		(property "Value" "sensor1"
+			(at 40.64 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5016,7 +2893,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 279.4 40.64 0)
+			(at 45.72 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5025,7 +2902,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 279.4 40.64 0)
+			(at 45.72 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5034,7 +2911,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 279.4 40.64 0)
+			(at 45.72 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5044,8 +2921,191 @@
 		)
 		(instances
 			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "M1")
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "S1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 81.28 66.04 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "762299cc-8b03-4395-b64b-c894150b7a95")
+		(property "Reference" "R1"
+			(at 81.28 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "510"
+			(at 81.28 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 81.28 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 81.28 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148")
+		(at 109.22 53.34 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d77cd6ba-bf36-40c9-8441-3b7e9ec7bb6f")
+		(property "Reference" "D3"
+			(at 115.57 50.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 118.11 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 109.22 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148")
+		(at 109.22 78.74 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2c672ab6-9663-4a60-aef5-22190b9ace83")
+		(property "Reference" "D1"
+			(at 115.57 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 118.11 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 109.22 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -5053,15 +3113,15 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 287.02 205.74 0)
+		(at 139.7 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "2f0a8f25-207b-449d-a721-83e03cefcef5")
-		(property "Reference" "C3"
-			(at 292.1 203.2 0)
+		(uuid "ad574e20-1a64-46a5-9dba-1ba87d6d770e")
+		(property "Reference" "C1"
+			(at 144.78 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5070,7 +3130,7 @@
 			)
 		)
 		(property "Value" "0.1u"
-			(at 292.1 208.28 0)
+			(at 144.78 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5079,7 +3139,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 287.02 205.74 0)
+			(at 139.7 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5088,7 +3148,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 287.02 205.74 0)
+			(at 139.7 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5097,7 +3157,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 287.02 205.74 0)
+			(at 139.7 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5107,33 +3167,32 @@
 		)
 		(instances
 			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "C3")
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "C1")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 287.02 194.31 0)
+		(lib_id "Device:R")
+		(at 170.18 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "04ec6141-2595-4030-bfc7-a16ac8eed512")
-		(property "Reference" "#PWR015"
-			(at 287.02 189.23 0)
+		(uuid "0809f361-aa12-45b0-8bec-2a49fabca39b")
+		(property "Reference" "R3"
+			(at 175.26 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Value" "+3V3"
-			(at 287.02 188.5 90)
+		(property "Value" "47k"
+			(at 175.26 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5141,7 +3200,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 287.02 194.31 0)
+			(at 170.18 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5150,7 +3209,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 287.02 194.31 0)
+			(at 170.18 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5159,7 +3218,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 287.02 194.31 0)
+			(at 170.18 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5169,24 +3228,42 @@
 		)
 		(instances
 			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR015")
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "R3")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 287.02 217.17 0)
+		(lib_id "SuperMEXE02_IO:SensorInterface")
+		(at 45.72 111.76 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "b2cbe7e4-283f-48ef-9e08-3d2cc4997828")
-		(property "Reference" "#PWR016"
-			(at 287.02 212.09 0)
+		(uuid "282f1218-7b43-44e7-88b4-4e041bd52fb4")
+		(property "Reference" "S2"
+			(at 40.64 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "sensor2"
+			(at 40.64 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5194,8 +3271,52 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 287.02 222.48 90)
+		(property "Datasheet" ""
+			(at 45.72 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "S2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 81.28 109.22 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b24a22a9-fced-42cd-9e48-1afe3d65407a")
+		(property "Reference" "R2"
+			(at 81.28 104.14 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "510"
+			(at 81.28 114.3 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5203,7 +3324,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 287.02 217.17 0)
+			(at 81.28 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5212,7 +3333,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 287.02 217.17 0)
+			(at 81.28 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5221,7 +3342,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 287.02 217.17 0)
+			(at 81.28 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5231,8 +3352,130 @@
 		)
 		(instances
 			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR016")
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148")
+		(at 109.22 96.52 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d34524df-5ee9-4ebf-86a9-4617ffb0a45b")
+		(property "Reference" "D4"
+			(at 115.57 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 118.11 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 109.22 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148")
+		(at 109.22 121.92 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "35ade512-3f6d-4483-bb36-9f8df78e3f89")
+		(property "Reference" "D2"
+			(at 115.57 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 118.11 124.46 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 109.22 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -5240,15 +3483,942 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 322.58 205.74 0)
+		(at 139.7 121.92 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "790a8665-4f72-4453-b76c-7052a323099a")
+		(uuid "e980e3da-077a-4b6f-9eff-b1dd0213a44a")
+		(property "Reference" "C2"
+			(at 144.78 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1u"
+			(at 144.78 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 170.18 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b03cf121-91b2-44f0-adbb-1a192e854c32")
+		(property "Reference" "R4"
+			(at 175.26 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "47k"
+			(at 175.26 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 170.18 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SuperMEXE02_IO:SensorInterface")
+		(at 45.72 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3c6df114-ef10-4486-8289-aff03c098a04")
+		(property "Reference" "S3"
+			(at 40.64 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "sensor3"
+			(at 40.64 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "S3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 81.28 152.4 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "399f204c-b761-435b-b902-49231ed31036")
+		(property "Reference" "R5"
+			(at 81.28 147.32 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "510"
+			(at 81.28 157.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 81.28 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 81.28 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148")
+		(at 109.22 139.7 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b3db2b16-ff46-47d4-b414-6e836944c502")
+		(property "Reference" "D6"
+			(at 115.57 137.16 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 118.11 142.24 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 109.22 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148")
+		(at 109.22 165.1 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6fd38dc1-b279-4459-8434-35e19032ab19")
+		(property "Reference" "D5"
+			(at 115.57 162.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 118.11 167.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 109.22 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 139.7 165.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d957b577-54a2-4bdd-b35b-99ced0da3722")
+		(property "Reference" "C5"
+			(at 144.78 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1u"
+			(at 144.78 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 170.18 165.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f0023c53-45b8-426d-ad71-fd8527b208bb")
+		(property "Reference" "R6"
+			(at 175.26 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "47k"
+			(at 175.26 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 170.18 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SuperMEXE02_IO:SensorInterface")
+		(at 45.72 198.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e047f0a7-e4f7-48c8-95c7-e5401704970f")
+		(property "Reference" "S4"
+			(at 40.64 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "sensor4"
+			(at 40.64 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "S4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 81.28 195.58 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "06cfe3ec-d75d-4af2-aebd-2167e71ac68e")
+		(property "Reference" "R7"
+			(at 81.28 190.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "510"
+			(at 81.28 200.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 81.28 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 81.28 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148")
+		(at 109.22 182.88 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4358fa60-3308-41cf-8c81-02d32da8930b")
+		(property "Reference" "D8"
+			(at 115.57 180.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 118.11 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 109.22 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148")
+		(at 109.22 208.28 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6fa59e3a-62ee-4391-bf0b-34c3d71c9374")
+		(property "Reference" "D7"
+			(at 115.57 205.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 118.11 210.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 109.22 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 139.7 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dc4e5593-b33a-49c5-948f-2b0a8000d090")
+		(property "Reference" "C6"
+			(at 144.78 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1u"
+			(at 144.78 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 170.18 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1b7a3e5a-4eb4-4899-91f3-c08246ac7bf9")
+		(property "Reference" "R8"
+			(at 175.26 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "47k"
+			(at 175.26 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 170.18 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 210.82 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5b29ff60-42af-417e-b19c-4d9457087371")
+		(property "Reference" "C3"
+			(at 215.9 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1u"
+			(at 215.9 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 210.82 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 210.82 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 210.82 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "SuperMEXE02"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 246.38 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f4d67eae-5dbc-4521-8533-dec2f1fc9ee8")
 		(property "Reference" "C4"
-			(at 327.66 203.2 0)
+			(at 251.46 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5257,7 +4427,7 @@
 			)
 		)
 		(property "Value" "1u"
-			(at 327.66 208.28 0)
+			(at 251.46 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5266,7 +4436,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 322.58 205.74 0)
+			(at 246.38 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5275,7 +4445,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 322.58 205.74 0)
+			(at 246.38 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5284,7 +4454,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 322.58 205.74 0)
+			(at 246.38 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5294,7 +4464,7 @@
 		)
 		(instances
 			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
 					(reference "C4")
 					(unit 1)
 				)
@@ -5302,140 +4472,16 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 322.58 194.31 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4c8e422e-4cc5-4a5a-8cb2-1dd2e7841b4c")
-		(property "Reference" "#PWR017"
-			(at 322.58 189.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 322.58 188.5 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 322.58 194.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 322.58 194.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 322.58 194.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 322.58 217.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3656b8d7-8be6-4054-a148-df4c987f2802")
-		(property "Reference" "#PWR018"
-			(at 322.58 212.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 322.58 222.48 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 322.58 217.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 322.58 217.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 322.58 217.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR018")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 358.14 215.9 0)
+		(at 299.72 231.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "246a1f25-c3f6-4a4f-a362-e99c98a596f2")
+		(uuid "acb50e46-b001-4858-a38f-5ca620b8d671")
 		(property "Reference" "#FLG01"
-			(at 358.14 205.74 0)
+			(at 287.02 236.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5443,7 +4489,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 358.14 201.93 0)
+			(at 287.02 241.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5451,7 +4497,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 358.14 215.9 0)
+			(at 299.72 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5460,7 +4506,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 358.14 215.9 0)
+			(at 299.72 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5469,7 +4515,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 358.14 215.9 0)
+			(at 299.72 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5479,7 +4525,7 @@
 		)
 		(instances
 			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
 					(reference "#FLG01")
 					(unit 1)
 				)
@@ -5487,33 +4533,34 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 358.14 215.9 0)
+		(lib_id "SuperMEXE02_IO:MotorVCTInterface")
+		(at 218.44 210.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "07d250a7-0019-4302-bb75-49e00a08db6f")
-		(property "Reference" "#PWR019"
-			(at 358.14 210.82 0)
+		(uuid "e06b7449-cba3-4f38-81db-255b412f9a75")
+		(property "Reference" "M1"
+			(at 210.82 207.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+				(justify left)
 			)
 		)
-		(property "Value" "GND"
-			(at 358.14 221.21 90)
+		(property "Value" "motor PA0 (logical)"
+			(at 210.82 214.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 358.14 215.9 0)
+			(at 218.44 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5522,7 +4569,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 358.14 215.9 0)
+			(at 218.44 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5531,7 +4578,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 358.14 215.9 0)
+			(at 218.44 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5541,8 +4588,8 @@
 		)
 		(instances
 			(project "SuperMEXE02"
-				(path "/1187bea8-b2da-4e1f-a4a8-1686578e182d"
-					(reference "#PWR019")
+				(path "/d7241718-d196-4e12-b0bd-9d1ffa318543"
+					(reference "M1")
 					(unit 1)
 				)
 			)
