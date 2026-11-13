@@ -1,0 +1,46 @@
+[
+  {
+    "sensor": "sensor1",
+    "channel": "a",
+    "pin": "PA0",
+    "net": "SENSOR1_ADC_PA0",
+    "series_resistor": "R1",
+    "shunt_resistor": "R3",
+    "capacitor": "C1",
+    "lower_diode": "D1",
+    "upper_diode": "D3"
+  },
+  {
+    "sensor": "sensor2",
+    "channel": "b",
+    "pin": "PA1",
+    "net": "SENSOR2_ADC_PA1",
+    "series_resistor": "R2",
+    "shunt_resistor": "R4",
+    "capacitor": "C2",
+    "lower_diode": "D2",
+    "upper_diode": "D4"
+  },
+  {
+    "sensor": "sensor3",
+    "channel": "c",
+    "pin": "PA4",
+    "net": "SENSOR3_ADC_PA4",
+    "series_resistor": "R5",
+    "shunt_resistor": "R6",
+    "capacitor": "C5",
+    "lower_diode": "D5",
+    "upper_diode": "D6"
+  },
+  {
+    "sensor": "sensor4",
+    "channel": "d",
+    "pin": "PA5",
+    "net": "SENSOR4_ADC_PA5",
+    "series_resistor": "R7",
+    "shunt_resistor": "R8",
+    "capacitor": "C6",
+    "lower_diode": "D7",
+    "upper_diode": "D8"
+  }
+]

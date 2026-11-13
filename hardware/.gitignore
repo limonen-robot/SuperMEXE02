@@ -1,0 +1,6 @@
+*.lck
+~*
+*.kicad_prl
+*-backups/
+*.net.xml
+fp-info-cache

@@ -4,6 +4,9 @@ NUCLEO-G431KBを2台使用し、直動アクチュエータの動作生成とセ
 
 ## ドキュメント
 
+- **[KiCad回路図](hardware/README.md)**：sensor側の4入力回路、USB給電、VCT、機器型番の記録。
+
+
 - **[システム・ハードウェア仕様書](docs/SYSTEM_SPEC.md)**：機器構成、電源・配線、全ピン割当、計測・制御・通信仕様、停止条件、開発環境、未確認事項。
 - **[アプリの操作説明](motor_app/README.md)**：設定、ビルド・書込み、通常運転、フィードバック、保存・読込み。
 - **[KiCad 10・MCP連携の設定](docs/KICAD_MCP_SETUP.md)**：導入済み環境、AIからの回路図操作、再設定・診断手順。
@@ -30,6 +33,7 @@ G431KB_motor/             motorファームウェア、PID
 G431KB_sensor/            sensorファームウェア
 motor_app/                PCアプリ、操作説明、自動テスト
 AlphaToBeta_conversion/   変換表CSV
+hardware/                 KiCad 10回路図、専用シンボル、プレビュー
 docs/SYSTEM_SPEC.md       システム・ハードウェア仕様書
 .vscode/                  ビルド・Flash・アプリ起動タスク
 ```

@@ -2,8 +2,8 @@
 
 | 項目 | 内容 |
 |---|---|
-| 文書版 | 1.0 |
-| 作成日 | 2026-11-11 |
+| 文書版 | 1.1 |
+| 作成日／更新日 | 2026-11-11／2026-11-13 |
 | 実装の確認基準 | コミット `d768f59` のコード |
 | motorファームウェア | `SUPERMEXE02_MOTOR_V6` |
 | sensorファームウェア | `SUPERMEXE02_SENSOR_V1` |
@@ -45,9 +45,9 @@ flowchart LR
 | sensorボード | ST NUCLEO-G431KB | 4入力のADC取得とVCT後の時刻指定取得 |
 | 直動アクチュエータ | オリエンタルモーター DRS2 / `DRSM42RG-04A2AZMK` | 利用者が提示した機種。軸ごとの個体番号・銘板写真は未収録 |
 | ドライバ | オリエンタルモーター `AZD-K` | パルス列入力形。`AZD-KD`ではない |
-| ZHOME回路 | リレーを介してドライバへ接続 | 利用者確認。リレー型番・回路図・接点仕様は未確認 |
+| ZHOME回路 | リレーを介してドライバへ接続 | リレー本体は写真よりBESTEP `JQC3F-03VDC-C`。モジュール型番・入力仕様・実配線は未確認 |
 | アナログセンサー | 圧力・流量など、最大4系列 | 具体的な型番・電源・校正成績は未確認 |
-| ドライバ電源・ブレーキ電源 | 実機の設定未確認 | 電源型番、定格、配線図を後日記録する |
+| 提示された24 V電源 | MEAN WELL `MDR-100-24`、24 V・4 A（96 W） | 写真の銘板で確認。ドライバ・ブレーキへの分配は未確認 |
 
 NUCLEOの正式な端子・電源仕様は[STの製品ページ](https://www.st.com/en/evaluation-tools/nucleo-g431kb.html)および[UM2397](https://www.st.com/resource/en/user_manual/dm00493601-stm32g4-nucleo32-board-mb1430-stmicroelectronics.pdf)を参照する。
 
@@ -82,17 +82,25 @@ NUCLEOの正式な端子・電源仕様は[STの製品ページ](https://www.st.
 
 | 接続 | 現在把握している内容 |
 |---|---|
-| PCとmotor | motor側ST-LINK USB端子に接続 |
-| PCとsensor | sensor側ST-LINK USB端子に接続 |
+| PCとmotor | motor側ST-LINK USB端子に接続し、USBから給電（利用者確認） |
+| PCとsensor | sensor側ST-LINK USB端子に接続し、USBから給電（利用者確認） |
 | ボード間GND | 共通化済みとの利用者申告 |
 | ボード間VCC | 共通化済みとの利用者申告。ただし3.3 V／5 Vのどの端子か、USB給電との関係は未確認 |
-| 同期信号 | motor `PA_0` → sensor `PB_0` |
+| 同期信号 | コード上の想定はmotor `PA_0` → sensor `PB_0`。2026-11-13時点で現物配線は再確認待ち |
 | ZHOME | GPIO → リレー回路 → AZD-K |
 | CW・CCWの電気的接続 | GPIO生成は確認済み。ドライバ入力までのレベル変換・電流制限・絶縁回路の詳細は未確認 |
 
 実機で、sensor側が無給電のときにmotorの接続不良が発生し、sensor側にも給電すると復帰したとの報告がある。現運用では両ボードの給電を確認してからアプリに接続する。影響の電気的原因は未特定。
 
 この表はVCC同士の接続方法を指定する回路図ではない。各電源端子とUSB電源の接続可否は、実配線とUM2397の電源構成を照合して確定する必要がある。NRST、電源、GNDを含む完成配線図は未作成。
+
+### 3.1 sensor入力回路の図面化（2026-11-13）
+
+[KiCadプロジェクト・回路図](../hardware/README.md)を追加。sensor1=a/PA_0、sensor2=b/PA_1、sensor3=c/PA_4、sensor4=d/PA_5の4入力で、Pressure／Flowなどの用途名は固定しない。各入力は510 Ω直列、0.1 µFと47 kΩを対GND、1N4148をGND・3V3へ上下クランプとする。既存3入力は提供図の転記で、PA_5の4入力目は同じ構成を追加した。センサーIN側は意図的な省略。
+
+PB_0はVCT立ち上がりを受けるデジタル入力（内部PullDown）で、指定時間後の計測に用いる。旧コードでは310 ms後のPA_5左室圧を取得していた。現在は遅延を系列ごとに設定できる。実配線は再確認待ちとして回路図へ注記した。
+
+電源MDR-100-24とリレーJQC3F-03VDC-Cは写真で型番を確認した。リレー本体はDC 3 Vコイル表記で、モジュールの制御入力仕様とは区別する。両機器の配線図は今後追加する。回路図は機能端子を表す部分図で、物理ヘッダー・フットプリント・PCBの設計は未実施。
 
 ## 4. motor側ピン割当
 
@@ -450,6 +458,7 @@ BIN出力先は各プロジェクトの`BUILD/VSCode/NUCLEO_G431KB/ARMC6/debug/`
 
 ## 16. 関連資料
 
+- [KiCad回路図・機器型番の記録](../hardware/README.md)
 - [アプリの操作説明](../motor_app/README.md)
 - [motorファームウェア](../G431KB_motor/main.cpp) / [PID実装](../G431KB_motor/feedback_controller.h)
 - [sensorファームウェア](../G431KB_sensor/main.cpp)
